@@ -6,16 +6,17 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { label: "The Problem", href: "#problem" },
-  { label: "Our Agents", href: "#agents" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Results", href: "#results" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "The Problem", href: "#problem", id: "problem" },
+  { label: "Our Agents", href: "#agents", id: "agents" },
+  { label: "How It Works", href: "#how-it-works", id: "how-it-works" },
+  { label: "Results", href: "#results", id: "results" },
+  { label: "Pricing", href: "#pricing", id: "pricing" },
+  { label: "Contact", href: "#contact", id: "contact" },
 ]
 
 export function Navbar() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(null)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const navRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,36 @@ export function Navbar() {
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Intersection observer for active link highlighting
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.id)
+    const observers: IntersectionObserver[] = []
+
+    const handleIntersect = (id: string) => (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveId(id)
+        }
+      })
+    }
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) {
+        const observer = new IntersectionObserver(handleIntersect(id), {
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: 0,
+        })
+        observer.observe(el)
+        observers.push(observer)
+      }
+    })
+
+    return () => {
+      observers.forEach((obs) => obs.disconnect())
+    }
   }, [])
 
   return (
@@ -56,34 +87,56 @@ export function Navbar() {
 
         {/* Desktop Nav Items */}
         <div className="hidden lg:flex items-center gap-1 relative">
-          {navItems.map((item, index) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="relative px-3 py-2 text-sm text-[#8892a4] hover:text-[#e8ecf1] transition-colors"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {hoveredIndex === index && (
-                <motion.div
-                  layoutId="navbar-hover"
-                  className="absolute inset-0 bg-[rgba(255,255,255,0.04)] rounded-lg"
-                  initial={false}
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">{item.label}</span>
-            </a>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = activeId === item.id
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`relative px-3 py-2 text-sm transition-colors ${
+                  isActive ? "text-[#e8ecf1]" : "text-[#8892a4] hover:text-[#e8ecf1]"
+                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {hoveredIndex === index && (
+                  <motion.div
+                    layoutId="navbar-hover"
+                    className="absolute inset-0 bg-[rgba(255,255,255,0.04)] rounded-lg"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  />
+                )}
+                {isActive && hoveredIndex !== index && (
+                  <motion.div
+                    layoutId="navbar-active"
+                    className="absolute inset-0 bg-[rgba(0,229,160,0.06)] rounded-lg"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{item.label}</span>
+                {isActive && (
+                  <motion.div
+                    layoutId="navbar-indicator"
+                    className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#00e5a0] rounded-full"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                  />
+                )}
+              </a>
+            )
+          })}
         </div>
 
         {/* CTA Button */}
         <div className="hidden lg:flex items-center">
           <Button
+            asChild
             size="sm"
             className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full px-5 font-semibold text-sm shadow-[0_0_20px_rgba(0,229,160,0.15)] hover:shadow-[0_0_30px_rgba(0,229,160,0.25)] transition-shadow"
           >
-            Book a Deployment Call
+            <a href="#contact">Book a Deployment Call</a>
           </Button>
         </div>
 
@@ -111,15 +164,24 @@ export function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="px-4 py-3 text-sm text-[#8892a4] hover:text-[#e8ecf1] hover:bg-[rgba(255,255,255,0.04)] rounded-lg transition-colors"
+                  className={`px-4 py-3 text-sm rounded-lg transition-colors ${
+                    activeId === item.id
+                      ? "text-[#e8ecf1] bg-[rgba(0,229,160,0.06)] border-l-2 border-[#00e5a0]"
+                      : "text-[#8892a4] hover:text-[#e8ecf1] hover:bg-[rgba(255,255,255,0.04)]"
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
               <hr className="border-[rgba(255,255,255,0.06)] my-2" />
-              <Button className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full font-semibold">
-                Book a Deployment Call
+              <Button
+                asChild
+                className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full font-semibold"
+              >
+                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                  Book a Deployment Call
+                </a>
               </Button>
             </div>
           </motion.div>
