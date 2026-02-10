@@ -24,7 +24,7 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 overflow-hidden">
+    <section aria-label="Hero introduction to MonakesAI freight automation" className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#06090f] pointer-events-none" />
 

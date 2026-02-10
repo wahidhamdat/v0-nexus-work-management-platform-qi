@@ -17,7 +17,7 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <footer ref={ref} className="border-t border-[rgba(255,255,255,0.06)] bg-[#06090f]">
+    <footer ref={ref} role="contentinfo" className="border-t border-[rgba(255,255,255,0.06)] bg-[#06090f]">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -90,6 +90,11 @@ export function Footer() {
             </ul>
           </div>
         </motion.div>
+
+        {/* SEO contextual text */}
+        <p className="text-xs text-[#5a6478]/60 leading-relaxed max-w-4xl mt-12">
+          MonakesAI provides AI-powered freight quoting automation, multi-carrier booking orchestration, and container lifecycle management for freight forwarders and third-party logistics companies worldwide. Our AI agents — Sarah, Alex, and Leo — handle quoting, booking, and tracking so your team can focus on customer relationships and strategic growth.
+        </p>
 
         {/* Bottom bar */}
         <motion.div

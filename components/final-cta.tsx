@@ -47,7 +47,7 @@ export function FinalCTA() {
   const labelClasses = "block text-sm text-[#8892a4] mb-2"
 
   return (
-    <section id="contact" className="relative py-28 px-6 bg-[#06090f] overflow-hidden">
+    <section id="contact" aria-label="Contact MonakesAI to deploy AI freight agents" className="relative py-28 px-6 bg-[#06090f] overflow-hidden">
       {/* Green radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(0,229,160,0.06)_0%,transparent_70%)] pointer-events-none" />
 

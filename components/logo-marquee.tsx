@@ -21,7 +21,7 @@ export function LogoMarquee() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="py-16 overflow-hidden bg-[#06090f]">
+    <section ref={ref} aria-label="Trusted logistics partners" className="py-16 overflow-hidden bg-[#06090f]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}

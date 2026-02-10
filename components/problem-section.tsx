@@ -59,6 +59,7 @@ export function ProblemSection() {
   return (
     <section
       id="problem"
+      aria-label="The problem with manual freight operations"
       className="relative py-24 px-6"
       style={{
         backgroundColor: "#0c1018",

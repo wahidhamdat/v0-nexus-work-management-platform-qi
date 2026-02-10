@@ -59,6 +59,7 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
+      aria-label="How MonakesAI agents work with human-in-the-loop approval"
       className="relative py-24 px-6"
       style={{
         backgroundColor: "#0c1018",
