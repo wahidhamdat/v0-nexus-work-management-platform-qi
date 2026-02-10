@@ -5,6 +5,7 @@ import { LogoMarquee } from "@/components/logo-marquee"
 import { ProblemSection } from "@/components/problem-section"
 import { AgentsSection } from "@/components/agents-section"
 import { HowItWorks } from "@/components/how-it-works"
+import { ResultsSection } from "@/components/results-section"
 import { Pricing } from "@/components/pricing"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
@@ -19,6 +20,7 @@ export default function Home() {
         <ProblemSection />
         <AgentsSection />
         <HowItWorks />
+        <ResultsSection />
         <Pricing />
         <FinalCTA />
         <Footer />
