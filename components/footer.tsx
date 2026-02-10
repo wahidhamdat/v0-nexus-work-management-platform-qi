@@ -3,12 +3,14 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-const footerLinks = {
-  Product: ["AI Quoting Agent", "Carrier Manager", "Container Tracker", "Ops Dashboard", "API"],
-  Company: ["About", "Careers", "Blog", "Partners", "Contact"],
-  Resources: ["Documentation", "Case Studies", "ROI Calculator", "Webinars", "Support"],
-  Legal: ["Privacy Policy", "Terms of Service", "Security", "Compliance"],
-}
+const navigateLinks = [
+  { label: "The Problem", href: "#problem" },
+  { label: "Our Agents", href: "#agents" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Results", href: "#results" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
+]
 
 export function Footer() {
   const ref = useRef(null)
@@ -21,10 +23,10 @@ export function Footer() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-5 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8"
         >
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          {/* Column 1 — Brand */}
+          <div>
             <a href="#" className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 rounded-sm bg-[#00e5a0]" />
               <span
@@ -34,50 +36,71 @@ export function Footer() {
                 MonakesAI
               </span>
             </a>
-            <p className="text-sm text-[#5a6478] mb-4">
-              AI Digital Employees for freight forwarders and 3PLs across Australia.
+            <p className="text-sm text-[#8892a4] mb-4">
+              Digital Employees for Freight & Logistics
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111822] border border-[rgba(255,255,255,0.06)]">
-              <span className="w-2 h-2 rounded-full bg-[#00e5a0] pulse-glow" />
-              <span className="text-xs text-[#8892a4]">All Systems Operational</span>
-            </div>
+            <p className="text-xs text-[#5a6478] leading-relaxed">
+              182-184 High Street North,
+              <br />
+              East Ham, London E6 2JA
+            </p>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold text-[#e8ecf1] mb-4">{title}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Column 2 — Navigate */}
+          <div>
+            <h4 className="text-sm font-semibold text-[#e8ecf1] mb-5">
+              Navigate
+            </h4>
+            <ul className="space-y-3">
+              {navigateLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3 — Get In Touch */}
+          <div>
+            <h4 className="text-sm font-semibold text-[#e8ecf1] mb-5">
+              Get In Touch
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="mailto:hello@monakesai.com"
+                  className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors"
+                >
+                  hello@monakesai.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-sm text-[#00e5a0] hover:text-[#00cc8e] transition-colors"
+                >
+                  Book a Deployment Call
+                </a>
+              </li>
+            </ul>
+          </div>
         </motion.div>
 
-        {/* Bottom */}
+        {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-16 pt-8 border-t border-[rgba(255,255,255,0.06)]"
         >
-          <p className="text-sm text-[#5a6478]">
-            &copy; {new Date().getFullYear()} MonakesAI Pty Ltd. All rights reserved.
+          <p className="text-xs text-[#5a6478] text-center">
+            &copy; 2025 MonakesAI. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
-              LinkedIn
-            </a>
-            <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
-              Twitter
-            </a>
-          </div>
         </motion.div>
       </div>
     </footer>
