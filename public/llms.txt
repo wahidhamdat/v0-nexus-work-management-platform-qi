@@ -1,0 +1,46 @@
+# MonakesAI
+
+> MonakesAI builds AI agents (Digital Employees) for freight forwarders and third-party logistics companies (3PLs). Our agents automate freight quoting, multi-carrier booking, and container lifecycle management with human-in-the-loop oversight. Based in London, serving freight forwarders and 3PLs worldwide.
+
+## Live AI Agents (Deployed)
+
+- [Sarah — Quote Orchestration Agent](https://monakesai.com/#agents): Analyses routes, calculates multi-carrier costs, optimises margins, and generates professional freight quotes in under 4 minutes. Replaces 35-45 minute manual quoting process. Handles multi-modal, multi-leg, multi-carrier freight quoting with 95% accuracy. Reduces cost per quote from $42 to under $0.60.
+
+- [Alex — Booking Orchestration Agent](https://monakesai.com/#agents): Navigates 8+ carrier portals automatically. Handles slot allocation, trip number creation, and booking confirmations. Eliminates 12+ manual SOPs per booking. Reduces booking time by 85%. Processes multi-carrier bookings across rail, sea, and road without human portal navigation.
+
+- [Leo — Container Lifecycle Sentinel](https://monakesai.com/#agents): Tracks every container from empty delivery through to dehire. Coordinates hub transfers, monitors vessel crossings, optimises inter-job container transfers, and prevents storage penalties. Reduces container storage penalties by 95%. Provides real-time visibility across the full container lifecycle.
+
+## Coming Soon Agents
+
+- [Maya — Hub Transfer Orchestration Agent](https://monakesai.com/#agents): Manages complex inter-modal hub transfers. Coming Q2 2025.
+
+- [Nova — Intelligent Communication Agent](https://monakesai.com/#agents): Automates customer and carrier communications with context-aware messaging. Coming Q3 2025.
+
+- [Finn — Financial Processing Agent](https://monakesai.com/#agents): Automates freight invoicing, cost reconciliation, and financial workflows. Coming Q4 2025.
+
+## How It Works
+
+MonakesAI uses a Human-in-the-Loop model: AI agents handle 90% of repetitive operational work (route analysis, cost calculation, portal navigation, document generation, container tracking). Human team members review and approve everything from a central dashboard before it reaches the customer. This means 90% AI automation with 100% human control.
+
+## Key Results
+
+- Freight quotes generated in 4 minutes (down from 35-45 minutes)
+- Cost per quote reduced from $42 to $0.60
+- Booking time reduced by 85%
+- Container storage penalties reduced by 95%
+- Average customer saves $107,000 per year
+- 6 carrier portals navigated automatically per booking
+
+## Company Information
+
+- Website: https://monakesai.com
+- Email: info@monakes.com
+- Address: 182-184 High Street North, East Ham, London E6 2JA, United Kingdom
+- Market: Freight forwarders and 3PLs worldwide (5-person operations to 200+ staff enterprises)
+- Founded: 2024
+
+## Pricing
+
+- Single Agent: Deploy one AI agent for a specific workflow
+- Full Digital Team (Most Popular): Deploy Sarah + Alex + Leo together for end-to-end automation
+- Enterprise: Custom integrations, dedicated infrastructure, SLA-backed performance for high-volume operations (500+ quotes/month)
