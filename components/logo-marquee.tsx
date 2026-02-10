@@ -4,14 +4,16 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
 const logos = [
-  { name: "Mainfreight" },
-  { name: "Toll Group" },
-  { name: "Linfox" },
+  { name: "Maersk" },
   { name: "DHL" },
-  { name: "CEVA Logistics" },
   { name: "Kuehne+Nagel" },
   { name: "DB Schenker" },
-  { name: "Freight People" },
+  { name: "CEVA Logistics" },
+  { name: "C.H. Robinson" },
+  { name: "DSV" },
+  { name: "Expeditors" },
+  { name: "Nippon Express" },
+  { name: "Bollor\u00e9 Logistics" },
 ]
 
 export function LogoMarquee() {
@@ -27,7 +29,7 @@ export function LogoMarquee() {
         className="text-center mb-10"
       >
         <p className="text-sm text-[#5a6478] uppercase tracking-wider font-medium">
-          Trusted by logistics leaders across Australia
+          Trusted by logistics leaders worldwide
         </p>
       </motion.div>
 

@@ -15,7 +15,7 @@ const plans = [
       "One specialised AI agent",
       "Full dashboard access",
       "Human-in-the-loop approval",
-      "Australian carrier integrations",
+      "Global carrier integrations",
       "Professional document generation",
       "Email & chat support",
     ],
@@ -31,7 +31,7 @@ const plans = [
       "All three live AI agents",
       "Unified command dashboard",
       "Priority human-in-the-loop flows",
-      "All Australian carrier integrations",
+      "All global carrier integrations",
       "Advanced analytics & reporting",
       "Dedicated onboarding specialist",
       "Priority support (< 2hr response)",
@@ -44,7 +44,7 @@ const plans = [
     tag: null,
     name: "Enterprise & High-Volume",
     description:
-      "For 3PLs and forwarders processing 500+ quotes a month. Custom integrations, dedicated infrastructure, bespoke agent training on your specific carrier network and workflows.",
+      "For 3PLs and forwarders processing high volumes. Custom integrations, dedicated infrastructure, bespoke agent training on your specific carrier network and workflows.",
     features: [
       "Custom agent configuration & training",
       "Bespoke carrier & TMS integrations",
@@ -106,7 +106,7 @@ export function Pricing() {
             }
           </p>
           <p className="text-[#5a6478] text-sm">
-            All pricing in AUD. No lock-in contracts. Scales with your volume.
+            All pricing in USD. No lock-in contracts. Scales with your volume.
           </p>
         </motion.div>
 

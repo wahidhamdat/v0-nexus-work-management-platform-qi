@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { Clock, AlertTriangle, RefreshCw, TrendingDown } from "lucide-react"
+import { Clock, RefreshCw, Package, TrendingDown } from "lucide-react"
 
 const containerVariants = {
   hidden: {},
@@ -29,26 +29,26 @@ const painPoints = [
   {
     icon: Clock,
     title: "45 Minutes Per Quote",
-    body: "Your team juggles carrier schedules, multi-leg route calculations, and margin optimisation \u2014 manually building a PDF before the customer moves on to a faster competitor.",
-    stat: "A$42 hidden cost per quote",
-  },
-  {
-    icon: AlertTriangle,
-    title: "1 in 5 Quotes Has an Error",
-    body: "Wrong carrier rate on a multi-leg run doesn\u2019t just cost margin. It costs the rework, the awkward call to the customer, and the trust that took months to build.",
-    stat: "22% average manual error rate",
+    body: "Multi-leg route calculations, carrier rate lookups, margin optimisation, document generation \u2014 all done manually. By the time your quote lands, a faster competitor already won the job.",
+    stat: "$42 hidden cost per quote",
   },
   {
     icon: RefreshCw,
-    title: "8 Carrier Portals, One Booking",
-    body: "FreightWeb, Rail Flow, Strait Link CBS, email-based systems \u2014 your staff context-switch across platforms all day. Every new carrier means another portal, another login, another SOP.",
-    stat: "45+ minutes per booking",
+    title: "8 Portals, 12 SOPs, One Booking",
+    body: "Carrier portals, freight platforms, email-based systems \u2014 your team context-switches across platforms all day. Every booking is a manual obstacle course of logins, form fills, and confirmation chasing.",
+    stat: "45+ minutes per multi-carrier booking",
+  },
+  {
+    icon: Package,
+    title: "Containers Vanishing Into Spreadsheets",
+    body: "Hired, owned, purchased \u2014 each container type has its own tracking process, dehire workflow, and supplier coordination. One missed handoff and you\u2019re paying $200/day in storage penalties while hunting a container that should\u2019ve been returned last Tuesday.",
+    stat: "8+ separate tracking processes",
   },
   {
     icon: TrendingDown,
-    title: "A$200/Day Penalty Risk",
-    body: "One missed hub transfer timing and containers sit at the depot racking up storage penalties. The bigger your volume, the bigger the exposure.",
-    stat: "Up to A$200/day per container in storage fees",
+    title: "The Hidden Cost of \u2018How We\u2019ve Always Done It\u2019",
+    body: "Manual quoting, portal-hopping bookings, and spreadsheet container tracking aren\u2019t just slow \u2014 they compound. Errors cascade. Penalties stack. Staff burn out. Your margins bleed while you\u2019re too busy firefighting to notice.",
+    stat: "$100K+ annual hidden operational cost",
   },
 ]
 
@@ -90,7 +90,7 @@ export function ProblemSection() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#e8ecf1] leading-tight max-w-4xl mb-5 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          The Entire Industry Runs on Spreadsheets, Sweat, and 11pm Phone Calls.
+          {"The Entire Industry Runs on Spreadsheets, Portal Tabs, and 11pm Phone Calls."}
         </motion.h2>
 
         {/* Subtitle */}
@@ -100,7 +100,7 @@ export function ProblemSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-16 leading-relaxed"
         >
-          {"Whether you\u2019re a 5-person forwarder or a 200-person 3PL, your operations team is burning hours on work that should take minutes. Here\u2019s what\u2019s silently killing your margins."}
+          {"Whether you\u2019re a 5-person forwarder or a 200-person 3PL, your team is burning hours on quoting, booking, and tracking work that should take minutes."}
         </motion.p>
 
         {/* Pain Point Cards */}
@@ -157,11 +157,11 @@ export function ProblemSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center text-base sm:text-lg text-[#e8ecf1] max-w-4xl mx-auto mt-16 leading-relaxed"
         >
-          At 200 quotes a month, that{"'"}s{" "}
-          <span className="text-[#00e5a0] font-semibold">A$8,400/month</span>{" "}
-          in hidden labour. At 1,000 quotes, you{"'"}re haemorrhaging{" "}
-          <span className="text-[#00e5a0] font-semibold">A$42,000</span>{" "}
-          {"— before you\u2019ve moved a single container."}
+          {"Your ops team didn\u2019t sign up to be data entry clerks. At scale, manual quoting costs "}
+          <span className="text-[#00e5a0] font-semibold">$42,000/month</span>
+          {", booking chaos adds 45 minutes per job, and one missed container transfer costs "}
+          <span className="text-[#00e5a0] font-semibold">$200/day</span>
+          {". It adds up fast."}
         </motion.p>
       </div>
     </section>

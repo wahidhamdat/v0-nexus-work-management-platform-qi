@@ -54,12 +54,12 @@ const liveAgents: LiveAgent[] = [
     label: "QUOTE ORCHESTRATION AGENT",
     name: "Sarah, Your Intelligent Quote Master",
     description:
-      "Sarah analyses routes, calculates multi-carrier costs, optimises your margins, and generates professional quote documents \u2014 all in under 4 minutes. Multi-modal, multi-leg, multi-carrier. Whether it\u2019s a Melbourne-to-Hobart container or a Sydney-to-Perth rail consignment, she handles the complexity while your team focuses on winning the customer.",
+      "Sarah analyses routes, calculates multi-carrier costs, optimises your margins, and generates professional quote documents \u2014 all in under 4 minutes. Multi-modal, multi-leg, multi-carrier. Whether it\u2019s a cross-country container or an international rail consignment, she handles the complexity while your team focuses on winning the customer.",
     metrics: [
       { value: "4 min", label: "Per Quote (was 35)" },
       { value: "95%", label: "Accuracy Rate" },
       { value: "5X", label: "Daily Capacity" },
-      { value: "A$8,400", label: "Monthly Savings" },
+      { value: "$8,400", label: "Monthly Savings" },
     ],
   },
   {
@@ -69,7 +69,7 @@ const liveAgents: LiveAgent[] = [
     label: "BOOKING ORCHESTRATION AGENT",
     name: "Alex, Your Booking Orchestration Specialist",
     description:
-      "Alex navigates carrier portals so your team doesn\u2019t have to \u2014 FreightWeb, Rail Flow, Strait Link CBS, email-based systems. Multi-carrier bookings, slot allocation, trip number creation, and confirmation emails \u2014 orchestrated automatically. One agent replaces twelve SOPs.",
+      "Alex navigates carrier portals so your team doesn\u2019t have to \u2014 freight management systems, rail booking platforms, vessel scheduling tools, email-based carriers. Multi-carrier bookings, slot allocation, trip number creation, and confirmation emails \u2014 orchestrated automatically. One agent replaces twelve SOPs.",
     metrics: [
       { value: "85%", label: "Faster Bookings" },
       { value: "90%", label: "Less Manual Errors" },
@@ -84,12 +84,12 @@ const liveAgents: LiveAgent[] = [
     label: "CONTAINER LIFECYCLE SENTINEL",
     name: "Leo, Your Container Lifecycle Sentinel",
     description:
-      "Leo tracks every container \u2014 hired, owned, or purchased \u2014 from empty delivery to full collection to dehire. He coordinates hub transfers, monitors vessel crossings, optimises inter-job transfers, and alerts your team before a A$200/day penalty even starts. Whether you\u2019re moving 20 containers a week or 200.",
+      "Leo tracks every container \u2014 hired, owned, or purchased \u2014 from empty delivery to full collection to dehire. He coordinates hub transfers, monitors vessel crossings, optimises inter-job transfers, and alerts your team before a $200/day penalty even starts. Whether you\u2019re moving 20 containers a week or 200.",
     metrics: [
       { value: "95%", label: "Penalty Reduction" },
       { value: "Real-time", label: "Status Tracking" },
       { value: "3X", label: "Throughput Increase" },
-      { value: "A$0", label: "Target Storage Penalties" },
+      { value: "$0", label: "Target Storage Penalties" },
     ],
   },
 ]
@@ -330,8 +330,7 @@ export function AgentsSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-16 leading-relaxed"
         >
-          Three specialists deployed and ready. Three more in the pipeline. Each one trained on Australian freight
-          operations, built for your workflows, and managed from one command dashboard. They scale as you scale.
+          {"Three specialists deployed and ready. Three more in the pipeline. Each one trained on global freight operations, built for your workflows, and managed from one command dashboard. They scale as you scale."}
         </motion.p>
 
         {/* ═══════ DEPLOYED & READY ═══════ */}
