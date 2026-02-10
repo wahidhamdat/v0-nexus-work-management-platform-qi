@@ -47,7 +47,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-[720px]  mx-auto lg:mx-0 lg:ml-[max(2rem,calc((100vw-1280px)/2+2rem))]">
+      <div className="relative z-10 max-w-[800px] mx-auto text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-base sm:text-lg text-[#8892a4] max-w-[640px] mb-10 leading-relaxed"
+          className="text-base sm:text-lg text-[#8892a4] max-w-[640px] mx-auto mb-10 leading-relaxed"
         >
           Freight forwarders and 3PLs are still drowning in manual quoting, carrier juggling, and container tracking. Our
           AI agents handle 90% of it — while your team keeps 100% control from one dashboard.
@@ -105,7 +105,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-start gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <Button
             size="lg"
@@ -129,7 +129,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-0"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-0"
         >
           {stats.map((stat, index) => (
             <div
