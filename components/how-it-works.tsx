@@ -36,7 +36,7 @@ const steps = [
     number: "2",
     icon: Cpu,
     title: "Agent Does the Work",
-    text: "Route analysis. Carrier selection. Cost calculation. Document generation. Portal navigation. Done in minutes, not hours.",
+    text: "Route analysis. Carrier selection. Cost calculation. Document generation. Portal navigation. Container tracking. Done in minutes, not hours.",
   },
   {
     number: "3",
@@ -98,7 +98,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-20 leading-relaxed"
         >
-          {"No AI black box. No loss of control. Your agents handle the repetitive work and present everything for human review. One dashboard. Full visibility. Whether you've got 3 people or 300."}
+          {"No AI black box. No loss of control. Your agents handle the repetitive work and present everything for human review. One dashboard. Full visibility. Whether you run a 5-person outfit or a 300-person operation."}
         </motion.p>
 
         {/* Steps Flow */}

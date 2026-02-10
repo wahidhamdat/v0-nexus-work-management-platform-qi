@@ -17,9 +17,9 @@ const textRevealVariants = {
 }
 
 const stats = [
-  { value: "85%", label: "Faster Quoting" },
-  { value: "A$107K", label: "Average Annual Savings" },
-  { value: "5X", label: "More Capacity, Zero Hires" },
+  { value: "4 min", label: "Quote Generation (was 35 min)" },
+  { value: "85%", label: "Faster Carrier Bookings" },
+  { value: "95%", label: "Container Penalty Reduction" },
 ]
 
 export function Hero() {
@@ -56,7 +56,7 @@ export function Hero() {
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111822] border border-[rgba(255,255,255,0.06)] mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-[#00e5a0] pulse-glow" />
-          <span className="text-sm text-[#8892a4]">Now Deploying Across Australia</span>
+          <span className="text-sm text-[#8892a4]">Now Deploying Worldwide</span>
         </motion.div>
 
         {/* Headline */}
@@ -72,7 +72,7 @@ export function Hero() {
               animate="visible"
               custom={0}
             >
-              {"Your Next Hire Isn't Human."}
+              {"Your Freight Ops Team Just Got 6 New Employees."}
             </motion.span>
           </span>
           <span className="block overflow-hidden">
@@ -83,8 +83,7 @@ export function Hero() {
               animate="visible"
               custom={1}
             >
-              It Quotes Freight in{" "}
-              <span className="text-[#00e5a0]">4 Minutes Flat.</span>
+              <span className="text-[#00e5a0]">None of Them Are Human.</span>
             </motion.span>
           </span>
         </h1>
@@ -96,8 +95,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base sm:text-lg text-[#8892a4] max-w-[640px] mx-auto mb-10 leading-relaxed"
         >
-          Freight forwarders and 3PLs are still drowning in manual quoting, carrier juggling, and container tracking. Our
-          AI agents handle 90% of it — while your team keeps 100% control from one dashboard.
+          {"Freight forwarders and 3PLs lose thousands of hours a year to manual quoting, multi-portal booking chaos, and container tracking spreadsheets. Our AI agents handle 90% of it \u2014 quoting, booking, and tracking \u2014 while your team keeps 100% control from one dashboard."}
         </motion.p>
 
         {/* CTAs */}

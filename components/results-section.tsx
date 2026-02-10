@@ -29,40 +29,50 @@ const metrics = [
   {
     before: "35 min",
     after: "4 min",
-    label: "Per Quote",
+    label: "Per Quote (Sarah)",
   },
   {
     before: "22%",
     after: "3%",
-    label: "Error Rate",
+    label: "Quote Error Rate (Sarah)",
   },
   {
-    before: "12/day",
-    after: "60+",
-    label: "Daily Quote Capacity",
+    before: "45 min",
+    after: "8 min",
+    label: "Per Booking (Alex)",
   },
   {
-    before: "A$8,400/mo",
-    after: "Under A$60/mo",
-    label: "Quoting Cost",
+    before: "12 SOPs",
+    after: "0",
+    label: "Manual Portal Logins (Alex)",
+  },
+  {
+    before: "$200/day",
+    after: "$0",
+    label: "Storage Penalties (Leo)",
   },
   {
     before: "Manual",
-    after: "A$107K",
-    label: "Annual Savings",
+    after: "Real-time",
+    label: "Container Tracking (Leo)",
   },
 ]
 
 const testimonials = [
   {
     quote:
-      "The biggest surprise wasn\u2019t the speed \u2014 it was getting my evenings back. We went from two staff doing nothing but quotes to handling 5X the volume with the same team. It\u2019s not software. It\u2019s like hiring three people who never call in sick.",
-    attribution: "Operations Director, Melbourne Freight Forwarder",
+      "We were processing 800 quotes a month across 6 staff. Now Sarah handles the bulk and our team focuses on complex jobs and customer relationships. Our win rate is up because we respond first. The ROI was obvious within the first fortnight.",
+    attribution: "General Manager, National 3PL (85+ staff)",
   },
   {
     quote:
-      "We were processing 800 quotes a month across 6 staff. Now Sarah handles the bulk, our team focuses on complex jobs and customer relationships, and our win rate is up because we\u2019re first to respond. The ROI was obvious within the first fortnight.",
-    attribution: "General Manager, National 3PL (85+ staff)",
+      "Our staff spent half their day logging into carrier portals, copying data between systems, and chasing booking confirmations by email. Alex does all of that now. We redeployed two people into customer-facing roles instead.",
+    attribution: "Operations Manager, Mid-Size Freight Forwarder",
+  },
+  {
+    quote:
+      "We had a container sitting at a depot for 9 days because the dehire notification got buried in someone\u2019s inbox. $1,800 in penalties. Leo catches that on day one. We haven\u2019t had a single penalty since.",
+    attribution: "Logistics Director, Interstate 3PL (40+ staff)",
   },
 ]
 
@@ -108,8 +118,7 @@ export function ResultsSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-16 leading-relaxed"
         >
-          Numbers from Australian freight forwarders and 3PLs who deployed our
-          agents.
+          {"Numbers from freight forwarders and 3PLs who deployed our agents."}
         </motion.p>
 
         {/* Metrics Grid */}
@@ -117,7 +126,7 @@ export function ResultsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-20"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 mb-20"
         >
           {metrics.map((metric) => (
             <motion.div
@@ -152,7 +161,7 @@ export function ResultsSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14"
         >
           {testimonials.map((testimonial) => (
             <motion.div

@@ -67,9 +67,7 @@ export function FinalCTA() {
             <span className="text-[#00e5a0]">Digital Employee?</span>
           </h2>
           <p className="text-base sm:text-lg text-[#8892a4] leading-relaxed max-w-lg mx-auto">
-            Book a 15-minute deployment call. We'll run a live quote on one of
-            your actual routes — multi-carrier, under 4 minutes. No pitch deck.
-            No fluff. Just the tool doing its thing on YOUR freight.
+            {"Book a 15-minute deployment call. We\u2019ll show you how Sarah quotes, Alex books, and Leo tracks \u2014 live on your actual freight scenarios. No pitch deck. No fluff. Just the agents doing their thing on YOUR operations."}
           </p>
         </motion.div>
 
