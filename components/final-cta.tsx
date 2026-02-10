@@ -1,55 +1,31 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useRef, useEffect, useState, useCallback } from "react"
-
-const HUBSPOT_PORTAL_ID = "147781266"
-const HUBSPOT_FORM_ID = "dc7bc7e3-6a71-4506-9a97-b7024927ad6d"
+import { useRef, useEffect, useState } from "react"
 
 export function FinalCTA() {
   const ref = useRef(null)
-  const formContainerRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [formReady, setFormReady] = useState(false)
 
-  const createForm = useCallback(() => {
-    if (
-      formContainerRef.current &&
-      typeof window !== "undefined" &&
-      (window as any).hbspt
-    ) {
-      formContainerRef.current.innerHTML = ""
-      ;(window as any).hbspt.forms.create({
-        region: "eu1",
-        portalId: HUBSPOT_PORTAL_ID,
-        formId: HUBSPOT_FORM_ID,
-        target: `#hubspot-form-container`,
-        onFormReady: () => {
-          setFormReady(true)
-        },
-      })
-    }
-  }, [])
-
   useEffect(() => {
-    // Check if script already loaded
-    if ((window as any).hbspt) {
-      createForm()
+    // Load the new HubSpot embed script
+    const existingScript = document.querySelector(
+      'script[src="https://js-eu1.hsforms.net/forms/embed/147781266.js"]'
+    )
+    if (existingScript) {
+      setFormReady(true)
       return
     }
 
     const script = document.createElement("script")
-    script.src = "//js-eu1.hsforms.net/forms/embed/v2.js"
-    script.async = true
+    script.src = "https://js-eu1.hsforms.net/forms/embed/147781266.js"
+    script.defer = true
     script.onload = () => {
-      createForm()
+      setFormReady(true)
     }
     document.head.appendChild(script)
-
-    return () => {
-      // Cleanup: don't remove script as other instances may need it
-    }
-  }, [createForm])
+  }, [])
 
   return (
     <section
@@ -101,11 +77,12 @@ export function FinalCTA() {
             </div>
           )}
 
-          {/* HubSpot embedded form container */}
+          {/* HubSpot embedded form via hs-form-frame (no CAPTCHA) */}
           <div
-            id="hubspot-form-container"
-            ref={formContainerRef}
-            className={formReady ? "block" : "hidden"}
+            className="hs-form-frame"
+            data-region="eu1"
+            data-form-id="dc7bc7e3-6a71-4506-9a97-b7024927ad6d"
+            data-portal-id="147781266"
           />
         </motion.div>
 
