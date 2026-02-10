@@ -3,7 +3,7 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { LogoMarquee } from "@/components/logo-marquee"
 import { ProblemSection } from "@/components/problem-section"
-import { BentoGrid } from "@/components/bento-grid"
+import { AgentsSection } from "@/components/agents-section"
 import { Pricing } from "@/components/pricing"
 import { FinalCTA } from "@/components/final-cta"
 import { Footer } from "@/components/footer"
@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <LogoMarquee />
         <ProblemSection />
-        <BentoGrid />
+        <AgentsSection />
         <Pricing />
         <FinalCTA />
         <Footer />
