@@ -4,10 +4,10 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
 const footerLinks = {
-  Product: ["Features", "Pricing", "Changelog", "Roadmap", "API"],
-  Resources: ["Documentation", "Guides", "Blog", "Community", "Templates"],
-  Company: ["About", "Careers", "Press", "Partners", "Contact"],
-  Legal: ["Privacy", "Terms", "Security", "Cookies", "Licenses"],
+  Product: ["AI Quoting Agent", "Carrier Manager", "Container Tracker", "Ops Dashboard", "API"],
+  Company: ["About", "Careers", "Blog", "Partners", "Contact"],
+  Resources: ["Documentation", "Case Studies", "ROI Calculator", "Webinars", "Support"],
+  Legal: ["Privacy Policy", "Terms of Service", "Security", "Compliance"],
 }
 
 export function Footer() {
@@ -15,8 +15,8 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <footer ref={ref} className="border-t border-zinc-800 bg-zinc-950">
-      <div className="max-w-6xl mx-auto px-4 py-16">
+    <footer ref={ref} className="border-t border-[rgba(255,255,255,0.06)] bg-[#06090f]">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -26,27 +26,31 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
-                <span className="text-zinc-950 font-bold text-sm">A</span>
-              </div>
-              <span className="font-semibold text-white">Apex</span>
+              <div className="w-2 h-2 rounded-sm bg-[#00e5a0]" />
+              <span
+                className="font-bold text-[#e8ecf1] text-lg"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                MonakesAI
+              </span>
             </a>
-            <p className="text-sm text-zinc-500 mb-4">The modern platform for teams who ship fast.</p>
-            {/* System Status */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 pulse-glow" />
-              <span className="text-xs text-zinc-400">All Systems Operational</span>
+            <p className="text-sm text-[#5a6478] mb-4">
+              AI Digital Employees for freight forwarders and 3PLs across Australia.
+            </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#111822] border border-[rgba(255,255,255,0.06)]">
+              <span className="w-2 h-2 rounded-full bg-[#00e5a0] pulse-glow" />
+              <span className="text-xs text-[#8892a4]">All Systems Operational</span>
             </div>
           </div>
 
           {/* Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-sm font-semibold text-white mb-4">{title}</h4>
+              <h4 className="text-sm font-semibold text-[#e8ecf1] mb-4">{title}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                    <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
                       {link}
                     </a>
                   </li>
@@ -61,18 +65,17 @@ export function Footer() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-16 pt-8 border-t border-[rgba(255,255,255,0.06)] flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} Apex, Inc. All rights reserved.</p>
+          <p className="text-sm text-[#5a6478]">
+            &copy; {new Date().getFullYear()} MonakesAI Pty Ltd. All rights reserved.
+          </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
+            <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
+              LinkedIn
+            </a>
+            <a href="#" className="text-sm text-[#5a6478] hover:text-[#e8ecf1] transition-colors">
               Twitter
-            </a>
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              GitHub
-            </a>
-            <a href="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
-              Discord
             </a>
           </div>
         </motion.div>
