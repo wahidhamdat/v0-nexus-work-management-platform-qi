@@ -10,7 +10,7 @@ export function FinalCTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section className="py-24 px-4">
+    <section id="contact" className="py-24 px-6 bg-[#06090f]">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 40 }}
@@ -19,33 +19,38 @@ export function FinalCTA() {
         className="max-w-4xl mx-auto text-center"
       >
         <h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
-          style={{ fontFamily: "var(--font-cal-sans)" }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#e8ecf1] mb-6 tracking-tight"
+          style={{ fontFamily: "var(--font-heading)" }}
         >
-          Ready to ship faster?
+          Ready to Deploy Your
+          <br />
+          <span className="text-[#00e5a0]">First Digital Employee?</span>
         </h2>
-        <p className="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-          Join thousands of teams already building with Apex. Start free, no credit card required.
+        <p className="text-lg sm:text-xl text-[#8892a4] mb-10 max-w-2xl mx-auto leading-relaxed">
+          Join freight forwarders and 3PLs across Australia who are already quoting faster, saving more, and scaling
+          without hiring.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
             size="lg"
-            className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-white/20"
+            className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full px-8 h-14 text-base font-semibold shadow-[0_0_30px_rgba(0,229,160,0.2)] hover:shadow-[0_0_40px_rgba(0,229,160,0.3)] transition-shadow"
           >
-            Get Started for Free
+            Book a Deployment Call
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <Button
             variant="outline"
             size="lg"
-            className="rounded-full px-8 h-14 text-base font-medium border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white hover:border-zinc-700 bg-transparent"
+            className="rounded-full px-8 h-14 text-base font-medium border-[rgba(255,255,255,0.12)] text-[#e8ecf1] hover:bg-[rgba(255,255,255,0.04)] hover:text-[#e8ecf1] hover:border-[rgba(255,255,255,0.2)] bg-transparent"
           >
-            Talk to Sales
+            See a Live Demo
           </Button>
         </div>
 
-        <p className="mt-8 text-sm text-zinc-500">Free forever for individuals. Team plans start at $29/month.</p>
+        <p className="mt-8 text-sm text-[#5a6478]">
+          Free 14-day trial. No credit card required. Full onboarding included.
+        </p>
       </motion.div>
     </section>
   )

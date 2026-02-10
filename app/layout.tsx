@@ -1,31 +1,25 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope, DM_Serif_Display, Instrument_Sans } from "next/font/google"
+import { Syne, DM_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const manrope = Manrope({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-manrope",
-})
-
-const calSans = DM_Serif_Display({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-cal-sans",
+  variable: "--font-syne",
   display: "swap",
 })
 
-const instrumentSans = Instrument_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-instrument-sans",
+  variable: "--font-dm-sans",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Apex - Enterprise SaaS Platform",
-  description: "The modern platform for teams who ship fast. Built for scale, designed for speed.",
-    generator: 'v0.app'
+  title: "MonakesAI - AI Digital Employees for Freight & Logistics",
+  description:
+    "AI agents that quote freight in 4 minutes flat. Built for freight forwarders, 3PLs, and logistics companies across Australia.",
 }
 
 export default function RootLayout({
@@ -35,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
+      <body className={`${syne.variable} ${dmSans.variable} font-sans antialiased`}>
         <div className="noise-overlay" aria-hidden="true" />
         {children}
         <Analytics />

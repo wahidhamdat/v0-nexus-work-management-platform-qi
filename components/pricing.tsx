@@ -1,49 +1,58 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const plans = [
   {
     name: "Starter",
-    description: "Perfect for side projects and small teams",
-    price: { monthly: 0, yearly: 0 },
-    features: ["3 team members", "10 projects", "Basic analytics", "Community support", "1GB storage"],
-    cta: "Get Started",
+    description: "For small forwarders getting started with AI",
+    price: "A$1,490",
+    period: "/month",
+    features: [
+      "1 AI Quoting Agent",
+      "Up to 200 quotes/month",
+      "5 carrier integrations",
+      "Email & chat support",
+      "Basic analytics dashboard",
+    ],
+    cta: "Start Free Trial",
     highlighted: false,
   },
   {
-    name: "Pro",
-    description: "For growing teams that need more power",
-    price: { monthly: 29, yearly: 24 },
+    name: "Growth",
+    description: "For 3PLs scaling operations fast",
+    price: "A$3,490",
+    period: "/month",
     features: [
-      "Unlimited team members",
-      "Unlimited projects",
-      "Advanced analytics",
-      "Priority support",
-      "100GB storage",
-      "Custom domains",
+      "3 AI Agents (Quote + Track + Carrier)",
+      "Unlimited quotes",
+      "20+ carrier integrations",
+      "Priority support & onboarding",
+      "Advanced analytics & reporting",
+      "Custom workflow rules",
       "API access",
     ],
-    cta: "Start Free Trial",
+    cta: "Deploy Now",
     highlighted: true,
   },
   {
     name: "Enterprise",
-    description: "For organizations with advanced needs",
-    price: { monthly: 99, yearly: 79 },
+    description: "For large logistics operations",
+    price: "Custom",
+    period: "",
     features: [
-      "Everything in Pro",
-      "SSO & SAML",
-      "Dedicated support",
+      "Unlimited AI Agents",
+      "Unlimited everything",
+      "Custom carrier integrations",
+      "Dedicated success manager",
       "SLA guarantee",
-      "Unlimited storage",
-      "Custom integrations",
-      "Audit logs",
+      "SSO & audit logs",
+      "On-premise option",
     ],
-    cta: "Contact Sales",
+    cta: "Talk to Us",
     highlighted: false,
   },
 ]
@@ -52,7 +61,7 @@ function BorderBeam() {
   return (
     <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
       <div
-        className="absolute w-24 h-24 bg-white/20 blur-xl border-beam"
+        className="absolute w-24 h-24 bg-[#00e5a0]/20 blur-xl border-beam"
         style={{
           offsetPath: "rect(0 100% 100% 0 round 16px)",
         }}
@@ -64,10 +73,9 @@ function BorderBeam() {
 export function Pricing() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly")
 
   return (
-    <section id="pricing" className="py-24 px-4">
+    <section id="pricing" className="py-24 px-6 bg-[#06090f]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,51 +84,14 @@ export function Pricing() {
           className="text-center mb-12"
         >
           <h2
-            className="text-3xl sm:text-4xl font-bold text-white mb-4"
-            style={{ fontFamily: "var(--font-instrument-sans)" }}
+            className="text-3xl sm:text-4xl font-bold text-[#e8ecf1] mb-4"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
-            Simple, transparent pricing
+            Transparent Pricing
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-            Start free, scale as you grow. No hidden fees, no surprises.
+          <p className="text-[#8892a4] max-w-2xl mx-auto">
+            No setup fees. No lock-in contracts. Cancel anytime. ROI typically achieved within the first month.
           </p>
-
-          {/* Billing Toggle */}
-          <div className="inline-flex items-center p-1 rounded-full bg-zinc-900 border border-zinc-800">
-            <button
-              onClick={() => setBillingCycle("monthly")}
-              className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                billingCycle === "monthly" ? "text-white" : "text-zinc-400"
-              }`}
-            >
-              {billingCycle === "monthly" && (
-                <motion.div
-                  layoutId="billing-toggle"
-                  className="absolute inset-0 bg-zinc-800 rounded-full"
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">Monthly</span>
-            </button>
-            <button
-              onClick={() => setBillingCycle("yearly")}
-              className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                billingCycle === "yearly" ? "text-white" : "text-zinc-400"
-              }`}
-            >
-              {billingCycle === "yearly" && (
-                <motion.div
-                  layoutId="billing-toggle"
-                  className="absolute inset-0 bg-zinc-800 rounded-full"
-                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                />
-              )}
-              <span className="relative z-10">Yearly</span>
-              <span className="relative z-10 ml-2 px-2 py-0.5 text-xs bg-emerald-500/20 text-emerald-400 rounded-full">
-                -20%
-              </span>
-            </button>
-          </div>
         </motion.div>
 
         <motion.div
@@ -136,49 +107,51 @@ export function Pricing() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className={`relative p-6 rounded-2xl border transition-all duration-300 hover:scale-[1.02] ${
+              className={`relative p-6 rounded-2xl border transition-all duration-300 ${
                 plan.highlighted
-                  ? "bg-zinc-900 border-zinc-700"
-                  : "bg-zinc-900/50 border-zinc-800 hover:border-zinc-600"
+                  ? "bg-[#111822] border-[rgba(0,229,160,0.2)]"
+                  : "bg-[#111822]/50 border-[rgba(255,255,255,0.06)] hover:border-[rgba(255,255,255,0.12)]"
               }`}
             >
               {plan.highlighted && <BorderBeam />}
 
               {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-white text-zinc-950 text-xs font-medium rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#00e5a0] text-[#06090f] text-xs font-semibold rounded-full">
                   Most Popular
                 </div>
               )}
 
               <div className="mb-6">
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
-                <p className="text-zinc-400 text-sm">{plan.description}</p>
+                <h3 className="text-xl font-semibold text-[#e8ecf1] mb-2">{plan.name}</h3>
+                <p className="text-[#8892a4] text-sm">{plan.description}</p>
               </div>
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-white">${plan.price[billingCycle]}</span>
-                  {plan.price.monthly > 0 && <span className="text-zinc-400 text-sm">/month</span>}
+                  <span
+                    className="text-4xl font-bold text-[#e8ecf1]"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {plan.price}
+                  </span>
+                  {plan.period && <span className="text-[#5a6478] text-sm">{plan.period}</span>}
                 </div>
-                {billingCycle === "yearly" && plan.price.yearly > 0 && (
-                  <p className="text-xs text-zinc-500 mt-1">Billed annually (${plan.price.yearly * 12}/year)</p>
-                )}
               </div>
 
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-zinc-300">
-                    <Check className="w-4 h-4 text-emerald-500 shrink-0" strokeWidth={1.5} />
+                  <li key={feature} className="flex items-center gap-3 text-sm text-[#8892a4]">
+                    <Check className="w-4 h-4 text-[#00e5a0] shrink-0" strokeWidth={1.5} />
                     {feature}
                   </li>
                 ))}
               </ul>
 
               <Button
-                className={`w-full rounded-full ${
+                className={`w-full rounded-full font-semibold ${
                   plan.highlighted
-                    ? "shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200"
-                    : "bg-zinc-800 text-white hover:bg-zinc-700 border border-zinc-700"
+                    ? "shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e]"
+                    : "bg-[#1a2332] text-[#e8ecf1] hover:bg-[#223043] border border-[rgba(255,255,255,0.06)]"
                 }`}
               >
                 {plan.cta}
