@@ -297,7 +297,7 @@ export function AgentsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="agents" className="py-24 px-6 bg-[#06090f]">
+    <section id="agents" aria-label="AI agents for freight forwarding operations" className="py-24 px-6 bg-[#06090f]">
       <div className="max-w-6xl mx-auto" ref={ref}>
         {/* Section Label */}
         <motion.div

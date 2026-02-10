@@ -83,6 +83,7 @@ export function ResultsSection() {
   return (
     <section
       id="results"
+      aria-label="Real results from deploying AI freight agents"
       className="relative py-24 px-6"
       style={{ backgroundColor: "#06090f" }}
     >

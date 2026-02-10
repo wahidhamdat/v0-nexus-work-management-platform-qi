@@ -79,6 +79,7 @@ export function Pricing() {
   return (
     <section
       id="pricing"
+      aria-label="Pricing plans for AI freight agents"
       className="relative py-24 px-6 bg-[#0c1018] border-t border-b border-[rgba(255,255,255,0.04)]"
     >
       <div className="max-w-6xl mx-auto">

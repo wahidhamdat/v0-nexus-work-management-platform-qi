@@ -6,12 +6,12 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { label: "The Problem", href: "#problem", id: "problem" },
-  { label: "Our Agents", href: "#agents", id: "agents" },
-  { label: "How It Works", href: "#how-it-works", id: "how-it-works" },
-  { label: "Results", href: "#results", id: "results" },
-  { label: "Pricing", href: "#pricing", id: "pricing" },
-  { label: "Contact", href: "#contact", id: "contact" },
+  { label: "The Problem", href: "#problem", id: "problem", ariaLabel: "View the problems we solve for freight forwarders" },
+  { label: "Our Agents", href: "#agents", id: "agents", ariaLabel: "View our AI agents for freight forwarding" },
+  { label: "How It Works", href: "#how-it-works", id: "how-it-works", ariaLabel: "Learn how our AI agents work" },
+  { label: "Results", href: "#results", id: "results", ariaLabel: "See real results from our AI agents" },
+  { label: "Pricing", href: "#pricing", id: "pricing", ariaLabel: "View pricing for AI freight agents" },
+  { label: "Contact", href: "#contact", id: "contact", ariaLabel: "Contact us to deploy AI agents" },
 ]
 
 export function Navbar() {
@@ -72,6 +72,8 @@ export function Navbar() {
     >
       <nav
         ref={navRef}
+        role="navigation"
+        aria-label="Main navigation"
         className="relative flex items-center justify-between px-6 py-4 max-w-7xl mx-auto"
       >
         {/* Logo */}
@@ -93,6 +95,7 @@ export function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
+                aria-label={item.ariaLabel}
                 className={`relative px-3 py-2 text-sm transition-colors ${
                   isActive ? "text-[#e8ecf1]" : "text-[#8892a4] hover:text-[#e8ecf1]"
                 }`}
