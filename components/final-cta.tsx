@@ -90,17 +90,16 @@ export function FinalCTA() {
     setErrorMessage("")
 
     try {
-      const { error } = await supabase.from("contact_submissions").insert([
+      const { error } = await supabase.from("form_submissions").insert([
         {
           first_name: formData.first_name.trim(),
           last_name: formData.last_name.trim(),
           email: formData.email.trim(),
           phone: formData.phone.trim() || null,
-          company: formData.company.trim(),
+          company_name: formData.company.trim(),
           monthly_quote_volume: formData.monthly_quote_volume || null,
+          biggest_ops_pain: formData.message.trim() || null,
           agent_interest: formData.agent_interest || null,
-          message: formData.message.trim() || null,
-          lead_source: "Website Form",
         },
       ])
 
