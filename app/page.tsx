@@ -1,7 +1,7 @@
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { LogoMarquee } from "@/components/logo-marquee"
+
 import { ProblemSection } from "@/components/problem-section"
 import { AgentsSection } from "@/components/agents-section"
 import { HowItWorks } from "@/components/how-it-works"
@@ -207,7 +207,6 @@ export default function Home() {
       <main id="main-content" className="min-h-screen bg-[#06090f]">
         <Navbar />
         <Hero />
-        <LogoMarquee />
         <ProblemSection />
         <AgentsSection />
         <HowItWorks />
