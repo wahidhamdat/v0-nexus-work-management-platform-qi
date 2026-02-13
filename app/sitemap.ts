@@ -1,14 +1,10 @@
 import type { MetadataRoute } from "next"
 
-const BASE_URL = "https://monakesai.com"
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
-
   return [
     {
-      url: BASE_URL,
-      lastModified,
+      url: "https://monakesai.com/",
+      lastModified: new Date().toISOString(),
       changeFrequency: "weekly",
       priority: 1,
     },
