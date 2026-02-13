@@ -12,11 +12,11 @@
 
 ## Coming Soon Agents
 
-- [Maya — Hub Transfer Orchestration Agent](https://monakesai.com/#agents): Manages complex inter-modal hub transfers. Coming Q2 2025.
+- [Maya — Hub Transfer Orchestration Agent](https://monakesai.com/#agents): Manages complex inter-modal hub transfers. Coming Q2 2026.
 
-- [Nova — Intelligent Communication Agent](https://monakesai.com/#agents): Automates customer and carrier communications with context-aware messaging. Coming Q3 2025.
+- [Nova — Intelligent Communication Agent](https://monakesai.com/#agents): Automates customer and carrier communications with context-aware messaging. Coming Q3 2026.
 
-- [Finn — Financial Processing Agent](https://monakesai.com/#agents): Automates freight invoicing, cost reconciliation, and financial workflows. Coming Q4 2025.
+- [Finn — Financial Processing Agent](https://monakesai.com/#agents): Automates freight invoicing, cost reconciliation, and financial workflows. Coming Q4 2026.
 
 ## How It Works
 

@@ -104,7 +104,7 @@ export function Footer() {
           className="mt-16 pt-8 border-t border-[rgba(255,255,255,0.06)]"
         >
           <p className="text-xs text-[#5a6478] text-center">
-            &copy; 2025 MonakesAI. All rights reserved.
+            &copy; 2026 MonakesAI. All rights reserved.
           </p>
         </motion.div>
       </div>
