@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 
 export async function POST() {
   const key = process.env.INDEXNOW_KEY || "monakesai2025"
-  const url = "https://monakesai.com"
+  const url = "https://monakesai.com/"
 
   const res = await fetch("https://api.indexnow.org/indexnow", {
     method: "POST",
