@@ -41,5 +41,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://monakesai.com/sitemap.xml",
+    host: "https://monakesai.com",
   }
 }
