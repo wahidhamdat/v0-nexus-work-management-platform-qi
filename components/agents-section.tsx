@@ -101,7 +101,7 @@ const comingSoonAgents: ComingSoonAgent[] = [
     gradient: "linear-gradient(135deg, #f43f5e, #fb7185)",
     label: "HUB TRANSFER ORCHESTRATION AGENT",
     name: "Maya, Your Hub Transfer Commander",
-    badge: "COMING Q2 2025",
+    badge: "COMING Q2 2026",
     description:
       "Maya eliminates missed connections between incompatible carriers. She calculates optimal transfer windows, auto-allocates drivers, monitors real-time delays, and triggers contingency plans before storage penalties kick in. Precision coordination at any volume.",
     tags: [
@@ -117,7 +117,7 @@ const comingSoonAgents: ComingSoonAgent[] = [
     gradient: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
     label: "INTELLIGENT COMMUNICATION AGENT",
     name: "Nova, Your Customer Comms Specialist",
-    badge: "COMING Q3 2025",
+    badge: "COMING Q3 2026",
     description:
       "Nova reads, classifies, and responds to inbound emails in seconds. Quote enquiries get routed to Sarah. Booking questions go to Alex. Complaints get flagged for humans. She manages your sales sequences, generates personalised follow-ups, and makes sure no lead falls through the cracks \u2014 whether you get 20 enquiries a day or 200.",
     tags: [
@@ -133,7 +133,7 @@ const comingSoonAgents: ComingSoonAgent[] = [
     gradient: "linear-gradient(135deg, #10b981, #34d399)",
     label: "FINANCIAL PROCESSING AGENT",
     name: "Finn, Your Financial Ops Engine",
-    badge: "COMING Q4 2025",
+    badge: "COMING Q4 2026",
     description:
       "Finn handles deposit invoicing the moment a booking is confirmed, generates final invoices after container weighing, processes credit card fee calculations (1.9% Visa/MC, 3.3% Amex), enforces refund policies, and manages trading account terms. From a handful of invoices to thousands \u2014 your books, on autopilot.",
     tags: [
@@ -396,7 +396,7 @@ export function AgentsSection() {
           className="text-center mt-16"
         >
           <p className="text-base sm:text-lg text-[#8892a4] max-w-3xl mx-auto mb-8 leading-relaxed">
-            The full fleet deploys by end of 2025. Early adopters get priority onboarding and{" "}
+            The full fleet deploys by end of 2026. Early adopters get priority onboarding and{" "}
             <span className="text-[#00e5a0] font-semibold">founding-member pricing</span>.
           </p>
           <a
