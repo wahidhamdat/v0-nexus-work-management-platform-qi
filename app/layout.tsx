@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://monakesai.com"),
+  metadataBase: new URL("https://monakesai.com/"),
   title: {
     default: "MonakesAI — AI Agents for Freight Forwarding & 3PL Operations",
     template: "%s | MonakesAI",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   creator: "MonakesAI",
   publisher: "MonakesAI",
   formatDetection: { email: false, address: false, telephone: false },
-  alternates: { canonical: "https://monakesai.com" },
+  alternates: { canonical: "https://monakesai.com/" },
   robots: {
     index: true,
     follow: true,
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://monakesai.com",
+    url: "https://monakesai.com/",
     siteName: "MonakesAI",
     title: "MonakesAI — AI Agents That Quote, Book & Track Freight Automatically",
     description:
