@@ -17,9 +17,9 @@ const textRevealVariants = {
 }
 
 const stats = [
-  { value: "4 min", label: "Quote Generation (was 35 min)" },
-  { value: "85%", label: "Faster Carrier Bookings" },
-  { value: "95%", label: "Container Penalty Reduction" },
+  { value: "4 min", label: "Your Quote Hits the Inbox (Theirs Takes 35)" },
+  { value: "85%", label: "Faster Than Manual Booking" },
+  { value: "$0", label: "Storage Penalties (Was $200/Day)" },
 ]
 
 export function Hero() {
@@ -56,7 +56,7 @@ export function Hero() {
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111822] border border-[rgba(255,255,255,0.06)] mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-[#00e5a0] pulse-glow" />
-          <span className="text-sm text-[#8892a4]">Now Deploying Worldwide</span>
+          <span className="text-sm text-[#8892a4]">Trusted by Freight Teams Across 3 Continents</span>
         </motion.div>
 
         {/* Headline */}
@@ -72,7 +72,7 @@ export function Hero() {
               animate="visible"
               custom={0}
             >
-              {"Your Freight Ops Team Just Got 6 New Employees."}
+              {"Your Quote Lands First. Every Time."}
             </motion.span>
           </span>
           <span className="block overflow-hidden">
@@ -83,7 +83,7 @@ export function Hero() {
               animate="visible"
               custom={1}
             >
-              <span className="text-[#00e5a0]">None of Them Are Human.</span>
+              <span className="text-[#00e5a0]">{"While Your Competitor Is Still Opening Their Spreadsheet."}</span>
             </motion.span>
           </span>
         </h1>
@@ -95,7 +95,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-base sm:text-lg text-[#8892a4] max-w-[640px] mx-auto mb-10 leading-relaxed"
         >
-          {"Freight forwarders and 3PLs lose thousands of hours a year to manual quoting, multi-portal booking chaos, and container tracking spreadsheets. Our AI agents handle 90% of it \u2014 quoting, booking, and tracking \u2014 while your team keeps 100% control from one dashboard."}
+          {"Freight companies lose $100K+ a year to slow quoting, portal chaos, and missed container deadlines. We fix all three. Your team doesn\u2019t learn new software. Doesn\u2019t change how they work. They just stop losing jobs to faster competitors and start going home on time."}
         </motion.p>
 
         {/* CTAs */}
@@ -109,7 +109,7 @@ export function Hero() {
             size="lg"
             className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full px-8 h-12 text-base font-semibold shadow-[0_0_30px_rgba(0,229,160,0.2)] hover:shadow-[0_0_40px_rgba(0,229,160,0.3)] transition-shadow"
           >
-            Deploy Your First Agent
+            Get Your Free Speed Audit
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
           <Button
@@ -118,7 +118,7 @@ export function Hero() {
             className="rounded-full px-8 h-12 text-base font-medium border-[rgba(255,255,255,0.12)] text-[#e8ecf1] hover:bg-[rgba(255,255,255,0.04)] hover:text-[#e8ecf1] hover:border-[rgba(255,255,255,0.2)] bg-transparent"
           >
             <Play className="mr-2 w-4 h-4" />
-            Watch a Live Quote Demo
+            Watch a 60-Second Live Demo
           </Button>
         </motion.div>
 
