@@ -139,7 +139,7 @@ export function Navbar() {
             size="sm"
             className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full px-5 font-semibold text-sm shadow-[0_0_20px_rgba(0,229,160,0.15)] hover:shadow-[0_0_30px_rgba(0,229,160,0.25)] transition-shadow"
           >
-            <a href="#contact">Book a Deployment Call</a>
+            <a href="#contact">Get Your Free Speed Audit</a>
           </Button>
         </div>
 
@@ -183,7 +183,7 @@ export function Navbar() {
                 className="shimmer-btn bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-full font-semibold"
               >
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                  Book a Deployment Call
+                  Get Your Free Speed Audit
                 </a>
               </Button>
             </div>
