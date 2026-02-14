@@ -37,7 +37,7 @@ export function Footer() {
               </span>
             </a>
             <p className="text-sm text-[#8892a4] mb-4">
-              Digital Employees for Freight & Logistics
+              The Fastest Freight Teams Run on MonakesAI
             </p>
             <p className="text-xs text-[#5a6478] leading-relaxed">
               182-184 High Street North,
@@ -84,7 +84,7 @@ export function Footer() {
                   href="#contact"
                   className="text-sm text-[#00e5a0] hover:text-[#00cc8e] transition-colors"
                 >
-                  Book a Deployment Call
+                  Get Your Free Speed Audit
                 </a>
               </li>
             </ul>
@@ -93,7 +93,7 @@ export function Footer() {
 
         {/* SEO contextual text */}
         <p className="text-xs text-[#5a6478]/60 leading-relaxed max-w-4xl mt-12">
-          MonakesAI provides AI-powered freight quoting automation, multi-carrier booking orchestration, and container lifecycle management for freight forwarders and third-party logistics companies worldwide. Our AI agents — Sarah, Alex, and Leo — handle quoting, booking, and tracking so your team can focus on customer relationships and strategic growth.
+          {"MonakesAI makes freight companies the fastest quote in every inbox. Our digital specialists \u2014 Sarah, Alex, and Leo \u2014 handle quoting, booking, and container tracking so your team wins more jobs, eliminates penalties, and focuses on growth. Trusted by freight forwarders and 3PLs worldwide."}
         </p>
 
         {/* Bottom bar */}

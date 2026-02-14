@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 const plans = [
   {
     tag: null,
-    name: "Single Agent",
+    name: "The Quick Win",
     description:
-      "Deploy one AI agent \u2014 Sarah (Quoting), Alex (Booking), or Leo (Container Tracking) \u2014 to solve your most painful bottleneck first. Start with one, scale when ready.",
+      "Fix your biggest bottleneck first. Whether it\u2019s slow quoting, portal chaos, or penalty risk \u2014 pick one, deploy, and see results in 2 weeks. Scale when you\u2019re ready.",
     features: [
       "One specialised AI agent",
       "Full dashboard access",
@@ -24,9 +24,9 @@ const plans = [
   },
   {
     tag: "MOST POPULAR",
-    name: "Full Digital Team",
+    name: "The Speed Advantage",
     description:
-      "Deploy all three live agents \u2014 Sarah, Alex, and Leo \u2014 as your complete Digital Workforce. The full automation stack for freight operations, plus priority access to Maya, Nova, and Finn when they launch.",
+      "The complete speed stack. Quoting, booking, and tracking \u2014 all three bottlenecks eliminated at once. Plus priority access to Maya, Nova, and Finn when they launch. This is how you become the fastest operation in your market.",
     features: [
       "All three live AI agents",
       "Unified command dashboard",
@@ -42,9 +42,9 @@ const plans = [
   },
   {
     tag: null,
-    name: "Enterprise & High-Volume",
+    name: "The Market Leader",
     description:
-      "For 3PLs and forwarders processing high volumes. Custom integrations, dedicated infrastructure, bespoke agent training on your specific carrier network and workflows.",
+      "For operations that want to dominate their market. Custom-built. Dedicated infrastructure. Trained on your specific carrier network. SLA-backed. This is how market leaders stay market leaders.",
     features: [
       "Custom agent configuration & training",
       "Bespoke carrier & TMS integrations",
@@ -97,13 +97,13 @@ export function Pricing() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#e8ecf1] mb-5 text-balance"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Cheaper Than a Hire. Faster Than a Contractor.
+            {"Costs Less Than One Part-Time Admin."}
             <br className="hidden sm:block" />
-            <span className="text-[#00e5a0]"> Scales Like Software.</span>
+            <span className="text-[#00e5a0]"> Does the Work of Six.</span>
           </h2>
           <p className="text-[#8892a4] max-w-3xl mx-auto text-base sm:text-lg leading-relaxed mb-4">
             {
-              "You\u2019re not buying a licence. You\u2019re deploying specialist team members that pay for themselves within 2 weeks \u2014 whether you\u2019re a 10-person forwarder or a 200-person 3PL."
+              "Most clients see ROI within the first 2 weeks. Not months. Weeks. Whether you\u2019re running a 10-person operation or a 200-person enterprise, the math is the same: this pays for itself and then some."
             }
           </p>
           <p className="text-[#5a6478] text-sm">
