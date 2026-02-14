@@ -52,14 +52,14 @@ const liveAgents: LiveAgent[] = [
     initial: "S",
     gradient: "linear-gradient(135deg, #00e5a0, #00b4d8)",
     label: "QUOTE ORCHESTRATION AGENT",
-    name: "Sarah, Your Intelligent Quote Master",
+    name: "Sarah Makes You the Fastest Quote in Every Inbox",
     description:
-      "Sarah analyses routes, calculates multi-carrier costs, optimises your margins, and generates professional quote documents \u2014 all in under 4 minutes. Multi-modal, multi-leg, multi-carrier. Whether it\u2019s a cross-country container or an international rail consignment, she handles the complexity while your team focuses on winning the customer.",
+      "While your competitor is still opening their spreadsheet, Sarah has already analysed the route, pulled carrier rates, optimised your margin, and generated a professional quote document. 4 minutes. Done. Your team reviews, clicks approve, and the customer gets the quote before anyone else.",
     metrics: [
-      { value: "4 min", label: "Per Quote (was 35)" },
-      { value: "95%", label: "Accuracy Rate" },
-      { value: "5X", label: "Daily Capacity" },
-      { value: "$8,400", label: "Monthly Savings" },
+      { value: "4 min", label: "Quote to Inbox (Competitors: 35 min)" },
+      { value: "95%", label: "First-Time Accuracy" },
+      { value: "5\u00D7", label: "More Quotes, Same Team" },
+      { value: "$8,400", label: "Back in Your Pocket Every Month" },
     ],
   },
   {
@@ -67,14 +67,14 @@ const liveAgents: LiveAgent[] = [
     initial: "A",
     gradient: "linear-gradient(135deg, #7c3aed, #a78bfa)",
     label: "BOOKING ORCHESTRATION AGENT",
-    name: "Alex, Your Booking Orchestration Specialist",
+    name: "Alex Means Your Team Never Logs Into a Carrier Portal Again",
     description:
-      "Alex navigates carrier portals so your team doesn\u2019t have to \u2014 freight management systems, rail booking platforms, vessel scheduling tools, email-based carriers. Multi-carrier bookings, slot allocation, trip number creation, and confirmation emails \u2014 orchestrated automatically. One agent replaces twelve SOPs.",
+      "Every portal. Every login. Every SOP. Every form fill. Every confirmation email. Alex handles all of it. Your team doesn\u2019t navigate carrier systems anymore \u2014 they just review completed bookings on one dashboard. 12 SOPs gone. 8 portals gone. Your people do real work instead.",
     metrics: [
-      { value: "85%", label: "Faster Bookings" },
-      { value: "90%", label: "Less Manual Errors" },
-      { value: "12+", label: "SOPs Eliminated" },
-      { value: "0", label: "Portals to Navigate" },
+      { value: "85%", label: "Faster Than Doing It Manually" },
+      { value: "90%", label: "Fewer Errors (No More Double-Checking)" },
+      { value: "12", label: "SOPs Replaced by One Dashboard" },
+      { value: "0", label: "Portals \u2014 Your Team Never Logs In Again" },
     ],
   },
   {
@@ -82,14 +82,14 @@ const liveAgents: LiveAgent[] = [
     initial: "L",
     gradient: "linear-gradient(135deg, #f59e0b, #fbbf24)",
     label: "CONTAINER LIFECYCLE SENTINEL",
-    name: "Leo, Your Container Lifecycle Sentinel",
+    name: "Leo Killed Our Storage Penalties. Completely.",
     description:
-      "Leo tracks every container \u2014 hired, owned, or purchased \u2014 from empty delivery to full collection to dehire. He coordinates hub transfers, monitors vessel crossings, optimises inter-job transfers, and alerts your team before a $200/day penalty even starts. Whether you\u2019re moving 20 containers a week or 200.",
+      "Every container. Every type. Every stage \u2014 from empty delivery to dehire. Leo tracks it all in real-time and flags penalty risks before they cost you a cent. No more containers sitting at depots because a notification got buried. No more $200/day surprises. Our clients went from thousands in penalties to zero.",
     metrics: [
-      { value: "95%", label: "Penalty Reduction" },
-      { value: "Real-time", label: "Status Tracking" },
-      { value: "3X", label: "Throughput Increase" },
-      { value: "$0", label: "Target Storage Penalties" },
+      { value: "$0", label: "Storage Penalties (Was $200/Day Per Container)" },
+      { value: "Real-Time", label: "Every Container, Every Status, Always" },
+      { value: "3\u00D7", label: "More Containers, Same Team" },
+      { value: "Zero", label: "Missed Dehires Since Deployment" },
     ],
   },
 ]
@@ -100,10 +100,10 @@ const comingSoonAgents: ComingSoonAgent[] = [
     initial: "M",
     gradient: "linear-gradient(135deg, #f43f5e, #fb7185)",
     label: "HUB TRANSFER ORCHESTRATION AGENT",
-    name: "Maya, Your Hub Transfer Commander",
+    name: "Maya Makes Sure Nothing Gets Stuck Between Carriers",
     badge: "COMING Q2 2026",
     description:
-      "Maya eliminates missed connections between incompatible carriers. She calculates optimal transfer windows, auto-allocates drivers, monitors real-time delays, and triggers contingency plans before storage penalties kick in. Precision coordination at any volume.",
+      "Missed connections. Incompatible schedules. Containers stranded between legs. Maya kills all of it before it costs you. Predictive delay detection, auto driver allocation, real-time monitoring. Precision coordination at any volume.",
     tags: [
       "Predictive Delay Detection",
       "Auto Driver Allocation",
@@ -116,10 +116,10 @@ const comingSoonAgents: ComingSoonAgent[] = [
     initial: "N",
     gradient: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
     label: "INTELLIGENT COMMUNICATION AGENT",
-    name: "Nova, Your Customer Comms Specialist",
+    name: "Nova Means No Lead Falls Through the Cracks. Ever.",
     badge: "COMING Q3 2026",
     description:
-      "Nova reads, classifies, and responds to inbound emails in seconds. Quote enquiries get routed to Sarah. Booking questions go to Alex. Complaints get flagged for humans. She manages your sales sequences, generates personalised follow-ups, and makes sure no lead falls through the cracks \u2014 whether you get 20 enquiries a day or 200.",
+      "Every inbound email classified and routed in seconds. Quote enquiries go to Sarah. Booking questions go to Alex. Complaints get flagged for humans. Your response time drops from hours to seconds. No lead ignored. No enquiry missed. Whether you get 20 a day or 200.",
     tags: [
       "Auto Email Classification",
       "AI-Generated Responses",
@@ -132,10 +132,10 @@ const comingSoonAgents: ComingSoonAgent[] = [
     initial: "F",
     gradient: "linear-gradient(135deg, #10b981, #34d399)",
     label: "FINANCIAL PROCESSING AGENT",
-    name: "Finn, Your Financial Ops Engine",
+    name: "Finn Means Your Books Close Themselves",
     badge: "COMING Q4 2026",
     description:
-      "Finn handles deposit invoicing the moment a booking is confirmed, generates final invoices after container weighing, processes credit card fee calculations (1.9% Visa/MC, 3.3% Amex), enforces refund policies, and manages trading account terms. From a handful of invoices to thousands \u2014 your books, on autopilot.",
+      "Invoice generated the moment a booking confirms. Credit card fees calculated. Refund policies enforced. From 10 invoices a week to 10,000 \u2014 your financial ops on autopilot. No manual entry. No missed payments. No end-of-month scramble.",
     tags: [
       "Auto Invoice Generation",
       "Payment Processing",
@@ -285,7 +285,7 @@ function ComingSoonCard({ agent }: { agent: ComingSoonAgent }) {
         href="#contact"
         className="relative inline-flex items-center gap-1.5 text-sm text-[#00e5a0] hover:text-[#00ffb2] transition-colors"
       >
-        {"Join the early access waitlist"}
+        {"Reserve Your Spot \u2014 Founding Members Get Priority + Locked-In Pricing"}
         <ArrowRight className="w-3.5 h-3.5" />
       </a>
     </motion.div>
@@ -320,7 +320,7 @@ export function AgentsSection() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#e8ecf1] leading-tight max-w-4xl mb-5 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Six Agents. Zero Salaries. Infinite Capacity.
+          {"They Don\u2019t Call In Sick. They Don\u2019t Miss Deadlines. They Don\u2019t Lose Your Freight Jobs."}
         </motion.h2>
 
         {/* Subtitle */}
@@ -330,7 +330,7 @@ export function AgentsSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-16 leading-relaxed"
         >
-          {"Three specialists deployed and ready. Three more in the pipeline. Each one trained on global freight operations, built for your workflows, and managed from one command dashboard. They scale as you scale."}
+          {"Three deployed and working right now. Three more coming this year. Each one handles a specific bottleneck that\u2019s bleeding your margin. Your team stays in charge. The repetitive grind just stops."}
         </motion.p>
 
         {/* ═══════ DEPLOYED & READY ═══════ */}
@@ -396,14 +396,15 @@ export function AgentsSection() {
           className="text-center mt-16"
         >
           <p className="text-base sm:text-lg text-[#8892a4] max-w-3xl mx-auto mb-8 leading-relaxed">
-            The full fleet deploys by end of 2026. Early adopters get priority onboarding and{" "}
-            <span className="text-[#00e5a0] font-semibold">founding-member pricing</span>.
+            {"The full team ships by end of 2026. Companies that deploy now lock in "}
+            <span className="text-[#00e5a0] font-semibold">founding-member pricing</span>
+            {" and get first access to every new specialist as they launch. That window closes when the cohort fills."}
           </p>
           <a
             href="#contact"
             className="shimmer-btn inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#00e5a0] text-[#06090f] font-semibold text-base hover:bg-[#00ffb2] transition-colors"
           >
-            {"Deploy Your First Agent \u2014 Book a Call"}
+            {"See What\u2019s Possible \u2014 Book Your Free Speed Audit"}
             <ArrowRight className="w-4 h-4" />
           </a>
         </motion.div>

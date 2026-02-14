@@ -29,32 +29,32 @@ const metrics = [
   {
     before: "35 min",
     after: "4 min",
-    label: "Per Quote (Sarah)",
+    label: "Your Quote Speed (Sarah)",
   },
   {
     before: "22%",
     after: "3%",
-    label: "Quote Error Rate (Sarah)",
+    label: "Quotes That Need Fixing (Sarah)",
   },
   {
     before: "45 min",
     after: "8 min",
-    label: "Per Booking (Alex)",
+    label: "Time Per Booking (Alex)",
   },
   {
     before: "12 SOPs",
     after: "0",
-    label: "Manual Portal Logins (Alex)",
+    label: "Portal Logins Your Team Does (Alex)",
   },
   {
     before: "$200/day",
     after: "$0",
-    label: "Storage Penalties (Leo)",
+    label: "Money Lost to Penalties (Leo)",
   },
   {
     before: "Manual",
     after: "Real-time",
-    label: "Container Tracking (Leo)",
+    label: "How You Track Containers (Leo)",
   },
 ]
 
@@ -109,7 +109,7 @@ export function ResultsSection() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#e8ecf1] leading-tight max-w-4xl mb-5 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          What Happens When You Deploy Instead of Hiring
+          {"What Happens When You\u2019re the Fastest Freight Company in the Room"}
         </motion.h2>
 
         {/* Subtitle */}
@@ -208,7 +208,7 @@ export function ResultsSection() {
             href="#contact"
             className="inline-flex items-center gap-2 text-[#00e5a0] text-sm font-semibold hover:gap-3 transition-all duration-300 group"
           >
-            See How It Works for Your Operation
+            {"Get Your Free Speed Audit \u2014 See Your Numbers"}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
           </a>
         </motion.div>

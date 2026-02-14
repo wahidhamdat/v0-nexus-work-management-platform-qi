@@ -139,11 +139,11 @@ export function FinalCTA() {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#e8ecf1] mb-5 tracking-tight text-balance"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Ready to Deploy Your First{" "}
-            <span className="text-[#00e5a0]">Digital Employee?</span>
+            {"Find Out What Slow Freight Ops Are Actually "}
+            <span className="text-[#00e5a0]">Costing You</span>
           </h2>
           <p className="text-base sm:text-lg text-[#8892a4] leading-relaxed max-w-lg mx-auto">
-            {"Book a 15-minute deployment call. We\u2019ll show you how Sarah quotes, Alex books, and Leo tracks \u2014 live on your actual freight scenarios. No pitch deck. No fluff. Just the agents doing their thing on YOUR operations."}
+            {"Book a free 15-minute speed audit with our founder. We\u2019ll diagnose your quoting bottleneck, calculate what it\u2019s actually costing you, and show you \u2014 live \u2014 what the fix looks like on your actual freight scenarios. No pitch deck. No pressure. Just the math."}
           </p>
         </motion.div>
 
@@ -344,7 +344,7 @@ export function FinalCTA() {
                     Sending...
                   </span>
                 ) : (
-                  "Book Your Deployment Call"
+                  "Get My Free Speed Audit"
                 )}
               </button>
             </form>
@@ -358,7 +358,7 @@ export function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-sm text-[#5a6478] mt-6"
         >
-          No spam. No 47-slide pitch deck. Just a straight conversation about your operation.
+          {"No spam. No 47-slide pitch deck. Just a 15-minute diagnosis that shows you the exact number \u2014 and how to fix it."}
         </motion.p>
       </div>
     </section>

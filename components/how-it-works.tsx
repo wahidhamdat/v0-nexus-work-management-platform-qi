@@ -29,26 +29,26 @@ const steps = [
   {
     number: "1",
     icon: Mail,
-    title: "Request Comes In",
-    text: "A customer emails a quote request, a booking gets triggered, or a container needs tracking. The right agent picks it up automatically.",
+    title: "Work Comes In Like It Always Does",
+    text: "A customer emails a quote request. A booking needs processing. A container needs tracking. Nothing changes on your end. The work just gets picked up instantly instead of sitting in a queue.",
   },
   {
     number: "2",
     icon: Cpu,
-    title: "Agent Does the Work",
-    text: "Route analysis. Carrier selection. Cost calculation. Document generation. Portal navigation. Container tracking. Done in minutes, not hours.",
+    title: "The Heavy Lifting Happens in Minutes",
+    text: "Routes analysed. Rates pulled. Margins optimised. Documents generated. Portals navigated. Containers tracked. What used to take your team 45 minutes is done in 4.",
   },
   {
     number: "3",
     icon: ClipboardCheck,
-    title: "Your Team Reviews & Approves",
-    text: "Everything lands on the dashboard. Check the numbers, tweak the margin, approve with one click. Your people stay in charge.",
+    title: "Your Team Checks, Tweaks, and Approves",
+    text: "Everything lands on one dashboard. Your people check the numbers, adjust the margin if they want, and approve with one click. Full control. Full visibility. Zero grunt work.",
   },
   {
     number: "4",
     icon: Send,
-    title: "Customer Gets the Output",
-    text: "Professional PDF sent. Booking confirmed. Container tracked. All logged, all audit-traceable, all compliant.",
+    title: "The Customer Gets a Faster, Better Result",
+    text: "Professional quote PDF in their inbox before anyone else. Booking confirmed. Container tracked. Fully logged, audit-traceable, and compliant. Your customer sees speed. Your team sees sanity.",
   },
 ]
 
@@ -89,7 +89,7 @@ export function HowItWorks() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#e8ecf1] leading-tight max-w-4xl mb-5 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          {"They Work. Your Team Approves. That's It."}
+          {"Nothing Changes for Your Team. Except the Results."}
         </motion.h2>
 
         {/* Subtitle */}
@@ -99,7 +99,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-20 leading-relaxed"
         >
-          {"No AI black box. No loss of control. Your agents handle the repetitive work and present everything for human review. One dashboard. Full visibility. Whether you run a 5-person outfit or a 300-person operation."}
+          {"No new software to learn. No workflow changes. No loss of control. The repetitive grind disappears. Your team reviews everything from one screen and stays in charge of every decision."}
         </motion.p>
 
         {/* Steps Flow */}
@@ -236,13 +236,13 @@ export function HowItWorks() {
                 className="text-xl sm:text-2xl font-bold text-[#e8ecf1] mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                The Human-in-the-Loop Guarantee
+                {"Your Team Stays in Charge. Always."}
               </h3>
               <p className="text-[#8892a4] text-sm sm:text-base leading-relaxed">
-                {"Your agents handle 90% of the repetitive workload \u2014 carrier lookups, rate calculations, document formatting, portal navigation, status tracking. The remaining 10% is your team\u2019s: final approval, exception handling, strategic decisions, customer relationships."}
+                {"90% of the repetitive work is handled before your team even sees it. The 10% that matters \u2014 approvals, exceptions, strategy, customer calls \u2014 that\u2019s still your people. They just have time to actually do it now."}
               </p>
               <p className="text-[#e8ecf1] text-sm sm:text-base leading-relaxed mt-4 font-medium">
-                {"Nobody loses their job. Everybody gets their evenings back."}
+                {"Nobody loses their job. Everybody stops working til 9pm."}
               </p>
             </div>
           </div>
