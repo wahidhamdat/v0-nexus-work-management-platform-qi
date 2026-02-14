@@ -91,7 +91,7 @@ export function ProblemSection() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#e8ecf1] leading-tight max-w-4xl mb-5 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          {"The Entire Industry Runs on Spreadsheets, Portal Tabs, and 11pm Phone Calls."}
+          {"You\u2019re Losing $100K a Year to Problems You\u2019ve Stopped Noticing."}
         </motion.h2>
 
         {/* Subtitle */}
@@ -101,7 +101,7 @@ export function ProblemSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#8892a4] text-base sm:text-lg max-w-3xl mb-16 leading-relaxed"
         >
-          {"Whether you\u2019re a 5-person forwarder or a 200-person 3PL, your team is burning hours on quoting, booking, and tracking work that should take minutes."}
+          {"Manual quoting. Portal roulette. Spreadsheet tracking. It doesn\u2019t matter if you\u2019re 5 people or 200 \u2014 the same bottlenecks are bleeding your margin every single day. Here\u2019s what it\u2019s actually costing you."}
         </motion.p>
 
         {/* Pain Point Cards */}
@@ -158,11 +158,9 @@ export function ProblemSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center text-base sm:text-lg text-[#e8ecf1] max-w-4xl mx-auto mt-16 leading-relaxed"
         >
-          {"Your ops team didn\u2019t sign up to be data entry clerks. At scale, manual quoting costs "}
-          <span className="text-[#00e5a0] font-semibold">$42,000/month</span>
-          {", booking chaos adds 45 minutes per job, and one missed container transfer costs "}
-          <span className="text-[#00e5a0] font-semibold">$200/day</span>
-          {". It adds up fast."}
+          {"This isn\u2019t a technology problem. It\u2019s a speed problem. A margin problem. A \u201Cyour best people doing their worst work\u201D problem. And it\u2019s costing you "}
+          <span className="text-[#00e5a0] font-semibold">$100K+ a year</span>
+          {" whether you measure it or not."}
         </motion.p>
       </div>
     </section>
