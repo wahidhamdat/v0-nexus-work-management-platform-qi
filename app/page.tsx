@@ -4,36 +4,28 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 
 const QuotingCostCalculator = dynamic(
-  () => import("@/components/quoting-cost-calculator").then((mod) => mod.QuotingCostCalculator),
-  { ssr: false }
+  () => import("@/components/quoting-cost-calculator").then((mod) => mod.QuotingCostCalculator)
 )
 const ProblemSection = dynamic(
-  () => import("@/components/problem-section").then((mod) => mod.ProblemSection),
-  { ssr: false }
+  () => import("@/components/problem-section").then((mod) => mod.ProblemSection)
 )
 const AgentsSection = dynamic(
-  () => import("@/components/agents-section").then((mod) => mod.AgentsSection),
-  { ssr: false }
+  () => import("@/components/agents-section").then((mod) => mod.AgentsSection)
 )
 const HowItWorks = dynamic(
-  () => import("@/components/how-it-works").then((mod) => mod.HowItWorks),
-  { ssr: false }
+  () => import("@/components/how-it-works").then((mod) => mod.HowItWorks)
 )
 const ResultsSection = dynamic(
-  () => import("@/components/results-section").then((mod) => mod.ResultsSection),
-  { ssr: false }
+  () => import("@/components/results-section").then((mod) => mod.ResultsSection)
 )
 const Pricing = dynamic(
-  () => import("@/components/pricing").then((mod) => mod.Pricing),
-  { ssr: false }
+  () => import("@/components/pricing").then((mod) => mod.Pricing)
 )
 const FinalCTA = dynamic(
-  () => import("@/components/final-cta").then((mod) => mod.FinalCTA),
-  { ssr: false }
+  () => import("@/components/final-cta").then((mod) => mod.FinalCTA)
 )
 const Footer = dynamic(
-  () => import("@/components/footer").then((mod) => mod.Footer),
-  { ssr: false }
+  () => import("@/components/footer").then((mod) => mod.Footer)
 )
 
 const jsonLd = {
