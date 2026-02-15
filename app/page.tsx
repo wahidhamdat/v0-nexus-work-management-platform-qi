@@ -1,14 +1,32 @@
+import dynamic from "next/dynamic"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { QuotingCostCalculator } from "@/components/quoting-cost-calculator"
-import { ProblemSection } from "@/components/problem-section"
-import { AgentsSection } from "@/components/agents-section"
-import { HowItWorks } from "@/components/how-it-works"
-import { ResultsSection } from "@/components/results-section"
-import { Pricing } from "@/components/pricing"
-import { FinalCTA } from "@/components/final-cta"
-import { Footer } from "@/components/footer"
+
+const QuotingCostCalculator = dynamic(
+  () => import("@/components/quoting-cost-calculator").then((mod) => mod.QuotingCostCalculator)
+)
+const ProblemSection = dynamic(
+  () => import("@/components/problem-section").then((mod) => mod.ProblemSection)
+)
+const AgentsSection = dynamic(
+  () => import("@/components/agents-section").then((mod) => mod.AgentsSection)
+)
+const HowItWorks = dynamic(
+  () => import("@/components/how-it-works").then((mod) => mod.HowItWorks)
+)
+const ResultsSection = dynamic(
+  () => import("@/components/results-section").then((mod) => mod.ResultsSection)
+)
+const Pricing = dynamic(
+  () => import("@/components/pricing").then((mod) => mod.Pricing)
+)
+const FinalCTA = dynamic(
+  () => import("@/components/final-cta").then((mod) => mod.FinalCTA)
+)
+const Footer = dynamic(
+  () => import("@/components/footer").then((mod) => mod.Footer)
+)
 
 const jsonLd = {
   "@context": "https://schema.org",

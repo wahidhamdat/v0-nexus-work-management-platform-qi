@@ -2,14 +2,25 @@
 
 import type React from "react"
 import { useEffect } from "react"
-import Lenis from "lenis"
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
+    let lenis: InstanceType<typeof import("lenis").default> | null = null
+    let rafId: number | null = null
+
+    import("lenis").then(({ default: Lenis }) => {
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+      })
+
+      function raf(time: number) {
+        lenis?.raf(time)
+        rafId = requestAnimationFrame(raf)
+      }
+
+      rafId = requestAnimationFrame(raf)
     })
 
     // Handle anchor link clicks for smooth scrolling with offset
@@ -24,22 +35,20 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       const el = document.querySelector(hash) as HTMLElement | null
       if (el) {
         e.preventDefault()
-        lenis.scrollTo(el, { offset: -80 })
+        if (lenis) {
+          lenis.scrollTo(el, { offset: -80 })
+        } else {
+          el.scrollIntoView({ behavior: "smooth" })
+        }
       }
     }
 
     document.addEventListener("click", handleAnchorClick)
 
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-
     return () => {
       document.removeEventListener("click", handleAnchorClick)
-      lenis.destroy()
+      if (rafId) cancelAnimationFrame(rafId)
+      lenis?.destroy()
     }
   }, [])
 
