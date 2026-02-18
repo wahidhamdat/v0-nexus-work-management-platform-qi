@@ -55,7 +55,7 @@ export function ProcurementCTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://calendly.com"
+              href="https://calendly.com/wahidhamdat30/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-[#8A1538] text-base font-semibold hover:bg-white/90 transition-colors shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
@@ -64,7 +64,7 @@ export function ProcurementCTA() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="mailto:hello@monakesai.com"
+              href="mailto:wahidhamdat30@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white text-base font-medium hover:bg-white/10 transition-colors"
             >
               Talk to Founder

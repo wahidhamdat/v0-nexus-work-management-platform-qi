@@ -8,6 +8,12 @@ export function ProcurementFooter() {
         >
           Monakes
         </span>
+        <a
+          href="mailto:wahidhamdat30@gmail.com"
+          className="text-sm text-white/50 hover:text-white/80 transition-colors"
+        >
+          wahidhamdat30@gmail.com
+        </a>
         <p className="text-sm text-white/40">
           {"\u00A9"} {new Date().getFullYear()} Monakes. All rights reserved.
         </p>
