@@ -1,52 +1,84 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { Globe, Database, TrendingUp, Target } from "lucide-react"
-
-function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
-  const [inView, setInView] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
-      { threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref, threshold])
-  return inView
-}
 
 const marketStats = [
   {
     icon: Globe,
     figure: "13\u201320%",
     context: "of GDP worldwide",
-    detail: "Public procurement = 13\u201320% of GDP worldwide (USD 13T+ annually).",
+    detail:
+      "Public procurement = 13\u201320% of GDP worldwide (USD 13T+ annually).",
   },
   {
     icon: Database,
     figure: "~USD 15T",
     context: "global flow",
-    detail: "15% of global GDP flows through public procurement systems (~USD 15T).",
+    detail:
+      "15% of global GDP flows through public procurement systems (~USD 15T).",
   },
   {
     icon: TrendingUp,
     figure: "USD 362.8B",
     context: "opened annually",
-    detail: "USD 362.8B in value opened up annually by procurement open data alone (2.81% of total spend).",
+    detail:
+      "USD 362.8B in value opened up annually by procurement open data alone (2.81% of total spend).",
   },
   {
     icon: Target,
     figure: "50%+",
     context: "savings potential",
-    detail: "Centralized procurement delivers 50%+ savings; most tools achieve 5\u201310% price savings.",
+    detail:
+      "Centralized procurement delivers 50%+ savings; most tools achieve 5\u201310% price savings.",
   },
 ]
 
 export function ProcurementWhyNow() {
   const sectionRef = useRef<HTMLElement>(null)
-  const inView = useInView(sectionRef)
+  const headingRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    let ctx: ReturnType<typeof import("gsap")["gsap"]["context"]> | undefined
+    async function init() {
+      const { gsap } = await import("gsap")
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger")
+      gsap.registerPlugin(ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          headingRef.current,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: { trigger: headingRef.current, start: "top 85%" },
+          }
+        )
+
+        cardsRef.current.filter(Boolean).forEach((card, i) => {
+          gsap.fromTo(
+            card,
+            { opacity: 0, y: 50, x: i % 2 === 0 ? -30 : 30 },
+            {
+              opacity: 1,
+              y: 0,
+              x: 0,
+              duration: 0.8,
+              delay: i * 0.12,
+              ease: "power3.out",
+              scrollTrigger: { trigger: card, start: "top 88%" },
+            }
+          )
+        })
+      }, sectionRef)
+    }
+    init()
+    return () => ctx?.revert()
+  }, [])
 
   return (
     <section
@@ -58,13 +90,8 @@ export function ProcurementWhyNow() {
       <div className="absolute inset-0 bg-white" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
-        <div
-          className={`max-w-2xl mb-16 transition-all duration-700 ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#8A1538] mb-4 block">
+        <div ref={headingRef} className="max-w-2xl mb-16 opacity-0">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A1538] mb-4 block">
             Why Now
           </span>
           <h2
@@ -76,23 +103,24 @@ export function ProcurementWhyNow() {
             </span>
           </h2>
           <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
-            Monakes captures the evaluation bottleneck in this trillion-dollar market.
+            Monakes captures the evaluation bottleneck in this trillion-dollar
+            market.
           </p>
         </div>
 
-        {/* Market stats grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {marketStats.map((stat, i) => {
             const Icon = stat.icon
             return (
               <div
                 key={stat.context}
-                className={`relative flex items-start gap-6 p-8 rounded-xl bg-[#F7F5F2] border border-[#1A1A1A]/6 transition-all duration-700 ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-                style={{ transitionDelay: `${200 + i * 150}ms` }}
+                ref={(el) => { cardsRef.current[i] = el }}
+                className="group relative flex items-start gap-6 p-8 rounded-xl bg-[#F7F5F2] border border-[#1A1A1A]/6 opacity-0 hover:border-[#8A1538]/15 transition-all duration-300 overflow-hidden"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#8A1538]/8 flex items-center justify-center">
+                {/* Hover reveal accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8A1538] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#8A1538]/8 flex items-center justify-center group-hover:bg-[#8A1538]/12 transition-colors duration-300">
                   <Icon className="w-6 h-6 text-[#8A1538]" />
                 </div>
                 <div>

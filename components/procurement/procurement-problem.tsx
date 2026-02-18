@@ -1,46 +1,118 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { Clock, AlertTriangle, Users } from "lucide-react"
-
-function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
-  const [inView, setInView] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
-      { threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref, threshold])
-  return inView
-}
 
 const stats = [
   {
     icon: Users,
     value: "150\u2013300",
     unit: "staff hours",
-    description: "per tender cycle are spent reading and scoring thousands of pages by hand.",
+    description:
+      "per tender cycle are spent reading and scoring thousands of pages by hand.",
   },
   {
     icon: Clock,
     value: "6+",
     unit: "weeks",
-    description: "Evaluation cycles stretch to 6 weeks or more for complex construction and infrastructure projects.",
+    description:
+      "Evaluation cycles stretch to 6 weeks or more for complex construction and infrastructure projects.",
   },
   {
     icon: AlertTriangle,
     value: "High",
     unit: "risk",
-    description: "Human error and inconsistent scoring create disputes, audit findings, and reputational risk.",
+    description:
+      "Human error and inconsistent scoring create disputes, audit findings, and reputational risk.",
   },
 ]
 
 export function ProcurementProblem() {
   const sectionRef = useRef<HTMLElement>(null)
-  const inView = useInView(sectionRef)
+  const headingRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    let ctx: ReturnType<typeof import("gsap")["gsap"]["context"]> | undefined
+    async function init() {
+      const { gsap } = await import("gsap")
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger")
+      gsap.registerPlugin(ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        // Heading reveal
+        gsap.fromTo(
+          headingRef.current,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: headingRef.current,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        )
+
+        // Cards stagger from right
+        cardsRef.current.filter(Boolean).forEach((card, i) => {
+          gsap.fromTo(
+            card,
+            { opacity: 0, x: 60, scale: 0.97 },
+            {
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              duration: 0.7,
+              delay: i * 0.15,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+                toggleActions: "play none none none",
+              },
+            }
+          )
+        })
+
+        // Hover tilt on cards
+        cardsRef.current.filter(Boolean).forEach((card) => {
+          const handleMove = (e: MouseEvent) => {
+            if (!card) return
+            const rect = card.getBoundingClientRect()
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            const centerX = rect.width / 2
+            const centerY = rect.height / 2
+            const rotateX = ((y - centerY) / centerY) * -3
+            const rotateY = ((x - centerX) / centerX) * 3
+            gsap.to(card, {
+              rotateX,
+              rotateY,
+              duration: 0.4,
+              ease: "power2.out",
+              transformPerspective: 800,
+            })
+          }
+          const handleLeave = () => {
+            gsap.to(card, {
+              rotateX: 0,
+              rotateY: 0,
+              duration: 0.6,
+              ease: "power2.out",
+            })
+          }
+          card?.addEventListener("mousemove", handleMove)
+          card?.addEventListener("mouseleave", handleLeave)
+        })
+      }, sectionRef)
+    }
+    init()
+    return () => ctx?.revert()
+  }, [])
 
   return (
     <section
@@ -50,42 +122,43 @@ export function ProcurementProblem() {
       className="relative px-6 py-24 lg:py-32 overflow-hidden"
     >
       <div className="absolute inset-0 bg-white" />
+      {/* Subtle diagonal line decoration */}
+      <div className="absolute top-0 right-0 w-1/3 h-full pointer-events-none opacity-[0.02]"
+        style={{
+          backgroundImage: "repeating-linear-gradient(-45deg, #8A1538, #8A1538 1px, transparent 1px, transparent 40px)",
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          {/* Left - Problem statements */}
-          <div className="lg:w-[45%]">
-            <div
-              className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+          <div ref={headingRef} className="lg:w-[45%] opacity-0">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A1538] mb-4 block">
+              The Problem
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight mb-6"
+              style={{ fontFamily: "var(--font-heading)" }}
             >
-              <span className="text-xs font-semibold tracking-widest uppercase text-[#8A1538] mb-4 block">
-                The Problem
+              <span className="text-balance block">
+                Public procurement teams are drowning in manual work.
               </span>
-              <h2
-                className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight mb-6"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                <span className="text-balance block">
-                  Public procurement teams are drowning in manual work.
-                </span>
-              </h2>
-              <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
-                Manual tender evaluation doesn{"'"}t scale when you{"'"}re managing billion-dollar project pipelines.
-              </p>
-            </div>
+            </h2>
+            <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
+              Manual tender evaluation doesn{"'"}t scale when you{"'"}re managing
+              billion-dollar project pipelines.
+            </p>
+            {/* Accent line */}
+            <div className="mt-8 w-16 h-[2px] bg-[#8A1538]/20" />
           </div>
 
-          {/* Right - Stat blocks */}
           <div className="lg:w-[55%] flex flex-col gap-6">
             {stats.map((stat, i) => {
               const Icon = stat.icon
               return (
                 <div
                   key={stat.unit}
-                  className={`flex items-start gap-5 p-6 rounded-xl bg-[#F7F5F2] border border-[#1A1A1A]/6 transition-all duration-700 ${
-                    inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                  }`}
-                  style={{ transitionDelay: `${200 + i * 150}ms` }}
+                  ref={(el) => { cardsRef.current[i] = el }}
+                  className="flex items-start gap-5 p-6 rounded-xl bg-[#F7F5F2] border border-[#1A1A1A]/6 opacity-0 will-change-transform hover:border-[#8A1538]/15 transition-colors duration-300"
                 >
                   <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#8A1538]/8 flex items-center justify-center">
                     <Icon className="w-5 h-5 text-[#8A1538]" />
