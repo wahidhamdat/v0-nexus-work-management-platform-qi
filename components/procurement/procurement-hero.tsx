@@ -47,7 +47,9 @@ export function ProcurementHero() {
 
           <div className="procurement-fade-in procurement-delay-3 flex flex-col sm:flex-row items-start gap-4">
             <a
-              href="#final-cta"
+              href="https://calendly.com/wahidhamdat30/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#8A1538] text-white text-base font-semibold hover:bg-[#6D1030] transition-colors shadow-[0_2px_16px_rgba(138,21,56,0.15)]"
             >
               Book a 30-Minute Demo

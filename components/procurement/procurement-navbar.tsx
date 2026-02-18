@@ -58,7 +58,9 @@ export function ProcurementNavbar() {
 
         <div className="hidden md:block">
           <a
-            href="#final-cta"
+            href="https://calendly.com/wahidhamdat30/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-5 py-2.5 rounded-lg bg-[#8A1538] text-white text-sm font-semibold hover:bg-[#6D1030] transition-colors"
           >
             Book a Demo
@@ -95,7 +97,9 @@ export function ProcurementNavbar() {
               ))}
               <hr className="border-[#8A1538]/10 my-2" />
               <a
-                href="#final-cta"
+                href="https://calendly.com/wahidhamdat30/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-3 text-sm text-center font-semibold rounded-lg bg-[#8A1538] text-white hover:bg-[#6D1030] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
