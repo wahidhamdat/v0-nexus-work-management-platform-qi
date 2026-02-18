@@ -41,7 +41,15 @@ function useCountUp(target: number, inView: boolean, duration = 1800) {
   return count
 }
 
-const metrics = [
+interface Metric {
+  value: number
+  suffix: string
+  label: string
+  description: string
+  isDecimal?: boolean
+}
+
+const metrics: Metric[] = [
   {
     value: 80,
     suffix: "\u201390%",
@@ -116,7 +124,7 @@ function MetricCard({
   index,
   inView,
 }: {
-  metric: (typeof metrics)[number]
+  metric: Metric
   index: number
   inView: boolean
 }) {

@@ -1,13 +1,55 @@
+import dynamic from "next/dynamic"
 import { ProcurementNavbar } from "@/components/procurement/procurement-navbar"
 import { ProcurementHero } from "@/components/procurement/procurement-hero"
-import { ProcurementProblem } from "@/components/procurement/procurement-problem"
-import { ProcurementSolution } from "@/components/procurement/procurement-solution"
-import { ProcurementHowItWorks } from "@/components/procurement/procurement-how-it-works"
-import { ProcurementImpact } from "@/components/procurement/procurement-impact"
-import { ProcurementWhyNow } from "@/components/procurement/procurement-why-now"
-import { ProcurementFounder } from "@/components/procurement/procurement-founder"
-import { ProcurementCTA } from "@/components/procurement/procurement-cta"
-import { ProcurementFooter } from "@/components/procurement/procurement-footer"
+
+const ProcurementProblem = dynamic(
+  () =>
+    import("@/components/procurement/procurement-problem").then(
+      (mod) => mod.ProcurementProblem
+    )
+)
+const ProcurementSolution = dynamic(
+  () =>
+    import("@/components/procurement/procurement-solution").then(
+      (mod) => mod.ProcurementSolution
+    )
+)
+const ProcurementHowItWorks = dynamic(
+  () =>
+    import("@/components/procurement/procurement-how-it-works").then(
+      (mod) => mod.ProcurementHowItWorks
+    )
+)
+const ProcurementImpact = dynamic(
+  () =>
+    import("@/components/procurement/procurement-impact").then(
+      (mod) => mod.ProcurementImpact
+    )
+)
+const ProcurementWhyNow = dynamic(
+  () =>
+    import("@/components/procurement/procurement-why-now").then(
+      (mod) => mod.ProcurementWhyNow
+    )
+)
+const ProcurementFounder = dynamic(
+  () =>
+    import("@/components/procurement/procurement-founder").then(
+      (mod) => mod.ProcurementFounder
+    )
+)
+const ProcurementCTA = dynamic(
+  () =>
+    import("@/components/procurement/procurement-cta").then(
+      (mod) => mod.ProcurementCTA
+    )
+)
+const ProcurementFooter = dynamic(
+  () =>
+    import("@/components/procurement/procurement-footer").then(
+      (mod) => mod.ProcurementFooter
+    )
+)
 
 export default function ProcurementPage() {
   return (
