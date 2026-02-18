@@ -319,3 +319,25 @@
 .procurement-delay-3 { animation-delay: 0.55s; }
 .procurement-delay-4 { animation-delay: 0.7s; }
 
+/* Progress bar fill animation */
+@keyframes procurement-progress-fill {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+
+.procurement-progress-bar {
+  width: 0;
+  animation: procurement-progress-fill 1.2s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
+}
+
+/* Scroll indicator line */
+@keyframes procurement-scroll-pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.6; transform: scaleY(1.2); }
+}
+
+.procurement-scroll-line {
+  animation: procurement-scroll-pulse 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
