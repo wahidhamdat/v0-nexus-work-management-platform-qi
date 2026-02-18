@@ -1,21 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { Eye, Shield, UserCheck, Link2 } from "lucide-react"
-
-function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.2) {
-  const [inView, setInView] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true) },
-      { threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref, threshold])
-  return inView
-}
 
 const features = [
   {
@@ -46,7 +32,79 @@ const features = [
 
 export function ProcurementSolution() {
   const sectionRef = useRef<HTMLElement>(null)
-  const inView = useInView(sectionRef)
+  const headingRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    let ctx: ReturnType<typeof import("gsap")["gsap"]["context"]> | undefined
+    async function init() {
+      const { gsap } = await import("gsap")
+      const { ScrollTrigger } = await import("gsap/ScrollTrigger")
+      gsap.registerPlugin(ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          headingRef.current,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: headingRef.current,
+              start: "top 85%",
+            },
+          }
+        )
+
+        cardsRef.current.filter(Boolean).forEach((card, i) => {
+          gsap.fromTo(
+            card,
+            { opacity: 0, y: 50, scale: 0.95 },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.7,
+              delay: i * 0.12,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 90%",
+              },
+            }
+          )
+        })
+
+        // Card hover glow effect
+        cardsRef.current.filter(Boolean).forEach((card) => {
+          const glowEl = card?.querySelector(".card-glow") as HTMLElement | null
+          const handleMove = (e: MouseEvent) => {
+            if (!card || !glowEl) return
+            const rect = card.getBoundingClientRect()
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            gsap.to(glowEl, {
+              x: x - 100,
+              y: y - 100,
+              opacity: 1,
+              duration: 0.4,
+              ease: "power2.out",
+            })
+          }
+          const handleLeave = () => {
+            if (!glowEl) return
+            gsap.to(glowEl, { opacity: 0, duration: 0.5 })
+          }
+          card?.addEventListener("mousemove", handleMove)
+          card?.addEventListener("mouseleave", handleLeave)
+        })
+      }, sectionRef)
+    }
+    init()
+    return () => ctx?.revert()
+  }, [])
 
   return (
     <section
@@ -58,13 +116,8 @@ export function ProcurementSolution() {
       <div className="absolute inset-0 bg-[#F7F5F2]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
-        <div
-          className={`max-w-2xl mb-16 transition-all duration-700 ${
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <span className="text-xs font-semibold tracking-widest uppercase text-[#8A1538] mb-4 block">
+        <div ref={headingRef} className="max-w-2xl mb-16 opacity-0">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A1538] mb-4 block">
             The Solution
           </span>
           <h2
@@ -72,38 +125,41 @@ export function ProcurementSolution() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              AI-powered evaluation that is fast, fair, and defendable in any audit.
+              AI-powered evaluation that is fast, fair, and defendable in any
+              audit.
             </span>
           </h2>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, i) => {
             const Icon = feature.icon
             return (
               <div
                 key={feature.title}
-                className={`group relative p-8 rounded-xl bg-white border border-[#1A1A1A]/6 hover:border-[#8A1538]/20 transition-all duration-500 ${
-                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-                style={{ transitionDelay: `${200 + i * 120}ms` }}
+                ref={(el) => { cardsRef.current[i] = el }}
+                className="group relative p-8 rounded-xl bg-white border border-[#1A1A1A]/6 hover:border-[#8A1538]/20 transition-all duration-500 opacity-0 overflow-hidden"
               >
-                {/* Connecting line decoration */}
-                <div className="absolute top-0 left-8 w-px h-3 bg-[#8A1538]/15 -translate-y-full hidden md:block" />
+                {/* Mouse-follow glow */}
+                <div className="card-glow absolute w-[200px] h-[200px] rounded-full bg-[#8A1538]/5 blur-[60px] pointer-events-none opacity-0" />
 
-                <div className="w-12 h-12 rounded-lg bg-[#8A1538]/8 flex items-center justify-center mb-5 group-hover:bg-[#8A1538]/12 transition-colors">
-                  <Icon className="w-5 h-5 text-[#8A1538]" />
+                {/* Connecting line top accent */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8A1538]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-lg bg-[#8A1538]/8 flex items-center justify-center mb-5 group-hover:bg-[#8A1538]/12 transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-[#8A1538]" />
+                  </div>
+                  <h3
+                    className="text-lg font-bold text-[#1A1A1A] mb-3"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-[#5A5A5A] leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3
-                  className="text-lg font-bold text-[#1A1A1A] mb-3"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-[#5A5A5A] leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             )
           })}
