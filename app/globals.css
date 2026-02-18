@@ -283,4 +283,39 @@
 .pharma-delay-3 { animation-delay: 0.45s; }
 .pharma-delay-4 { animation-delay: 0.6s; }
 
+/* Procurement Accelerator Landing Page Styles */
+.procurement-grid-pattern {
+  background-image:
+    linear-gradient(rgba(138,21,56,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138,21,56,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.procurement-grid-pattern-light {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@keyframes procurement-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.procurement-fade-in {
+  opacity: 0;
+  animation: procurement-fade-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.procurement-delay-1 { animation-delay: 0.2s; }
+.procurement-delay-2 { animation-delay: 0.4s; }
+.procurement-delay-3 { animation-delay: 0.55s; }
+.procurement-delay-4 { animation-delay: 0.7s; }
 
