@@ -1,38 +1,32 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Zap, Brain, ShieldCheck, Network, FileKey } from "lucide-react"
+import { Zap, Brain, ShieldCheck, FileKey } from "lucide-react"
 
 const features = [
   {
     icon: Zap,
-    title: "Real-Time Data Ingestion",
+    title: "Real-Time Screening",
     description:
-      "Instantaneous, API-driven ingestion of all critical regulatory updates (BIS, OFAC, UN) the millisecond they are published.",
+      "Every regulatory update from BIS, OFAC, and UN is ingested the moment it is published. No more waiting for weekly batch updates.",
   },
   {
     icon: Brain,
-    title: "Neural-Network Fuzzy Matching",
+    title: "Advanced Fuzzy Matching",
     description:
-      "Advanced multi-agent AI algorithms detect subtle obfuscations, transliterations, and deliberate name variations that bypass conventional screening methods.",
+      "Catches subtle name variations, transliterations, and deliberate obfuscations that conventional screening tools miss entirely.",
   },
   {
     icon: ShieldCheck,
-    title: "Deterministic Classification Engine",
+    title: "Accurate ECCN Classification",
     description:
-      "A rules-based AI ensures 100% legal accuracy for ECCN classification, providing verifiable decisions without AI hallucinations.",
-  },
-  {
-    icon: Network,
-    title: "Event-Driven API-First Architecture",
-    description:
-      "Seamlessly integrates with existing ERP and GTM systems, processing transactions in real-time without latency.",
+      "Rules-based classification engine delivers verifiable, deterministic results -- no hallucinations, no guesswork.",
   },
   {
     icon: FileKey,
-    title: "Immutable Automated Audit Trail",
+    title: "One-Click Audit Trail",
     description:
-      "Every decision, screen, and rule version is cryptographically logged, providing an unassailable, one-click audit record.",
+      "Every decision, screen, and rule version is cryptographically logged. Pull a complete audit record in one click when regulators come calling.",
   },
 ]
 
@@ -124,22 +118,20 @@ export function ShieldSolution() {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div ref={headingRef} className="max-w-2xl mb-16 opacity-0">
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF] mb-4 block">
-            The Solution
+            How It Works
           </span>
           <h2
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-6"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              Agentic AI: Real-Time Protection, Deterministic Results.
+              How Shield Protects You
             </span>
           </h2>
           <p className="text-base text-[#7A8BA8] leading-relaxed max-w-xl">
-            The Shield is powered by Monakes AI{"'"}s multi-agent architecture, an
-            advanced Agentic AI system designed for the complexities of global
-            trade. It operates as an intelligent, autonomous layer, continuously
-            monitoring, classifying, and logging every transaction with
-            unparalleled precision.
+            Shield operates as an autonomous compliance layer that continuously
+            monitors regulatory changes, screens every transaction in real time,
+            and logs every decision with an immutable audit trail.
           </p>
         </div>
 

@@ -71,14 +71,14 @@ export function ShieldCTA() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              Validate Your Compliance Posture with Agentic AI.
+              Close the Gap. Protect Your Name.
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-[#0A0E1A]/70 leading-relaxed max-w-xl mx-auto mb-10">
-            Discover how Monakes AI can transform your export compliance from
-            reactive to autonomous. Schedule a focused technical deep dive with
-            our solutions architects.
+            See how Shield screens every order against the current denied party
+            list in real time -- so your signature is never on a shipment to a
+            banned entity.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -90,15 +90,9 @@ export function ShieldCTA() {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00D4FF]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10 flex items-center gap-2">
-                Book a Technical Deep Dive
+                Book a 15-min demo
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </span>
-            </a>
-            <a
-              href="mailto:info@monakes.com"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-[#0A0E1A]/20 text-[#0A0E1A] text-base font-medium hover:bg-[#0A0E1A]/5 transition-colors duration-300"
-            >
-              info@monakes.com
             </a>
           </div>
         </div>
