@@ -126,7 +126,7 @@ export function ShieldHero() {
               <div className="absolute inset-0 rounded-full bg-[#00D4FF] animate-ping opacity-40" />
             </div>
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF]">
-              Agentic AI Export Compliance
+              Real-Time Export Compliance
             </span>
           </div>
 
