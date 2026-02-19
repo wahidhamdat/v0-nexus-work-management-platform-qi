@@ -95,10 +95,10 @@ export function ShieldCTA() {
               </span>
             </a>
             <a
-              href="mailto:wahidhamdat30@gmail.com"
+              href="mailto:info@monakes.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-[#0A0E1A]/20 text-[#0A0E1A] text-base font-medium hover:bg-[#0A0E1A]/5 transition-colors duration-300"
             >
-              Download Whitepaper
+              info@monakes.com
             </a>
           </div>
         </div>

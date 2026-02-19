@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, FileDown } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function ShieldHero() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -166,11 +166,10 @@ export function ShieldHero() {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#solution"
+              href="mailto:info@monakes.com"
               className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/15 text-white text-base font-medium hover:bg-white/5 transition-all duration-300"
             >
-              <FileDown className="w-4 h-4" />
-              Download Whitepaper
+              info@monakes.com
             </a>
           </div>
         </div>
