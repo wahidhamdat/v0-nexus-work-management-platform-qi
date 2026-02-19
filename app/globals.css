@@ -341,3 +341,28 @@
   transform-origin: top;
 }
 
+/* The Shield - Export Compliance Landing Page Styles */
+.shield-grid-pattern {
+  background-image:
+    linear-gradient(rgba(0,212,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.shield-grid-pattern-light {
+  background-image:
+    linear-gradient(rgba(10,14,26,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,14,26,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+@keyframes shield-scroll-pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.6; transform: scaleY(1.2); }
+}
+
+.shield-scroll-line {
+  animation: shield-scroll-pulse 2s ease-in-out infinite;
+  transform-origin: top;
+}
+
