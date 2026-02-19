@@ -78,7 +78,7 @@ export function ShieldHero() {
     return () => ctx?.revert()
   }, [])
 
-  const headlineText = "The Autonomous AI Layer for Uncompromising Export Compliance."
+  const headlineText = "Your signature is on every export. Close the gap before BIS does."
   const words = headlineText.split(" ")
 
   const dashboardMetrics = [
@@ -126,7 +126,7 @@ export function ShieldHero() {
               <div className="absolute inset-0 rounded-full bg-[#00D4FF] animate-ping opacity-40" />
             </div>
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF]">
-              Agentic AI Export Compliance
+              Real-Time Export Compliance
             </span>
           </div>
 
@@ -150,9 +150,10 @@ export function ShieldHero() {
             ref={subtextRef}
             className="text-base sm:text-lg text-[#7A8BA8] leading-relaxed max-w-xl mb-10 opacity-0"
           >
-            Monakes AI presents The Shield: An Agentic AI platform that delivers
-            real-time, deterministic denied party screening and ECCN classification,
-            fortifying your global trade operations.
+            BIS added 240 entities last year. Your screening tool updates weekly.
+            That gap -- between rule change and shipment -- is where your personal
+            liability lives. Shield screens every order in real time, so you never
+            ship to a banned entity.
           </p>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-start gap-4 opacity-0">
@@ -162,14 +163,14 @@ export function ShieldHero() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#00D4FF] text-[#0A0E1A] text-base font-semibold hover:bg-[#00BFEA] transition-all duration-300 shadow-[0_2px_16px_rgba(0,212,255,0.2)] hover:shadow-[0_4px_24px_rgba(0,212,255,0.3)]"
             >
-              Book a Technical Deep Dive
+              See it in 15 minutes
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:info@monakes.com"
+              href="#overview-video"
               className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/15 text-white text-base font-medium hover:bg-white/5 transition-all duration-300"
             >
-              info@monakes.com
+              Watch 2-min overview
             </a>
           </div>
         </div>
