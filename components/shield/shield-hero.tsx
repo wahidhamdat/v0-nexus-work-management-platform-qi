@@ -78,7 +78,7 @@ export function ShieldHero() {
     return () => ctx?.revert()
   }, [])
 
-  const headlineText = "The Autonomous AI Layer for Uncompromising Export Compliance."
+  const headlineText = "Your signature is on every export. Close the gap before BIS does."
   const words = headlineText.split(" ")
 
   const dashboardMetrics = [
