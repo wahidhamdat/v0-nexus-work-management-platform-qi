@@ -5,10 +5,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
-  { label: "Challenge", href: "#challenge" },
-  { label: "Solution", href: "#solution" },
+  { label: "The Gap", href: "#challenge" },
+  { label: "How It Works", href: "#solution" },
   { label: "Integration", href: "#integration" },
-  { label: "Advantage", href: "#advantage" },
 ]
 
 export function ShieldNavbar() {
@@ -106,7 +105,7 @@ export function ShieldNavbar() {
             className="group relative inline-flex items-center px-5 py-2.5 rounded-lg bg-[#00D4FF] text-[#0A0E1A] text-sm font-semibold hover:bg-[#00BFEA] transition-all duration-300 shadow-[0_2px_8px_rgba(0,212,255,0.2)] hover:shadow-[0_4px_16px_rgba(0,212,255,0.3)] overflow-hidden"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-            <span className="relative z-10">Book a Technical Deep Dive</span>
+            <span className="relative z-10">Book 15-min demo</span>
           </a>
         </div>
 
@@ -154,7 +153,7 @@ export function ShieldNavbar() {
                 className="px-4 py-3 text-sm text-center font-semibold rounded-lg bg-[#00D4FF] text-[#0A0E1A] hover:bg-[#00BFEA] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book a Technical Deep Dive
+                Book 15-min demo
               </a>
             </div>
           </motion.div>

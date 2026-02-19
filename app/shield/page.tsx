@@ -20,12 +20,7 @@ const ShieldIntegration = dynamic(
       (mod) => mod.ShieldIntegration
     )
 )
-const ShieldAdvantage = dynamic(
-  () =>
-    import("@/components/shield/shield-advantage").then(
-      (mod) => mod.ShieldAdvantage
-    )
-)
+
 const ShieldCTA = dynamic(
   () =>
     import("@/components/shield/shield-cta").then(
@@ -48,7 +43,6 @@ export default function ShieldPage() {
         <ShieldChallenge />
         <ShieldSolution />
         <ShieldIntegration />
-        <ShieldAdvantage />
         <ShieldCTA />
       </main>
       <ShieldFooter />
