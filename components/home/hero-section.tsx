@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
@@ -31,11 +30,11 @@ export function HeroSection() {
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button
-            asChild
             size="lg"
             className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
+            onClick={() => briefingModal?.openBriefingModal()}
           >
-            <Link href="/shield">See Shield</Link>
+            See Shield
           </Button>
           <Button
             size="lg"

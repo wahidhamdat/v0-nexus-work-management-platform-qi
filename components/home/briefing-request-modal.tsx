@@ -29,7 +29,7 @@ type BriefingRequestModalProps = {
 }
 
 export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModalProps) {
-  const [email, setEmail] = useState("")
+  const [name, setName] = useState("")
   const [role, setRole] = useState("")
   const [company, setCompany] = useState("")
   const [proEmail, setProEmail] = useState("")
@@ -37,7 +37,7 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
   const [errorMessage, setErrorMessage] = useState("")
 
   function resetForm() {
-    setEmail("")
+    setName("")
     setRole("")
     setCompany("")
     setProEmail("")
@@ -52,22 +52,24 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    if (!email.trim() || !role.trim() || !company.trim() || !proEmail.trim()) return
+    if (!name.trim() || !role.trim() || !company.trim() || !proEmail.trim()) return
 
     setStatus("sending")
     setErrorMessage("")
 
     try {
-      const { error } = await supabase.from("form_submissions").insert([
-        {
-          first_name: "Briefing",
-          last_name: "Request",
-          email: email.trim(),
-          company_name: company.trim(),
-          role: role.trim(),
-          pro_email: proEmail.trim(),
-        },
-      ])
+      const [first, ...rest] = name.trim().split(/\s+/)
+        const lastName = rest.length > 0 ? rest.join(" ") : ""
+        const { error } = await supabase.from("form_submissions").insert([
+          {
+            first_name: first ?? name.trim(),
+            last_name: lastName,
+            email: proEmail.trim(),
+            company_name: company.trim(),
+            role: role.trim(),
+            pro_email: proEmail.trim(),
+          },
+        ])
 
       if (error) throw error
       setStatus("success")
@@ -86,11 +88,11 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="border-white/[0.08] bg-[#0a0a0a] text-white sm:max-w-md"
+        className="border-white/[0.08] bg-[#0a0a0a] text-white sm:max-w-md [&_[data-slot=dialog-close]]:text-zinc-400 [&_[data-slot=dialog-close]]:hover:text-white [&_[data-slot=dialog-close]]:ring-offset-[#0a0a0a]"
         onPointerDownOutside={(e) => status === "sending" && e.preventDefault()}
       >
         <DialogHeader>
-          <DialogTitle className="text-lg font-semibold text-white">
+          <DialogTitle className="text-lg font-semibold text-[#e8ecf1]">
             Request a Briefing
           </DialogTitle>
           <DialogDescription className="text-sm text-zinc-400">
@@ -107,7 +109,7 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-white underline hover:no-underline"
+              className="text-sm text-[#e8ecf1] underline hover:no-underline"
             >
               Or book a time now
             </a>
@@ -115,15 +117,15 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4 pt-2">
             <div>
-              <Label htmlFor="briefing-email" className={labelClass}>
-                Email
+              <Label htmlFor="briefing-name" className={labelClass}>
+                Name
               </Label>
               <Input
-                id="briefing-email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@company.com"
+                id="briefing-name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Full name"
                 required
                 className={inputClass}
                 disabled={status === "sending"}
@@ -166,7 +168,7 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
             </div>
             <div>
               <Label htmlFor="briefing-pro-email" className={labelClass}>
-                Professional / work email
+                Work email
               </Label>
               <Input
                 id="briefing-pro-email"
@@ -188,7 +190,7 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
               <Button
                 type="button"
                 variant="outline"
-                className="border-white/20 text-white hover:bg-white/10"
+                className="border-white/20 text-[#e8ecf1] hover:bg-white/10"
                 onClick={() => handleOpenChange(false)}
                 disabled={status === "sending"}
               >
