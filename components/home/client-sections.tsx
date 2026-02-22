@@ -2,16 +2,32 @@
 
 import dynamic from "next/dynamic"
 
-const WhatWeBuild = dynamic(
-  () => import("@/components/home/what-we-build").then((mod) => mod.WhatWeBuild),
+const MetricsStrip = dynamic(
+  () => import("@/components/home/metrics-strip").then((mod) => mod.MetricsStrip),
   { ssr: false }
 )
-const MissionSection = dynamic(
-  () => import("@/components/home/mission-section").then((mod) => mod.MissionSection),
+const EnforcementTable = dynamic(
+  () => import("@/components/home/enforcement-table").then((mod) => mod.EnforcementTable),
   { ssr: false }
 )
-const LeadershipSection = dynamic(
-  () => import("@/components/home/leadership-section").then((mod) => mod.LeadershipSection),
+const WhyNowSection = dynamic(
+  () => import("@/components/home/why-now-section").then((mod) => mod.WhyNowSection),
+  { ssr: false }
+)
+const WhatShieldDoes = dynamic(
+  () => import("@/components/home/what-shield-does").then((mod) => mod.WhatShieldDoes),
+  { ssr: false }
+)
+const HowItWorksSection = dynamic(
+  () => import("@/components/home/how-it-works-section").then((mod) => mod.HowItWorksSection),
+  { ssr: false }
+)
+const PilotSection = dynamic(
+  () => import("@/components/home/pilot-section").then((mod) => mod.PilotSection),
+  { ssr: false }
+)
+const SectorBriefs = dynamic(
+  () => import("@/components/home/sector-briefs").then((mod) => mod.SectorBriefs),
   { ssr: false }
 )
 const ShieldCallout = dynamic(
@@ -26,9 +42,13 @@ const Footer = dynamic(
 export default function ClientSections() {
   return (
     <>
-      <WhatWeBuild />
-      <MissionSection />
-      <LeadershipSection />
+      <MetricsStrip />
+      <EnforcementTable />
+      <WhyNowSection />
+      <WhatShieldDoes />
+      <HowItWorksSection />
+      <PilotSection />
+      <SectorBriefs />
       <ShieldCallout />
       <Footer />
     </>
