@@ -40,7 +40,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://monakesai.com/sitemap.xml",
-    host: "https://monakesai.com",
+    sitemap: "https://monakes.com/sitemap.xml",
+    host: "https://monakes.com",
   }
 }
