@@ -2,6 +2,22 @@
 
 import dynamic from "next/dynamic"
 
+const ShieldHero = dynamic(
+  () => import("@/components/shield/shield-hero").then((mod) => mod.ShieldHero),
+  { ssr: false }
+)
+const ShieldChallenge = dynamic(
+  () => import("@/components/shield/shield-challenge").then((mod) => mod.ShieldChallenge),
+  { ssr: false }
+)
+const ShieldSolution = dynamic(
+  () => import("@/components/shield/shield-solution").then((mod) => mod.ShieldSolution),
+  { ssr: false }
+)
+const ShieldIntegration = dynamic(
+  () => import("@/components/shield/shield-integration").then((mod) => mod.ShieldIntegration),
+  { ssr: false }
+)
 const MetricsStrip = dynamic(
   () => import("@/components/home/metrics-strip").then((mod) => mod.MetricsStrip),
   { ssr: false }
@@ -30,6 +46,10 @@ const SectorBriefs = dynamic(
   () => import("@/components/home/sector-briefs").then((mod) => mod.SectorBriefs),
   { ssr: false }
 )
+const LeadershipSection = dynamic(
+  () => import("@/components/home/leadership-section").then((mod) => mod.LeadershipSection),
+  { ssr: false }
+)
 const ShieldCallout = dynamic(
   () => import("@/components/home/shield-callout").then((mod) => mod.ShieldCallout),
   { ssr: false }
@@ -42,13 +62,19 @@ const Footer = dynamic(
 export default function ClientSections() {
   return (
     <>
+      <ShieldHero />
+      <ShieldChallenge />
+      <ShieldSolution />
+      <ShieldIntegration />
       <MetricsStrip />
       <EnforcementTable />
       <WhyNowSection />
       <WhatShieldDoes />
+      <MissionSection />
       <HowItWorksSection />
       <PilotSection />
       <SectorBriefs />
+      <LeadershipSection />
       <ShieldCallout />
       <Footer />
     </>

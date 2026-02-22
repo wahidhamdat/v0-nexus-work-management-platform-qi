@@ -2,10 +2,11 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
-const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
 export function HeroSection() {
+  const briefingModal = useBriefingModal()
+
   return (
     <section
       aria-label="Hero introduction"
@@ -23,10 +24,10 @@ export function HeroSection() {
           className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-5 leading-[1.15]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Export Compliance Has a Liability Gap. Shield Closes It Before BIS Does.
+          Export Compliance Has a Liability Gap. Shield Closes It.
         </h1>
         <p className="text-base sm:text-lg text-zinc-400 max-w-[640px] leading-relaxed mb-8">
-          Shield screens every China-facing transaction against real-time BIS Entity Lists, OFAC SDN, and MEU Lists. Neural fuzzy matching. Immutable audit logs. Your signature protected.
+          Monakes AI builds autonomous compliance intelligence for enterprises operating in controlled and sanctioned trade environments. Shield is the flagship deployment.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button

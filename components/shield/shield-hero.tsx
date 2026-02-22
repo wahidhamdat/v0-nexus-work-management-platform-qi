@@ -78,7 +78,7 @@ export function ShieldHero() {
     return () => ctx?.revert()
   }, [])
 
-  const headlineText = "Your signature is on every export. Close the gap before BIS does."
+  const headlineText = "The gap between rule change and shipment is where liability attaches. Shield closes it."
   const words = headlineText.split(" ")
 
   const dashboardMetrics = [
@@ -150,10 +150,7 @@ export function ShieldHero() {
             ref={subtextRef}
             className="text-base sm:text-lg text-[#7A8BA8] leading-relaxed max-w-xl mb-10 opacity-0"
           >
-            BIS added 240 entities last year. Your screening tool updates weekly.
-            That gap -- between rule change and shipment -- is where your personal
-            liability lives. Shield screens every order in real time, so you never
-            ship to a banned entity.
+            Shield screens every transaction against the current BIS, OFAC, and MEU lists at the moment of processing. Sub-200ms latency. Deterministic classification. Immutable audit trail.
           </p>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-start gap-4 opacity-0">
@@ -163,7 +160,7 @@ export function ShieldHero() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#00D4FF] text-[#0A0E1A] text-base font-semibold hover:bg-[#00BFEA] transition-all duration-300 shadow-[0_2px_16px_rgba(0,212,255,0.2)] hover:shadow-[0_4px_24px_rgba(0,212,255,0.3)]"
             >
-              See it in 15 minutes
+              Request a Demonstration
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a

@@ -18,6 +18,13 @@ export function ShieldFooter() {
         </div>
         <div className="flex items-center gap-6">
           <a
+            href="/"
+            className="text-sm text-white/50 hover:text-white/80 transition-colors duration-300"
+          >
+            Home
+          </a>
+          <div className="w-px h-4 bg-white/10" />
+          <a
             href="mailto:info@monakes.com"
             className="text-sm text-white/50 hover:text-white/80 transition-colors duration-300"
           >

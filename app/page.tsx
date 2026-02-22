@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar"
 import { AlertBar } from "@/components/home/alert-bar"
 import { HeroSection } from "@/components/home/hero-section"
 import ClientSections from "@/components/home/client-sections"
+import { BriefingModalProvider } from "@/components/home/briefing-modal-context"
 
 const jsonLd = {
   "@context": "https://schema.org",
