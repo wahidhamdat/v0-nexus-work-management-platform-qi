@@ -4,7 +4,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-
+  experimental: {
+    serverComponentsExternalPackages: ["sharp"],
+  },
 }
 
 export default nextConfig
