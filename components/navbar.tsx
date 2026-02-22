@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
 const navItems = [
   { label: "Shield", href: "/shield" },
@@ -18,6 +19,7 @@ type NavbarProps = { belowAlertBar?: boolean }
 export function Navbar({ belowAlertBar }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const briefingModal = useBriefingModal()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -54,16 +56,27 @@ export function Navbar({ belowAlertBar }: NavbarProps) {
               {item.label}
             </a>
           ))}
-          <Button
-            asChild
-            size="sm"
-            variant="outline"
-            className="border-white/20 text-white hover:bg-white/10 hover:text-white rounded-sm px-4 font-medium text-sm"
-          >
-            <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
+          {briefingModal ? (
+            <Button
+              size="sm"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 hover:text-white rounded-sm px-4 font-medium text-sm"
+              onClick={() => briefingModal.openBriefingModal()}
+            >
               Request Briefing
-            </a>
-          </Button>
+            </Button>
+          ) : (
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 hover:text-white rounded-sm px-4 font-medium text-sm"
+            >
+              <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
+                Request Briefing
+              </a>
+            </Button>
+          )}
         </div>
 
         <button
@@ -96,11 +109,24 @@ export function Navbar({ belowAlertBar }: NavbarProps) {
                 </a>
               ))}
               <hr className="border-white/[0.08] my-2" />
-              <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-sm font-medium">
-                <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+              {briefingModal ? (
+                <Button
+                  variant="outline"
+                  className="border-white/20 text-white hover:bg-white/10 rounded-sm font-medium"
+                  onClick={() => {
+                    briefingModal.openBriefingModal()
+                    setMobileMenuOpen(false)
+                  }}
+                >
                   Request Briefing
-                </a>
-              </Button>
+                </Button>
+              ) : (
+                <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-sm font-medium">
+                  <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                    Request Briefing
+                  </a>
+                </Button>
+              )}
             </div>
           </motion.div>
         )}

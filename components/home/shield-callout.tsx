@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button"
+"use client"
 
-const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
+import { Button } from "@/components/ui/button"
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
 export function ShieldCallout() {
+  const briefingModal = useBriefingModal()
+
   return (
     <section className="px-6 py-20 bg-[#0a0a0a] border-t border-white/[0.08]">
       <div className="max-w-2xl mx-auto text-center">
@@ -16,13 +19,11 @@ export function ShieldCallout() {
           15 minutes to see what real-time screening looks like against your current stack.
         </p>
         <Button
-          asChild
           size="lg"
           className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
+          onClick={() => briefingModal?.openBriefingModal()}
         >
-          <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
-            Request a Briefing
-          </a>
+          Request a Briefing
         </Button>
       </div>
     </section>
