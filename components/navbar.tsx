@@ -13,7 +13,9 @@ const navItems = [
 
 const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
 
-export function Navbar() {
+type NavbarProps = { belowAlertBar?: boolean }
+
+export function Navbar({ belowAlertBar }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
