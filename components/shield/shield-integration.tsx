@@ -12,7 +12,7 @@ const integrations = [
   {
     icon: Layers,
     label: "Oracle GTM",
-    description: "Seamless data flow with Oracle Global Trade Management",
+    description: "API integration with Oracle Global Trade Management",
   },
   {
     icon: Lock,
@@ -100,23 +100,18 @@ export function ShieldIntegration() {
           <div className="lg:w-[50%]">
             <div ref={headingRef} className="opacity-0">
               <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF] mb-4 block">
-                Seamless Integration
+                Integration
               </span>
               <h2
                 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-6"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 <span className="text-balance block">
-                  Your Existing Infrastructure, Supercharged by AI.
+                  Zero-Disruption Deployment. API-First.
                 </span>
               </h2>
               <p className="text-base text-[#7A8BA8] leading-relaxed max-w-lg mb-10">
-                {'"'}The Shield{'"'} is engineered for zero-disruption deployment. Its
-                API-first design allows for rapid, secure integration with your
-                current SAP GTS, Oracle GTM, or other screening tools. It acts as
-                an intelligent, headless layer, augmenting your existing
-                investments and filling critical compliance gaps without requiring
-                a costly rip-and-replace.
+                Shield is engineered for zero-disruption deployment. API-first integration with SAP GTS, Oracle GTM, or custom ERP. Acts as a headless compliance layer. No rip-and-replace.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

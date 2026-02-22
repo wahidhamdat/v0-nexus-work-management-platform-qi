@@ -13,17 +13,17 @@ export function ShieldCallout() {
           className="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-4 leading-[1.2]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Shield Is Live. The Gap Is Closing.
+          Export control enforcement is accelerating. The entities list expands weekly. The liability window is narrow.
         </h2>
         <p className="text-sm text-zinc-400 leading-relaxed mb-8">
-          15 minutes to see what real-time screening looks like against your current stack.
+          Shield is in production. The question is whether your screening infrastructure is.
         </p>
         <Button
           size="lg"
           className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
           onClick={() => briefingModal?.openBriefingModal()}
         >
-          Request a Briefing
+          Request a Demonstration
         </Button>
       </div>
     </section>

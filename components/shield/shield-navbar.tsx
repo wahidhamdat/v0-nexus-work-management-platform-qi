@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
+  { label: "Home", href: "/" },
   { label: "The Gap", href: "#challenge" },
   { label: "How It Works", href: "#solution" },
   { label: "Integration", href: "#integration" },
@@ -24,6 +25,7 @@ export function ShieldNavbar() {
 
   useEffect(() => {
     const sections = navItems
+      .filter((item) => item.href.startsWith("#"))
       .map((item) => document.querySelector(item.href))
       .filter(Boolean) as Element[]
 
@@ -80,13 +82,13 @@ export function ShieldNavbar() {
               key={item.label}
               href={item.href}
               className={`relative text-sm px-3 py-2 rounded-md transition-all duration-300 font-medium ${
-                activeSection === item.href
+                activeSection === item.href && item.href.startsWith("#")
                   ? "text-[#00D4FF]"
                   : "text-[#7A8BA8] hover:text-[#00D4FF]"
               }`}
             >
               {item.label}
-              {activeSection === item.href && (
+              {activeSection === item.href && item.href.startsWith("#") && (
                 <motion.div
                   layoutId="shield-nav-indicator"
                   className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#00D4FF] rounded-full"

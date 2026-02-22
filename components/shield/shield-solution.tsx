@@ -8,25 +8,25 @@ const features = [
     icon: Zap,
     title: "Real-Time Screening",
     description:
-      "Every regulatory update from BIS, OFAC, and UN is ingested the moment it is published. No more waiting for weekly batch updates.",
+      "Every regulatory update from BIS, OFAC, and UN ingested at publication. No weekly batch. Zero-disruption deployment.",
   },
   {
     icon: Brain,
-    title: "Advanced Fuzzy Matching",
+    title: "Neural Fuzzy Matching",
     description:
-      "Catches subtle name variations, transliterations, and deliberate obfuscations that conventional screening tools miss entirely.",
+      "Name variants, transliterations, and obfuscations that exact-match screening misses. Deterministic match rationale.",
   },
   {
     icon: ShieldCheck,
-    title: "Accurate ECCN Classification",
+    title: "Deterministic ECCN Classification",
     description:
-      "Rules-based classification engine delivers verifiable, deterministic results -- no hallucinations, no guesswork.",
+      "Rules-based classification. Verifiable, deterministic results. No hallucinations.",
   },
   {
     icon: FileKey,
-    title: "One-Click Audit Trail",
+    title: "Immutable Audit Trail",
     description:
-      "Every decision, screen, and rule version is cryptographically logged. Pull a complete audit record in one click when regulators come calling.",
+      "Every decision, list version, and match rationale cryptographically logged. Export a complete audit record when regulators require it.",
   },
 ]
 
@@ -125,13 +125,11 @@ export function ShieldSolution() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              How Shield Protects You
+              How Shield Operates
             </span>
           </h2>
           <p className="text-base text-[#7A8BA8] leading-relaxed max-w-xl">
-            Shield operates as an autonomous compliance layer that continuously
-            monitors regulatory changes, screens every transaction in real time,
-            and logs every decision with an immutable audit trail.
+            Shield screens every transaction against the current regulatory list at the moment of processing. Sub-200ms. Deterministic. Immutable audit trail.
           </p>
         </div>
 

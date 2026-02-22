@@ -208,8 +208,8 @@ export function ShieldChallenge() {
         {/* Body text */}
         <div ref={bodyRef} className="opacity-0 max-w-2xl mx-auto mb-10">
           <p className="text-base sm:text-lg text-[#7A8BA8] leading-relaxed">
-            Your signature is on every shipment in that timeline. The question
-            is: can you prove you screened against the current list?
+            Every shipment in that timeline carries a signature. The question is
+            whether screening was executed against the current list.
           </p>
         </div>
 
@@ -221,7 +221,7 @@ export function ShieldChallenge() {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-[#00D4FF]/30 text-[#00D4FF] text-base font-semibold hover:bg-[#00D4FF]/10 transition-all duration-300"
           >
-            Close your gap now
+            Request a Demonstration
           </a>
         </div>
       </div>
