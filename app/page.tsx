@@ -1,5 +1,6 @@
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
+import { AlertBar } from "@/components/home/alert-bar"
 import { HeroSection } from "@/components/home/hero-section"
 import ClientSections from "@/components/home/client-sections"
 
