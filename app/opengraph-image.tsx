@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "MonakesAI - AI Agents for Freight Forwarding"
+export const alt = "Monakes AI — Autonomous Export Compliance | Shield"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: "#06090f",
+          background: "#0a0a0a",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -21,7 +21,7 @@ export default function Image() {
       >
         <div
           style={{
-            color: "#00e5a0",
+            color: "#00D4FF",
             fontSize: 28,
             fontWeight: 700,
             marginBottom: 16,
@@ -35,30 +35,31 @@ export default function Image() {
               width: 12,
               height: 12,
               borderRadius: 3,
-              background: "#00e5a0",
+              background: "#00D4FF",
+              transform: "rotate(45deg)",
             }}
           />
-          MonakesAI
+          Monakes AI
         </div>
         <div
           style={{
             color: "#e8ecf1",
-            fontSize: 52,
+            fontSize: 48,
             fontWeight: 800,
             lineHeight: 1.15,
             maxWidth: 800,
           }}
         >
-          AI Agents That Quote, Book & Track Freight Automatically
+          Autonomous Export Compliance | Shield
         </div>
         <div
           style={{
             color: "#8892a4",
-            fontSize: 24,
+            fontSize: 22,
             marginTop: 24,
           }}
         >
-          4 min quotes - 85% faster bookings - 95% fewer penalties
+          Real-time screening. Deterministic classification. Immutable audit trail.
         </div>
         <div
           style={{
@@ -67,7 +68,7 @@ export default function Image() {
             marginTop: 16,
           }}
         >
-          monakesai.com
+          monakes.com
         </div>
       </div>
     ),
