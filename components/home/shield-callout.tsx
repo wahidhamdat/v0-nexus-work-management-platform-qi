@@ -1,27 +1,27 @@
 import { Button } from "@/components/ui/button"
 
-const DEMO_URL = "https://calendly.com/wahidhamdat30/30min"
+const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
 
 export function ShieldCallout() {
   return (
-    <section className="px-6 py-24 bg-[#06090f] border-t border-[rgba(255,255,255,0.06)]">
-      <div className="max-w-3xl mx-auto text-center">
+    <section className="px-6 py-20 bg-[#0a0a0a] border-t border-white/[0.08]">
+      <div className="max-w-2xl mx-auto text-center">
         <h2
-          className="text-3xl sm:text-4xl font-bold tracking-tight text-[#e8ecf1] mb-6 leading-[1.2]"
+          className="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-4 leading-[1.2]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Shield Is Live. The Gap Is Closing. The Question Is Whether You&apos;re on the Right Side of It.
+          Shield Is Live. The Gap Is Closing.
         </h2>
-        <p className="text-[#8892a4] leading-relaxed mb-10">
-          Export control enforcement is accelerating. The entities list grows weekly. The penalty window is narrow and personal liability is real. Shield closes that gap for the companies that cannot afford to find out the hard way.
+        <p className="text-sm text-zinc-400 leading-relaxed mb-8">
+          15 minutes to see what real-time screening looks like against your current stack.
         </p>
         <Button
           asChild
           size="lg"
-          className="bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-md px-6 font-medium"
+          className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
         >
-          <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
-            See Shield in 15 Minutes
+          <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
+            Request a Briefing
           </a>
         </Button>
       </div>

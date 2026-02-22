@@ -11,7 +11,7 @@ const navItems = [
   { label: "Leadership", href: "#leadership" },
 ]
 
-const DEMO_URL = "https://calendly.com/wahidhamdat30/30min"
+const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -25,20 +25,18 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#06090f]/90 backdrop-blur-xl border-b border-[rgba(255,255,255,0.06)]"
-          : "bg-transparent backdrop-blur-md"
+      className={`fixed left-0 right-0 z-50 transition-colors duration-200 ${belowAlertBar ? "top-10" : "top-0"} ${
+        scrolled ? "bg-[#0a0a0a] border-b border-white/[0.08]" : "bg-[#0a0a0a]/95"
       }`}
     >
       <nav
         role="navigation"
         aria-label="Main navigation"
-        className="relative flex items-center justify-between px-6 py-4 max-w-7xl mx-auto"
+        className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto"
       >
         <a
           href="/"
-          className="text-[#e8ecf1] font-bold text-xl tracking-tight"
+          className="text-white font-semibold text-lg tracking-tight"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           Monakes AI
@@ -49,7 +47,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm text-[#8892a4] hover:text-[#e8ecf1] transition-colors"
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
               {item.label}
             </a>
@@ -57,17 +55,18 @@ export function Navbar() {
           <Button
             asChild
             size="sm"
-            className="bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-md px-4 font-medium text-sm"
+            variant="outline"
+            className="border-white/20 text-white hover:bg-white/10 hover:text-white rounded-sm px-4 font-medium text-sm"
           >
-            <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
-              Request a Demo
+            <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
+              Request Briefing
             </a>
           </Button>
         </div>
 
         <button
           type="button"
-          className="lg:hidden p-2 text-[#8892a4] hover:text-[#e8ecf1]"
+          className="lg:hidden p-2 text-zinc-400 hover:text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -81,23 +80,23 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#06090f]/98 backdrop-blur-xl border-t border-[rgba(255,255,255,0.06)] overflow-hidden"
+            className="lg:hidden bg-[#0a0a0a] border-t border-white/[0.08] overflow-hidden"
           >
             <div className="flex flex-col gap-1 p-4 max-w-7xl mx-auto">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="px-4 py-3 text-sm text-[#8892a4] hover:text-[#e8ecf1] hover:bg-[rgba(255,255,255,0.04)] rounded-lg transition-colors"
+                  className="px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-white/[0.04] rounded transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <hr className="border-[rgba(255,255,255,0.06)] my-2" />
-              <Button asChild className="bg-[#00e5a0] text-[#06090f] hover:bg-[#00cc8e] rounded-md font-medium">
-                <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
-                  Request a Demo
+              <hr className="border-white/[0.08] my-2" />
+              <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 rounded-sm font-medium">
+                <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                  Request Briefing
                 </a>
               </Button>
             </div>
