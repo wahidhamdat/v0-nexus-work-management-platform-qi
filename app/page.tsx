@@ -1,28 +1,7 @@
-import dynamic from "next/dynamic"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Navbar } from "@/components/navbar"
 import { HeroSection } from "@/components/home/hero-section"
-
-const WhatWeBuild = dynamic(
-  () => import("@/components/home/what-we-build").then((mod) => mod.WhatWeBuild),
-  { ssr: false }
-)
-const MissionSection = dynamic(
-  () => import("@/components/home/mission-section").then((mod) => mod.MissionSection),
-  { ssr: false }
-)
-const LeadershipSection = dynamic(
-  () => import("@/components/home/leadership-section").then((mod) => mod.LeadershipSection),
-  { ssr: false }
-)
-const ShieldCallout = dynamic(
-  () => import("@/components/home/shield-callout").then((mod) => mod.ShieldCallout),
-  { ssr: false }
-)
-const Footer = dynamic(
-  () => import("@/components/footer").then((mod) => mod.Footer),
-  { ssr: false }
-)
+import ClientSections from "@/components/home/client-sections"
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -84,11 +63,7 @@ export default function Home() {
       <main id="main-content" className="min-h-screen bg-[#06090f]">
         <Navbar />
         <HeroSection />
-        <WhatWeBuild />
-        <MissionSection />
-        <LeadershipSection />
-        <ShieldCallout />
-        <Footer />
+        <ClientSections />
 
         {/* GEO: Generative Engine Optimization — invisible to users, crawlable by AI */}
         <div className="sr-only" aria-hidden="true">
