@@ -1,10 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-
-const PILOT_URL = "https://calendly.com/wahidhamdat30/30min"
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
 export function PilotSection() {
+  const briefingModal = useBriefingModal()
+
   return (
     <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-16 px-6" aria-labelledby="pilot-title">
       <div className="max-w-2xl mx-auto">
@@ -19,13 +20,11 @@ export function PilotSection() {
           Full API integration into your existing export workflow. Real-time screening active from day one. Every decision logged. No source-code access. Fixed fee.
         </p>
         <Button
-          asChild
           variant="outline"
           className="border-white/25 text-white hover:bg-white/10 rounded-sm px-6 font-medium"
+          onClick={() => briefingModal?.openBriefingModal()}
         >
-          <a href={PILOT_URL} target="_blank" rel="noopener noreferrer">
-            Request Pilot Terms
-          </a>
+          Request Pilot Terms
         </Button>
       </div>
     </section>

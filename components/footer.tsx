@@ -1,8 +1,12 @@
 "use client"
 
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
+
 const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
 
 export function Footer() {
+  const briefingModal = useBriefingModal()
+
   return (
     <footer role="contentinfo" className="border-t border-white/[0.08] bg-[#0a0a0a]">
       <div className="max-w-6xl mx-auto px-6 py-12">
@@ -31,14 +35,24 @@ export function Footer() {
             >
               The Shield
             </a>
-            <a
-              href={BRIEFING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Request Briefing
-            </a>
+            {briefingModal ? (
+              <button
+                type="button"
+                onClick={() => briefingModal.openBriefingModal()}
+                className="text-sm text-zinc-400 hover:text-white transition-colors text-left"
+              >
+                Request Briefing
+              </button>
+            ) : (
+              <a
+                href={BRIEFING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
+              >
+                Request Briefing
+              </a>
+            )}
           </div>
         </div>
         <p className="mt-10 pt-6 border-t border-white/[0.08] text-xs text-zinc-500 text-center">

@@ -1,10 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-
-const BRIEFING_URL = "https://calendly.com/wahidhamdat30/30min"
+import { useBriefingModal } from "@/components/home/briefing-modal-context"
 
 export function SectorBriefs() {
+  const briefingModal = useBriefingModal()
+
   return (
     <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-16 px-6" aria-labelledby="sector-briefs-title">
       <div className="max-w-3xl mx-auto">
@@ -23,13 +24,11 @@ export function SectorBriefs() {
             Semiconductor Sector — Export Compliance Situational Brief, February 2026
           </p>
           <Button
-            asChild
             variant="outline"
             className="border-white/25 text-white hover:bg-white/10 rounded-sm font-medium"
+            onClick={() => briefingModal?.openBriefingModal()}
           >
-            <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
-              Request Brief
-            </a>
+            Request Brief
           </Button>
         </div>
       </div>

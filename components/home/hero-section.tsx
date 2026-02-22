@@ -37,14 +37,12 @@ export function HeroSection() {
             <Link href="/shield">See Shield</Link>
           </Button>
           <Button
-            asChild
             size="lg"
             variant="outline"
             className="border-white/25 text-white hover:bg-white/10 rounded-sm px-6 font-medium"
+            onClick={() => briefingModal?.openBriefingModal()}
           >
-            <a href={BRIEFING_URL} target="_blank" rel="noopener noreferrer">
-              Download Sector Brief
-            </a>
+            Download Sector Brief
           </Button>
         </div>
       </div>

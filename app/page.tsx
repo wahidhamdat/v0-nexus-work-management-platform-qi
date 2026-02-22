@@ -58,6 +58,7 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <BriefingModalProvider>
       <main id="main-content" className="min-h-screen bg-[#0a0a0a]">
         <AlertBar />
         <Navbar belowAlertBar />
@@ -71,6 +72,7 @@ export default function Home() {
           </p>
         </div>
       </main>
+    </BriefingModalProvider>
     </SmoothScroll>
   )
 }
