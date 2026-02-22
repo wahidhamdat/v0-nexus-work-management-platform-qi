@@ -34,6 +34,10 @@ const WhatShieldDoes = dynamic(
   () => import("@/components/home/what-shield-does").then((mod) => mod.WhatShieldDoes),
   { ssr: false }
 )
+const MissionSection = dynamic(
+  () => import("@/components/home/mission-section").then((mod) => mod.MissionSection),
+  { ssr: false }
+)
 const HowItWorksSection = dynamic(
   () => import("@/components/home/how-it-works-section").then((mod) => mod.HowItWorksSection),
   { ssr: false }
