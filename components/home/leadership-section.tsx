@@ -11,14 +11,14 @@ export function LeadershipSection() {
       initials: "MH",
       name: "Mohamed Hamdat",
       title: "Founder · CEO · CTO",
-      bio: "Mohamed founded Monakes AI and personally architects its production systems. The decisions governing how Shield screens, classifies, and logs — in real time, at scale, under regulatory scrutiny — are his decisions. He is not a CEO who delegates engineering. He is the engineer who built the company around it.",
+      bio: "Mohamed founded Monakes AI and personally architects its production systems. The decisions governing how Shield screens, classifies, and logs — in real time, at scale, under regulatory scrutiny — are his decisions. He is not a CEO who delegates engineering. He is the engineer who built the company around it. Shield's screening architecture, matching logic, and audit infrastructure are his direct work.",
       useDotGrid: false,
     },
     {
       initials: null,
       name: "Engineering & AI Research",
       title: "Distributed · World-Class · Specialist",
-      bio: "Our engineering capability is assembled from specialists recruited for the precision demands of compliance automation and real-time regulatory systems. No generalists. No offshore bodies filling headcount. Every person working on Shield is accountable for a specific outcome and operates with the understanding that errors in this domain carry legal and financial consequences.",
+      bio: "Our engineering capability is assembled from specialists recruited for the precision demands of compliance automation and real-time regulatory systems. Every person working on Shield is accountable for a specific outcome and operates with the understanding that errors in this domain carry legal and financial consequences.",
       useDotGrid: true,
     },
   ]

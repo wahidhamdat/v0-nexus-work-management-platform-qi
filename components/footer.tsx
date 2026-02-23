@@ -22,10 +22,10 @@ export function Footer() {
               London · Operating Globally
             </p>
             <a
-              href="mailto:info@monakes.com"
+              href="mailto:ceo@monakes.com"
               className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
-              info@monakes.com
+              ceo@monakes.com
             </a>
           </div>
           <div className="flex flex-col gap-2">

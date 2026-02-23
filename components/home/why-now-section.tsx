@@ -10,7 +10,7 @@ export function WhyNowSection() {
           The Enforcement Window Is Open
         </h2>
         <p className="text-[15px] leading-relaxed text-zinc-300">
-          BIS added 240 entities in December 2025 alone. The Affiliates Rule requires affirmative ownership verification at every tier of your distribution chain — not just a screening list check. The Cadence resolution established that reason-to-know is sufficient for criminal liability. The companies acting now control the narrative. The ones acting after enforcement are the precedent.
+          BIS added 240 entities in December 2025 alone. The Affiliates Rule requires affirmative ownership verification at every tier of your distribution chain — not just a screening list check. The Cadence resolution established that reason-to-know is sufficient for criminal liability. The companies acting now control the narrative.
         </p>
       </div>
     </section>
