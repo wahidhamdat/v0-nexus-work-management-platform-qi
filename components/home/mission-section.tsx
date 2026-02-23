@@ -1,6 +1,6 @@
 export function MissionSection() {
   return (
-    <section className="px-6 py-24 bg-[#0a0a0a] border-t border-white/[0.08]">
+    <section className="px-6 py-24 bg-[#07111F] border-t border-white/[0.08]">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12">
         <div className="md:pr-12 md:border-r border-[rgba(255,255,255,0.07)]">
           <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#5a6478] mb-4">

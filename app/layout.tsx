@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
   category: "technology",
   other: {
-    "theme-color": "#0a0a0a",
+    "theme-color": "#07111F",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "black-translucent",
   },

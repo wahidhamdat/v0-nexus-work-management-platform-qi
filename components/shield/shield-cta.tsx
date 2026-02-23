@@ -53,7 +53,7 @@ export function ShieldCTA() {
       aria-label="Call to action"
       className="relative px-6 py-24 lg:py-32 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[#00D4FF]" />
+      <div className="absolute inset-0 bg-[#4A7FA5]" />
       <div className="absolute inset-0 shield-grid-pattern-light" />
 
       <div
@@ -86,9 +86,9 @@ export function ShieldCTA() {
               href="https://calendly.com/wahidhamdat30/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-[#0A0E1A] text-[#00D4FF] text-base font-semibold hover:bg-[#111827] transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] overflow-hidden"
+              className="group relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-[#0A0E1A] text-[#4A7FA5] text-base font-semibold hover:bg-[#111827] transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] overflow-hidden"
             >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00D4FF]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#4A7FA5]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10 flex items-center gap-2">
                 Book a 15-min demo
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

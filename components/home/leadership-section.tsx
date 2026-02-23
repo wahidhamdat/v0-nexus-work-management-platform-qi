@@ -26,7 +26,7 @@ export function LeadershipSection() {
   return (
     <section
       id="leadership"
-      className="px-6 py-24 bg-[#0a0a0a] border-t border-white/[0.08]"
+      className="px-6 py-24 bg-[#07111F] border-t border-white/[0.08]"
     >
       <div className="max-w-6xl mx-auto">
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#5a6478] mb-4">

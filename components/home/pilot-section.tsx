@@ -7,7 +7,7 @@ export function PilotSection() {
   const briefingModal = useBriefingModal()
 
   return (
-    <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-16 px-6" aria-labelledby="pilot-title">
+    <section className="bg-[#07111F] border-t border-white/[0.08] py-16 px-6" aria-labelledby="pilot-title">
       <div className="max-w-2xl mx-auto">
         <h2
           id="pilot-title"

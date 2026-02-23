@@ -117,7 +117,7 @@ export function ShieldSolution() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div ref={headingRef} className="max-w-2xl mb-16 opacity-0">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF] mb-4 block">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4A7FA5] mb-4 block">
             How It Works
           </span>
           <h2
@@ -141,17 +141,17 @@ export function ShieldSolution() {
               <div
                 key={feature.title}
                 ref={(el) => { cardsRef.current[i] = el }}
-                className={`group relative p-8 rounded-xl bg-[#111827]/80 border border-white/6 hover:border-[#00D4FF]/20 transition-all duration-500 opacity-0 overflow-hidden ${
+                className={`group relative p-8 rounded-xl bg-[#111827]/80 border border-white/6 hover:border-[#4A7FA5]/20 transition-all duration-500 opacity-0 overflow-hidden ${
                   i >= 3 ? "lg:col-span-1 lg:last:col-start-2" : ""
                 }`}
               >
-                <div className="card-glow absolute w-[200px] h-[200px] rounded-full bg-[#00D4FF]/5 blur-[60px] pointer-events-none opacity-0" />
+                <div className="card-glow absolute w-[200px] h-[200px] rounded-full bg-[#4A7FA5]/5 blur-[60px] pointer-events-none opacity-0" />
 
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00D4FF]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A7FA5]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-lg bg-[#00D4FF]/8 flex items-center justify-center mb-5 group-hover:bg-[#00D4FF]/12 transition-colors duration-300">
-                    <Icon className="w-5 h-5 text-[#00D4FF]" />
+                  <div className="w-12 h-12 rounded-lg bg-[#4A7FA5]/8 flex items-center justify-center mb-5 group-hover:bg-[#4A7FA5]/12 transition-colors duration-300">
+                    <Icon className="w-5 h-5 text-[#4A7FA5]" />
                   </div>
                   <h3
                     className="text-lg font-bold text-white mb-3"

@@ -344,8 +344,8 @@
 /* The Shield - Export Compliance Landing Page Styles */
 .shield-grid-pattern {
   background-image:
-    linear-gradient(rgba(0,212,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.02) 1px, transparent 1px);
+    linear-gradient(rgba(74,127,165,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,127,165,0.02) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 

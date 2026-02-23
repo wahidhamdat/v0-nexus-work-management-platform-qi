@@ -99,7 +99,7 @@ export function ShieldIntegration() {
           {/* Left - Copy */}
           <div className="lg:w-[50%]">
             <div ref={headingRef} className="opacity-0">
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF] mb-4 block">
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4A7FA5] mb-4 block">
                 Integration
               </span>
               <h2
@@ -121,10 +121,10 @@ export function ShieldIntegration() {
                     <div
                       key={item.label}
                       ref={(el) => { cardsRef.current[i] = el }}
-                      className="flex items-start gap-3 p-4 rounded-lg bg-[#111827]/80 border border-white/6 opacity-0 hover:border-[#00D4FF]/15 transition-colors duration-300"
+                      className="flex items-start gap-3 p-4 rounded-lg bg-[#111827]/80 border border-white/6 opacity-0 hover:border-[#4A7FA5]/15 transition-colors duration-300"
                     >
-                      <div className="flex-shrink-0 w-9 h-9 rounded-md bg-[#00D4FF]/8 flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-[#00D4FF]" />
+                      <div className="flex-shrink-0 w-9 h-9 rounded-md bg-[#4A7FA5]/8 flex items-center justify-center">
+                        <Icon className="w-4 h-4 text-[#4A7FA5]" />
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-white mb-0.5">
@@ -150,7 +150,7 @@ export function ShieldIntegration() {
               <div className="rounded-2xl bg-[#111827]/80 border border-white/8 p-8 shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
                 {/* Title */}
                 <div className="flex items-center gap-2 mb-8">
-                  <div className="w-2 h-2 rounded-full bg-[#00D4FF]" />
+                  <div className="w-2 h-2 rounded-full bg-[#4A7FA5]" />
                   <span className="text-xs font-semibold tracking-[0.15em] uppercase text-[#7A8BA8]">
                     Architecture Overview
                   </span>
@@ -178,23 +178,23 @@ export function ShieldIntegration() {
                   {/* Arrow down */}
                   <div className="flex justify-center">
                     <div className="flex flex-col items-center gap-1">
-                      <div className="w-px h-4 bg-[#00D4FF]/30" />
-                      <div className="w-2 h-2 border-b-2 border-r-2 border-[#00D4FF]/40 rotate-45 -mt-1" />
+                      <div className="w-px h-4 bg-[#4A7FA5]/30" />
+                      <div className="w-2 h-2 border-b-2 border-r-2 border-[#4A7FA5]/40 rotate-45 -mt-1" />
                     </div>
                   </div>
 
                   {/* The Shield layer */}
-                  <div className="rounded-lg bg-[#00D4FF]/8 border border-[#00D4FF]/20 p-4 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00D4FF]/5 via-transparent to-[#00D4FF]/5" />
+                  <div className="rounded-lg bg-[#4A7FA5]/8 border border-[#4A7FA5]/20 p-4 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#4A7FA5]/5 via-transparent to-[#4A7FA5]/5" />
                     <div className="relative z-10">
-                      <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#00D4FF] mb-2 block">
+                      <span className="text-[10px] font-semibold tracking-[0.15em] uppercase text-[#4A7FA5] mb-2 block">
                         The Shield (Agentic AI Layer)
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {["Screening", "Classification", "Audit", "Monitoring"].map((mod) => (
                           <span
                             key={mod}
-                            className="text-xs px-2.5 py-1 rounded bg-[#00D4FF]/10 border border-[#00D4FF]/20 text-[#00D4FF] font-medium"
+                            className="text-xs px-2.5 py-1 rounded bg-[#4A7FA5]/10 border border-[#4A7FA5]/20 text-[#4A7FA5] font-medium"
                           >
                             {mod}
                           </span>
@@ -206,8 +206,8 @@ export function ShieldIntegration() {
                   {/* Arrow down */}
                   <div className="flex justify-center">
                     <div className="flex flex-col items-center gap-1">
-                      <div className="w-px h-4 bg-[#00D4FF]/30" />
-                      <div className="w-2 h-2 border-b-2 border-r-2 border-[#00D4FF]/40 rotate-45 -mt-1" />
+                      <div className="w-px h-4 bg-[#4A7FA5]/30" />
+                      <div className="w-2 h-2 border-b-2 border-r-2 border-[#4A7FA5]/40 rotate-45 -mt-1" />
                     </div>
                   </div>
 

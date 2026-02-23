@@ -7,7 +7,7 @@ export function MetricsStrip() {
   ]
 
   return (
-    <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-12 px-6" aria-label="Key metrics">
+    <section className="bg-[#07111F] border-t border-white/[0.08] py-12 px-6" aria-label="Key metrics">
       <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
         {items.map((item, i) => (
           <div

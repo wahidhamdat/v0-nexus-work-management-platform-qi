@@ -88,7 +88,7 @@ export function ShieldAdvantage() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
         <div ref={headingRef} className="max-w-2xl mb-16 opacity-0">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF] mb-4 block">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4A7FA5] mb-4 block">
             The Advantage
           </span>
           <h2
@@ -115,12 +115,12 @@ export function ShieldAdvantage() {
               <div
                 key={item.title}
                 ref={(el) => { cardsRef.current[i] = el }}
-                className="group relative flex items-start gap-6 p-8 rounded-xl bg-[#111827]/80 border border-white/6 opacity-0 hover:border-[#00D4FF]/15 transition-all duration-300 overflow-hidden"
+                className="group relative flex items-start gap-6 p-8 rounded-xl bg-[#111827]/80 border border-white/6 opacity-0 hover:border-[#4A7FA5]/15 transition-all duration-300 overflow-hidden"
               >
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#00D4FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#4A7FA5] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#00D4FF]/8 flex items-center justify-center group-hover:bg-[#00D4FF]/12 transition-colors duration-300">
-                  <Icon className="w-6 h-6 text-[#00D4FF]" />
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#4A7FA5]/8 flex items-center justify-center group-hover:bg-[#4A7FA5]/12 transition-colors duration-300">
+                  <Icon className="w-6 h-6 text-[#4A7FA5]" />
                 </div>
                 <div>
                   <h3

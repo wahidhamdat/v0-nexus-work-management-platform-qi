@@ -121,7 +121,7 @@ export function ShieldChallenge() {
         className="absolute top-0 right-0 w-1/3 h-full pointer-events-none opacity-[0.03]"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(-45deg, #00D4FF, #00D4FF 1px, transparent 1px, transparent 40px)",
+            "repeating-linear-gradient(-45deg, #4A7FA5, #4A7FA5 1px, transparent 1px, transparent 40px)",
         }}
       />
 
@@ -129,8 +129,8 @@ export function ShieldChallenge() {
         {/* Heading */}
         <div ref={headingRef} className="opacity-0 mb-14">
           <div className="flex items-center justify-center gap-2 mb-5">
-            <AlertTriangle className="w-4 h-4 text-[#FF6B6B]" />
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#FF6B6B]">
+            <AlertTriangle className="w-4 h-4 text-[#B83232]" />
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#B83232]">
               The Liability Gap
             </span>
           </div>
@@ -148,7 +148,7 @@ export function ShieldChallenge() {
         <div ref={timelineRef} className="opacity-0 mb-14">
           <div className="relative">
             {/* Connecting line */}
-            <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00D4FF]/30 to-transparent" />
+            <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A7FA5]/30 to-transparent" />
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4">
               {timelineSteps.map((step, i) => (
@@ -157,13 +157,13 @@ export function ShieldChallenge() {
                   <div
                     className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mb-4 ${
                       step.highlight
-                        ? "border-[#FF6B6B] bg-[#FF6B6B]/15"
-                        : "border-[#00D4FF]/40 bg-[#00D4FF]/10"
+                        ? "border-[#B83232] bg-[#B83232]/15"
+                        : "border-[#4A7FA5]/40 bg-[#4A7FA5]/10"
                     }`}
                   >
                     <div
                       className={`w-2 h-2 rounded-full ${
-                        step.highlight ? "bg-[#FF6B6B]" : "bg-[#00D4FF]"
+                        step.highlight ? "bg-[#B83232]" : "bg-[#4A7FA5]"
                       }`}
                     />
                   </div>
@@ -172,13 +172,13 @@ export function ShieldChallenge() {
                   <div
                     className={`rounded-xl p-5 w-full border ${
                       step.highlight
-                        ? "bg-[#FF6B6B]/5 border-[#FF6B6B]/20"
+                        ? "bg-[#B83232]/5 border-[#B83232]/20"
                         : "bg-[#111827]/80 border-white/6"
                     }`}
                   >
                     <span
                       className={`text-xs font-semibold tracking-wide block mb-2 ${
-                        step.highlight ? "text-[#FF6B6B]" : "text-[#00D4FF]"
+                        step.highlight ? "text-[#B83232]" : "text-[#4A7FA5]"
                       }`}
                     >
                       {step.time}
@@ -195,8 +195,8 @@ export function ShieldChallenge() {
                   {/* Arrow between steps (mobile only) */}
                   {i < timelineSteps.length - 1 && (
                     <div className="md:hidden flex flex-col items-center my-2">
-                      <div className="w-px h-4 bg-[#00D4FF]/20" />
-                      <div className="w-2 h-2 border-b border-r border-[#00D4FF]/30 rotate-45 -mt-1" />
+                      <div className="w-px h-4 bg-[#4A7FA5]/20" />
+                      <div className="w-2 h-2 border-b border-r border-[#4A7FA5]/30 rotate-45 -mt-1" />
                     </div>
                   )}
                 </div>
@@ -219,7 +219,7 @@ export function ShieldChallenge() {
             href="https://calendly.com/wahidhamdat30/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-[#00D4FF]/30 text-[#00D4FF] text-base font-semibold hover:bg-[#00D4FF]/10 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#07111F] text-white border border-[#4A7FA5] text-base font-semibold hover:bg-[#0a1628] transition-all duration-300"
           >
             Request a Demonstration
           </a>
