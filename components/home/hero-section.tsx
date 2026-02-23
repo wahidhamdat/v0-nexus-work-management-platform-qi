@@ -26,7 +26,7 @@ export function HeroSection() {
           Export Compliance Has a Liability Gap. Shield Closes It.
         </h1>
         <p className="text-base sm:text-lg text-zinc-400 max-w-[640px] leading-relaxed mb-8">
-          Monakes AI builds autonomous compliance intelligence for enterprises operating in controlled and sanctioned trade environments. Shield is the flagship deployment.
+          Monakes AI builds autonomous screening infrastructure for enterprises operating under BIS, OFAC, and sanctions controls. Shield is the production deployment.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button

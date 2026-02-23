@@ -17,7 +17,7 @@ export function PilotSection() {
           Shield Pilot — 30 Days
         </h2>
         <p className="text-sm text-zinc-400 leading-relaxed mb-8">
-          Full API integration into your existing export workflow. Real-time screening active from day one. Every decision logged. No source-code access. Fixed fee.
+          A scoped 30-day engagement covering your China-facing transaction flow. Real-time screening active from day one. Every decision logged with timestamp, list version, and match rationale. Fixed fee. NDA available on request.
         </p>
         <Button
           variant="outline"
