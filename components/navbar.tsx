@@ -30,7 +30,7 @@ export function Navbar({ belowAlertBar }: NavbarProps) {
   return (
     <header
       className={`fixed left-0 right-0 z-50 transition-colors duration-200 ${belowAlertBar ? "top-10" : "top-0"} ${
-        scrolled ? "bg-[#0a0a0a] border-b border-white/[0.08]" : "bg-[#0a0a0a]/95"
+        scrolled ? "bg-[#07111F] border-b border-white/[0.08]" : "bg-[#07111F]/95"
       }`}
     >
       <nav
@@ -95,7 +95,7 @@ export function Navbar({ belowAlertBar }: NavbarProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#0a0a0a] border-t border-white/[0.08] overflow-hidden"
+            className="lg:hidden bg-[#07111F] border-t border-white/[0.08] overflow-hidden"
           >
             <div className="flex flex-col gap-1 p-4 max-w-7xl mx-auto">
               {navItems.map((item) => (

@@ -82,13 +82,13 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
   }
 
   const inputClass =
-    "w-full bg-[#0a0a0a] border border-white/[0.12] rounded-sm px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/20"
+    "w-full bg-[#07111F] border border-white/[0.12] rounded-sm px-3 py-2 text-sm text-white placeholder-zinc-500 focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/20"
   const labelClass = "block text-sm font-medium text-zinc-400 mb-1.5"
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="border-white/[0.08] bg-[#0a0a0a] text-white sm:max-w-md [&_[data-slot=dialog-close]]:text-zinc-400 [&_[data-slot=dialog-close]]:hover:text-white [&_[data-slot=dialog-close]]:ring-offset-[#0a0a0a]"
+        className="border-white/[0.08] bg-[#07111F] text-white sm:max-w-md [&_[data-slot=dialog-close]]:text-zinc-400 [&_[data-slot=dialog-close]]:hover:text-white [&_[data-slot=dialog-close]]:ring-offset-[#07111F]"
         onPointerDownOutside={(e) => status === "sending" && e.preventDefault()}
       >
         <DialogHeader>
@@ -198,7 +198,7 @@ export function BriefingRequestModal({ open, onOpenChange }: BriefingRequestModa
               </Button>
               <Button
                 type="submit"
-                className="bg-white text-[#0a0a0a] hover:bg-zinc-200"
+                className="bg-[#07111F] text-white border border-[#4A7FA5] hover:bg-[#0a1628]"
                 disabled={status === "sending"}
               >
                 {status === "sending" ? "Sending…" : "Submit"}

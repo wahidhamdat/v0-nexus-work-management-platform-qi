@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <section
       aria-label="Hero introduction"
-      className="relative min-h-[85vh] flex flex-col justify-center px-6 pt-28 pb-20 overflow-hidden bg-[#0a0a0a]"
+      className="relative min-h-[85vh] flex flex-col justify-center px-6 pt-28 pb-20 overflow-hidden bg-[#07111F]"
     >
       <div
         className="absolute inset-0 pointer-events-none opacity-40"
@@ -31,7 +31,7 @@ export function HeroSection() {
         <div className="flex flex-wrap items-center gap-3">
           <Button
             size="lg"
-            className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
+            className="bg-[#07111F] text-white border border-[#4A7FA5] hover:bg-[#0a1628] rounded-sm px-6 font-medium"
             onClick={() => briefingModal?.openBriefingModal()}
           >
             See Shield

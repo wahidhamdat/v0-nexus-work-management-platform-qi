@@ -49,7 +49,7 @@ export function ShieldNavbar() {
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0A0E1A]/95 backdrop-blur-xl border-b border-[#00D4FF]/10 shadow-[0_1px_12px_rgba(0,0,0,0.3)]"
+          ? "bg-[#0A0E1A]/95 backdrop-blur-xl border-b border-[#4A7FA5]/10 shadow-[0_1px_12px_rgba(0,0,0,0.3)]"
           : "bg-transparent"
       }`}
     >
@@ -59,13 +59,13 @@ export function ShieldNavbar() {
         className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto"
       >
         <a href="/shield" className="flex items-center gap-3 group">
-          <div className="relative w-8 h-8 rounded-lg bg-[#00D4FF]/10 border border-[#00D4FF]/20 flex items-center justify-center group-hover:bg-[#00D4FF]/15 transition-colors duration-300">
-            <div className="w-3 h-3 rounded-sm bg-[#00D4FF] rotate-45" />
-            <div className="absolute inset-0 rounded-lg bg-[#00D4FF]/5 blur-sm -z-10" />
+          <div className="relative w-8 h-8 rounded-lg bg-[#4A7FA5]/10 border border-[#4A7FA5]/20 flex items-center justify-center group-hover:bg-[#4A7FA5]/15 transition-colors duration-300">
+            <div className="w-3 h-3 rounded-sm bg-[#4A7FA5] rotate-45" />
+            <div className="absolute inset-0 rounded-lg bg-[#4A7FA5]/5 blur-sm -z-10" />
           </div>
           <div className="flex flex-col">
             <span
-              className="text-white font-bold text-lg tracking-tight leading-none group-hover:text-[#00D4FF] transition-colors duration-300"
+              className="text-white font-bold text-lg tracking-tight leading-none group-hover:text-[#4A7FA5] transition-colors duration-300"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               The Shield
@@ -83,15 +83,15 @@ export function ShieldNavbar() {
               href={item.href}
               className={`relative text-sm px-3 py-2 rounded-md transition-all duration-300 font-medium ${
                 activeSection === item.href && item.href.startsWith("#")
-                  ? "text-[#00D4FF]"
-                  : "text-[#7A8BA8] hover:text-[#00D4FF]"
+                  ? "text-[#4A7FA5]"
+                  : "text-[#7A8BA8] hover:text-[#4A7FA5]"
               }`}
             >
               {item.label}
               {activeSection === item.href && item.href.startsWith("#") && (
                 <motion.div
                   layoutId="shield-nav-indicator"
-                  className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#00D4FF] rounded-full"
+                  className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#4A7FA5] rounded-full"
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
@@ -104,7 +104,7 @@ export function ShieldNavbar() {
             href="https://calendly.com/wahidhamdat30/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center px-5 py-2.5 rounded-lg bg-[#00D4FF] text-[#0A0E1A] text-sm font-semibold hover:bg-[#00BFEA] transition-all duration-300 shadow-[0_2px_8px_rgba(0,212,255,0.2)] hover:shadow-[0_4px_16px_rgba(0,212,255,0.3)] overflow-hidden"
+            className="group relative inline-flex items-center px-5 py-2.5 rounded-lg bg-[#07111F] text-white border border-[#4A7FA5] text-sm font-semibold hover:bg-[#0a1628] transition-all duration-300 shadow-[0_2px_8px_rgba(74,127,165,0.15)] overflow-hidden"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             <span className="relative z-10">Book 15-min demo</span>
@@ -127,7 +127,7 @@ export function ShieldNavbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden bg-[#0A0E1A]/98 backdrop-blur-xl border-t border-[#00D4FF]/10 overflow-hidden"
+            className="md:hidden bg-[#0A0E1A]/98 backdrop-blur-xl border-t border-[#4A7FA5]/10 overflow-hidden"
           >
             <div className="flex flex-col gap-1 p-4 max-w-7xl mx-auto">
               {navItems.map((item, i) => (
@@ -139,20 +139,20 @@ export function ShieldNavbar() {
                   transition={{ delay: i * 0.05 }}
                   className={`px-4 py-3 text-sm rounded-lg transition-colors font-medium ${
                     activeSection === item.href
-                      ? "text-[#00D4FF] bg-[#00D4FF]/5"
-                      : "text-[#7A8BA8] hover:text-[#00D4FF] hover:bg-[#00D4FF]/5"
+                      ? "text-[#4A7FA5] bg-[#4A7FA5]/5"
+                      : "text-[#7A8BA8] hover:text-[#4A7FA5] hover:bg-[#4A7FA5]/5"
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </motion.a>
               ))}
-              <hr className="border-[#00D4FF]/10 my-2" />
+              <hr className="border-[#4A7FA5]/10 my-2" />
               <a
                 href="https://calendly.com/wahidhamdat30/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-3 text-sm text-center font-semibold rounded-lg bg-[#00D4FF] text-[#0A0E1A] hover:bg-[#00BFEA] transition-colors"
+                className="px-4 py-3 text-sm text-center font-semibold rounded-lg bg-[#07111F] text-white border border-[#4A7FA5] hover:bg-[#0a1628] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Book 15-min demo

@@ -15,7 +15,7 @@ export function HowItWorksSection() {
   ]
 
   return (
-    <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-16 px-6" aria-labelledby="how-it-works-title">
+    <section className="bg-[#07111F] border-t border-white/[0.08] py-16 px-6" aria-labelledby="how-it-works-title">
       <div className="max-w-5xl mx-auto">
         <h2
           id="how-it-works-title"

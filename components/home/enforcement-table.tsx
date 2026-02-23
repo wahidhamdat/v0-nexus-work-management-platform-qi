@@ -13,7 +13,7 @@ export function EnforcementTable() {
   ]
 
   return (
-    <section className="bg-[#0a0a0a] border-t border-white/[0.08] py-16 px-6" id="about" aria-labelledby="enforcement-title">
+    <section className="bg-[#07111F] border-t border-white/[0.08] py-16 px-6" id="about" aria-labelledby="enforcement-title">
       <div className="max-w-4xl mx-auto">
         <h2
           id="enforcement-title"

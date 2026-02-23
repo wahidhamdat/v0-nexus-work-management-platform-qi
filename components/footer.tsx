@@ -8,7 +8,7 @@ export function Footer() {
   const briefingModal = useBriefingModal()
 
   return (
-    <footer role="contentinfo" className="border-t border-white/[0.08] bg-[#0a0a0a]">
+    <footer role="contentinfo" className="border-t border-white/[0.08] bg-[#07111F]">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           <div>

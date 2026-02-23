@@ -82,9 +82,9 @@ export function ShieldHero() {
   const words = headlineText.split(" ")
 
   const dashboardMetrics = [
-    { label: "Denied Party Screen", status: "CLEAR", color: "#00D4FF" },
-    { label: "ECCN Classification", status: "3A001.a", color: "#00D4FF" },
-    { label: "Sanctioned Entity Check", status: "CLEAR", color: "#00D4FF" },
+    { label: "Denied Party Screen", status: "CLEAR", color: "#4A7FA5" },
+    { label: "ECCN Classification", status: "3A001.a", color: "#4A7FA5" },
+    { label: "Sanctioned Entity Check", status: "CLEAR", color: "#4A7FA5" },
     { label: "Audit Trail Logged", status: "VERIFIED", color: "#10B981" },
     { label: "Regulatory Sync", status: "REAL-TIME", color: "#10B981" },
   ]
@@ -103,7 +103,7 @@ export function ShieldHero() {
         className="absolute -top-40 -right-40 w-[800px] h-[800px] pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at center, rgba(0,212,255,0.06) 0%, transparent 60%)",
+            "radial-gradient(circle at center, rgba(74,127,165,0.06) 0%, transparent 60%)",
         }}
       />
 
@@ -112,20 +112,20 @@ export function ShieldHero() {
         className="absolute -bottom-60 -left-60 w-[600px] h-[600px] pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at center, rgba(0,212,255,0.03) 0%, transparent 60%)",
+            "radial-gradient(circle at center, rgba(74,127,165,0.03) 0%, transparent 60%)",
         }}
       />
 
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#00D4FF]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#4A7FA5]/30 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16">
         {/* Left - Copy */}
         <div className="lg:w-[58%]">
           <div ref={badgeRef} className="flex items-center gap-2 mb-6 opacity-0">
-            <div className="relative w-2 h-2 rounded-full bg-[#00D4FF]">
-              <div className="absolute inset-0 rounded-full bg-[#00D4FF] animate-ping opacity-40" />
+            <div className="relative w-2 h-2 rounded-full bg-[#4A7FA5]">
+              <div className="absolute inset-0 rounded-full bg-[#4A7FA5] animate-ping opacity-40" />
             </div>
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#00D4FF]">
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#4A7FA5]">
               Real-Time Export Compliance
             </span>
           </div>
@@ -158,7 +158,7 @@ export function ShieldHero() {
               href="https://calendly.com/wahidhamdat30/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#00D4FF] text-[#0A0E1A] text-base font-semibold hover:bg-[#00BFEA] transition-all duration-300 shadow-[0_2px_16px_rgba(0,212,255,0.2)] hover:shadow-[0_4px_24px_rgba(0,212,255,0.3)]"
+              className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#07111F] text-white border border-[#4A7FA5] text-base font-semibold hover:bg-[#0a1628] transition-all duration-300 shadow-[0_2px_16px_rgba(74,127,165,0.15)]"
             >
               Request a Demonstration
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -175,21 +175,21 @@ export function ShieldHero() {
         {/* Right - Live compliance dashboard card */}
         <div className="lg:w-[42%] flex items-center justify-center">
           <div className="relative w-full max-w-md">
-            <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-[#00D4FF]/5 blur-sm" />
-            <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-[#00D4FF]/5 blur-md" />
+            <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-[#4A7FA5]/5 blur-sm" />
+            <div className="absolute -bottom-6 -right-6 w-12 h-12 rounded-full bg-[#4A7FA5]/5 blur-md" />
 
             <div
               ref={dashboardRef}
               className="relative rounded-2xl bg-[#111827]/90 backdrop-blur-sm border border-white/8 p-8 shadow-[0_8px_60px_rgba(0,0,0,0.4)] opacity-0"
             >
               <div className="flex items-center gap-3 mb-7">
-                <div className="relative w-2.5 h-2.5 rounded-full bg-[#00D4FF]">
-                  <div className="absolute inset-0 rounded-full bg-[#00D4FF] animate-ping opacity-30" />
+                <div className="relative w-2.5 h-2.5 rounded-full bg-[#4A7FA5]">
+                  <div className="absolute inset-0 rounded-full bg-[#4A7FA5] animate-ping opacity-30" />
                 </div>
                 <span className="text-sm text-[#7A8BA8] font-medium tracking-wide uppercase">
                   Compliance Monitor
                 </span>
-                <span className="ml-auto text-[10px] font-mono text-[#00D4FF]/80 bg-[#00D4FF]/10 px-2 py-0.5 rounded">
+                <span className="ml-auto text-[10px] font-mono text-[#4A7FA5]/80 bg-[#4A7FA5]/10 px-2 py-0.5 rounded">
                   LIVE
                 </span>
               </div>
@@ -235,7 +235,7 @@ export function ShieldHero() {
                 <span className="text-sm font-semibold text-white">
                   All checks passed
                 </span>
-                <span className="text-xs text-[#7A8BA8] bg-[#00D4FF]/8 px-2.5 py-1 rounded-md font-medium">
+                <span className="text-xs text-[#7A8BA8] bg-[#4A7FA5]/8 px-2.5 py-1 rounded-md font-medium">
                   {"< 200ms latency"}
                 </span>
               </div>
@@ -247,7 +247,7 @@ export function ShieldHero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
         <span className="text-[10px] uppercase tracking-[0.2em] text-[#7A8BA8]">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-[#00D4FF]/40 to-transparent shield-scroll-line" />
+        <div className="w-px h-8 bg-gradient-to-b from-[#4A7FA5]/40 to-transparent shield-scroll-line" />
       </div>
     </section>
   )

@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: "#0a0a0a",
+          background: "#07111F",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -21,7 +21,7 @@ export default function Image() {
       >
         <div
           style={{
-            color: "#00D4FF",
+            color: "#4A7FA5",
             fontSize: 28,
             fontWeight: 700,
             marginBottom: 16,
@@ -35,7 +35,7 @@ export default function Image() {
               width: 12,
               height: 12,
               borderRadius: 3,
-              background: "#00D4FF",
+              background: "#4A7FA5",
               transform: "rotate(45deg)",
             }}
           />

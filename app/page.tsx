@@ -60,7 +60,7 @@ export default function Home() {
         }}
       />
       <BriefingModalProvider>
-      <main id="main-content" className="min-h-screen bg-[#0a0a0a]">
+      <main id="main-content" className="min-h-screen bg-[#07111F]">
         <AlertBar />
         <Navbar belowAlertBar />
         <HeroSection />

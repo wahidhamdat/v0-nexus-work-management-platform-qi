@@ -7,7 +7,7 @@ export function ShieldCallout() {
   const briefingModal = useBriefingModal()
 
   return (
-    <section className="px-6 py-20 bg-[#0a0a0a] border-t border-white/[0.08]">
+    <section className="px-6 py-20 bg-[#07111F] border-t border-white/[0.08]">
       <div className="max-w-2xl mx-auto text-center">
         <h2
           className="text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-4 leading-[1.2]"
@@ -20,7 +20,7 @@ export function ShieldCallout() {
         </p>
         <Button
           size="lg"
-          className="bg-white text-[#0a0a0a] hover:bg-zinc-200 rounded-sm px-6 font-medium"
+          className="bg-[#07111F] text-white border border-[#4A7FA5] hover:bg-[#0a1628] rounded-sm px-6 font-medium"
           onClick={() => briefingModal?.openBriefingModal()}
         >
           Request a Demonstration
