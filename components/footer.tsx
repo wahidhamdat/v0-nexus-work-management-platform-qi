@@ -27,6 +27,9 @@ export function Footer() {
             >
               ceo@monakes.com
             </a>
+            <p className="text-xs text-zinc-500 mt-2">
+              Site content is currently being updated.
+            </p>
           </div>
           <div className="flex flex-col gap-2">
             <a

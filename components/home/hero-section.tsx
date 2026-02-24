@@ -25,8 +25,11 @@ export function HeroSection() {
         >
           Export Compliance Has a Liability Gap. Shield Closes It.
         </h1>
-        <p className="text-base sm:text-lg text-zinc-400 max-w-[640px] leading-relaxed mb-8">
+        <p className="text-base sm:text-lg text-zinc-400 max-w-[640px] leading-relaxed mb-4">
           Monakes AI builds autonomous screening infrastructure for enterprises operating under BIS, OFAC, and sanctions controls. Shield is the production deployment.
+        </p>
+        <p className="text-sm text-zinc-400 max-w-[640px] leading-relaxed mb-8">
+          This website is currently under construction. Shield is in production and available for evaluation.
         </p>
         <div className="flex flex-wrap items-center gap-3">
           <Button
@@ -34,7 +37,7 @@ export function HeroSection() {
             className="bg-[#07111F] text-white border border-[#4A7FA5] hover:bg-[#0a1628] rounded-sm px-6 font-medium"
             onClick={() => briefingModal?.openBriefingModal()}
           >
-            See Shield
+            Request Briefing
           </Button>
           <Button
             size="lg"
@@ -45,6 +48,9 @@ export function HeroSection() {
             Download Sector Brief
           </Button>
         </div>
+        <p className="text-xs text-zinc-500 mt-3">
+          For access and deployment discussions, contact ceo@monakes.com.
+        </p>
       </div>
     </section>
   )
