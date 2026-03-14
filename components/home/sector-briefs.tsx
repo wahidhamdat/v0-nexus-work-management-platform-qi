@@ -32,10 +32,10 @@ export function SectorBriefs() {
               Request Brief
             </Button>
             <a
-              href="mailto:ceo@monakes.com"
+              href="mailto:info@monakes.com"
               className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
-              ceo@monakes.com
+              info@monakes.com
             </a>
           </div>
         </div>

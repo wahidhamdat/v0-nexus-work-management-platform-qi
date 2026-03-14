@@ -8,12 +8,7 @@ const jsonLd = {
       "@id": "https://monakes.com/#organization",
       name: "Monakes AI",
       url: "https://monakes.com",
-      email: "ceo@monakes.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "London",
-        addressCountry: "UK",
-      },
+      email: "info@monakes.com",
       description:
         "Monakes AI builds autonomous AI agents for regulated industries — export compliance, pharmaceutical logistics, government procurement, and healthcare claims.",
     },

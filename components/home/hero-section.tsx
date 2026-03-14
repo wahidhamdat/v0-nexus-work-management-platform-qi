@@ -49,7 +49,7 @@ export function HeroSection() {
           </Button>
         </div>
         <p className="text-xs text-zinc-500 mt-3">
-          For access and deployment discussions, contact ceo@monakes.com.
+          For access and deployment discussions, contact info@monakes.com.
         </p>
       </div>
     </section>
