@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 import { ProcurementNavbar } from "@/components/procurement/procurement-navbar"
 import { ProcurementHero } from "@/components/procurement/procurement-hero"
+import { ProcurementMarketMoment } from "@/components/procurement/procurement-market-moment"
 
 const ProcurementProblem = dynamic(
   () =>
@@ -14,10 +15,22 @@ const ProcurementSolution = dynamic(
       (mod) => mod.ProcurementSolution
     )
 )
+const ProcurementDifferent = dynamic(
+  () =>
+    import("@/components/procurement/procurement-different").then(
+      (mod) => mod.ProcurementDifferent
+    )
+)
 const ProcurementHowItWorks = dynamic(
   () =>
     import("@/components/procurement/procurement-how-it-works").then(
       (mod) => mod.ProcurementHowItWorks
+    )
+)
+const ProcurementTraction = dynamic(
+  () =>
+    import("@/components/procurement/procurement-traction").then(
+      (mod) => mod.ProcurementTraction
     )
 )
 const ProcurementImpact = dynamic(
@@ -32,16 +45,22 @@ const ProcurementWhyNow = dynamic(
       (mod) => mod.ProcurementWhyNow
     )
 )
-const ProcurementFounder = dynamic(
+const ProcurementTeam = dynamic(
   () =>
-    import("@/components/procurement/procurement-founder").then(
-      (mod) => mod.ProcurementFounder
+    import("@/components/procurement/procurement-team").then(
+      (mod) => mod.ProcurementTeam
     )
 )
-const ProcurementCTA = dynamic(
+const ProcurementCompliance = dynamic(
   () =>
-    import("@/components/procurement/procurement-cta").then(
-      (mod) => mod.ProcurementCTA
+    import("@/components/procurement/procurement-compliance").then(
+      (mod) => mod.ProcurementCompliance
+    )
+)
+const ProcurementDualCTA = dynamic(
+  () =>
+    import("@/components/procurement/procurement-dual-cta").then(
+      (mod) => mod.ProcurementDualCTA
     )
 )
 const ProcurementFooter = dynamic(
@@ -94,13 +113,17 @@ export default function Home() {
         <ProcurementNavbar />
         <main id="main-content">
           <ProcurementHero />
+          <ProcurementMarketMoment />
           <ProcurementProblem />
           <ProcurementSolution />
+          <ProcurementDifferent />
           <ProcurementHowItWorks />
+          <ProcurementTraction />
           <ProcurementImpact />
           <ProcurementWhyNow />
-          <ProcurementFounder />
-          <ProcurementCTA />
+          <ProcurementTeam />
+          <ProcurementCompliance />
+          <ProcurementDualCTA />
         </main>
         <ProcurementFooter />
       </div>
