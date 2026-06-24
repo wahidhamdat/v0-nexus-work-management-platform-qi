@@ -131,13 +131,18 @@ export function ProcurementHero() {
       <div className="relative z-10 max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center gap-16">
         {/* Left - Copy */}
         <div className="lg:w-[58%]">
-          <div ref={badgeRef} className="flex items-center gap-2 mb-6 opacity-0">
-            <div className="relative w-2 h-2 rounded-full bg-[#8A1538]">
-              <div className="absolute inset-0 rounded-full bg-[#8A1538] animate-ping opacity-40" />
+          <div ref={badgeRef} className="flex flex-col items-start gap-2 mb-6 opacity-0">
+            <div className="flex items-center gap-2">
+              <div className="relative w-2 h-2 rounded-full bg-[#8A1538]">
+                <div className="absolute inset-0 rounded-full bg-[#8A1538] animate-ping opacity-40" />
+              </div>
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A1538]">
+                AI-Powered Procurement
+              </span>
             </div>
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#8A1538]">
-              AI-Powered Procurement
-            </span>
+            <p className="text-xs text-[#5A5A5A] tracking-wide">
+              A QSTP Portfolio Company · Education City, Doha, Qatar
+            </p>
           </div>
 
           <h1

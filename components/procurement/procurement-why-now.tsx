@@ -14,9 +14,9 @@ const marketStats = [
   {
     icon: TrendingUp,
     figure: "59%",
-    context: "Saudi arbitration growth",
+    context: "peak caseload growth",
     detail:
-      "Increase in Saudi arbitration caseload in one year. Construction disputes led at 38% of all cases.",
+      "Peak year-on-year increase in Gulf commercial arbitration caseload.",
   },
   {
     icon: Building2,
@@ -96,16 +96,16 @@ export function ProcurementWhyNow() {
             </span>
           </h2>
           <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
-            Across Saudi Arabia, the UAE, and Qatar, national digital
-            transformation agendas are not aspirational. They are operational
-            directives with timelines, oversight committees, and compliance
-            requirements. Qatar established a Smart Government and Digital
-            Excellence Steering Committee in March 2025, chaired at the Prime
-            Minister level, with a specific mandate over procurement governance.
-            Saudi Arabia recorded a 59 percent increase in commercial arbitration
-            caseload in one year — construction and engineering disputes led at
-            38 percent of all cases. The UAE has a mature arbitration
-            infrastructure actively processing billion-dollar claims.
+            Across the Gulf, national digital transformation agendas are not
+            aspirational. They are operational directives with timelines,
+            oversight committees, and compliance requirements. Governments
+            across the region have established executive-level steering bodies
+            with specific mandates over procurement governance and digital
+            accountability. Regional arbitration institutions recorded caseload
+            increases of 30 to 59 percent in a single year — construction and
+            engineering disputes consistently lead the charts. The arbitration
+            infrastructure is mature, active, and processing billion-dollar
+            claims at volume.
           </p>
           <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg mt-4 font-medium">
             The institutions that deploy contemporaneous documentation

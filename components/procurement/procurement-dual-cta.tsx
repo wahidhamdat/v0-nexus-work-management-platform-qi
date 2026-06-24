@@ -171,9 +171,11 @@ export function ProcurementDualCTA() {
               accelerating. National digital mandates across the GCC are
               converting what was once voluntary governance best practice into a
               regulatory requirement. The platform is operational. The partner
-              model is established. The deployment pipeline spans Qatar and
-              Saudi Arabia, with UAE and broader GCC markets on a defined
-              timeline.
+              model is established. Monakes for Artificial Intelligence
+              Solutions LLC is a registered QSTP portfolio company operating
+              within Qatar Foundation's sovereign technology free zone. The
+              deployment pipeline spans Qatar and Saudi Arabia, with UAE and
+              broader GCC markets on a defined timeline.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
@@ -195,8 +197,13 @@ export function ProcurementDualCTA() {
         {/* Supporting line */}
         <div ref={footerRef} className="text-center pt-10 border-t border-white/[0.08] opacity-0">
           <p className="text-sm text-white/40">
-            Monakes is a QSTP portfolio company. Headquartered in Doha.
-            Deploying globally.
+            Monakes for Artificial Intelligence Solutions LLC
+          </p>
+          <p className="text-sm text-white/25">
+            Qatar Science &amp; Technology Park, Education City, Doha, Qatar
+          </p>
+          <p className="text-sm text-white/40 mt-1">
+            A QSTP Portfolio Company
           </p>
         </div>
       </div>

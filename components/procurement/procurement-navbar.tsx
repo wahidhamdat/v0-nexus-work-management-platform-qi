@@ -9,7 +9,8 @@ const navItems = [
   { label: "Solution", href: "#solution" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Impact", href: "#impact" },
-  { label: "Founder", href: "#founder" },
+  { label: "Why Now", href: "#why-now" },
+  { label: "Team", href: "#team" },
 ]
 
 export function ProcurementNavbar() {
@@ -99,7 +100,7 @@ export function ProcurementNavbar() {
             className="group relative inline-flex items-center px-5 py-2.5 rounded-lg bg-[#8A1538] text-white text-sm font-semibold hover:bg-[#6D1030] transition-all duration-300 shadow-[0_2px_8px_rgba(138,21,56,0.15)] hover:shadow-[0_4px_16px_rgba(138,21,56,0.25)] overflow-hidden"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-            <span className="relative z-10">Book a Demo</span>
+            <span className="relative z-10">Request a Pilot</span>
           </a>
         </div>
 
@@ -147,7 +148,7 @@ export function ProcurementNavbar() {
                 className="px-4 py-3 text-sm text-center font-semibold rounded-lg bg-[#8A1538] text-white hover:bg-[#6D1030] transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Book a Demo
+                Request a Pilot
               </a>
             </div>
           </motion.div>
