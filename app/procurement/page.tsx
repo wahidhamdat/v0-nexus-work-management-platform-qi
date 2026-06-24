@@ -2,6 +2,12 @@ import dynamic from "next/dynamic"
 import { ProcurementNavbar } from "@/components/procurement/procurement-navbar"
 import { ProcurementHero } from "@/components/procurement/procurement-hero"
 
+const ProcurementMarketMoment = dynamic(
+  () =>
+    import("@/components/procurement/procurement-market-moment").then(
+      (mod) => mod.ProcurementMarketMoment
+    )
+)
 const ProcurementProblem = dynamic(
   () =>
     import("@/components/procurement/procurement-problem").then(
@@ -20,10 +26,34 @@ const ProcurementHowItWorks = dynamic(
       (mod) => mod.ProcurementHowItWorks
     )
 )
+const ProcurementDifferent = dynamic(
+  () =>
+    import("@/components/procurement/procurement-different").then(
+      (mod) => mod.ProcurementDifferent
+    )
+)
+const ProcurementTraction = dynamic(
+  () =>
+    import("@/components/procurement/procurement-traction").then(
+      (mod) => mod.ProcurementTraction
+    )
+)
 const ProcurementImpact = dynamic(
   () =>
     import("@/components/procurement/procurement-impact").then(
       (mod) => mod.ProcurementImpact
+    )
+)
+const ProcurementTeam = dynamic(
+  () =>
+    import("@/components/procurement/procurement-team").then(
+      (mod) => mod.ProcurementTeam
+    )
+)
+const ProcurementCompliance = dynamic(
+  () =>
+    import("@/components/procurement/procurement-compliance").then(
+      (mod) => mod.ProcurementCompliance
     )
 )
 const ProcurementWhyNow = dynamic(
@@ -32,16 +62,10 @@ const ProcurementWhyNow = dynamic(
       (mod) => mod.ProcurementWhyNow
     )
 )
-const ProcurementFounder = dynamic(
+const ProcurementDualCTA = dynamic(
   () =>
-    import("@/components/procurement/procurement-founder").then(
-      (mod) => mod.ProcurementFounder
-    )
-)
-const ProcurementCTA = dynamic(
-  () =>
-    import("@/components/procurement/procurement-cta").then(
-      (mod) => mod.ProcurementCTA
+    import("@/components/procurement/procurement-dual-cta").then(
+      (mod) => mod.ProcurementDualCTA
     )
 )
 const ProcurementFooter = dynamic(
@@ -57,13 +81,17 @@ export default function ProcurementPage() {
       <ProcurementNavbar />
       <main id="main-content">
         <ProcurementHero />
+        <ProcurementMarketMoment />
         <ProcurementProblem />
         <ProcurementSolution />
         <ProcurementHowItWorks />
+        <ProcurementDifferent />
+        <ProcurementTraction />
         <ProcurementImpact />
+        <ProcurementTeam />
+        <ProcurementCompliance />
         <ProcurementWhyNow />
-        <ProcurementFounder />
-        <ProcurementCTA />
+        <ProcurementDualCTA />
       </main>
       <ProcurementFooter />
     </div>
