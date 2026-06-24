@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic"
 import { ProcurementNavbar } from "@/components/procurement/procurement-navbar"
 import { ProcurementHero } from "@/components/procurement/procurement-hero"
+import { ProcurementTenSecondBar } from "@/components/procurement/procurement-ten-second-bar"
 import { ProcurementMarketMoment } from "@/components/procurement/procurement-market-moment"
 
 const ProcurementProblem = dynamic(
@@ -113,6 +114,7 @@ export default function Home() {
         <ProcurementNavbar />
         <main id="main-content">
           <ProcurementHero />
+          <ProcurementTenSecondBar />
           <ProcurementMarketMoment />
           <ProcurementProblem />
           <ProcurementSolution />

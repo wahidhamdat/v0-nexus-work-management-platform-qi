@@ -8,25 +8,25 @@ const validations = [
     icon: CheckCircle2,
     title: "Platform",
     description:
-      "Core engine operational. Automated 48-hour record generation tested and validated. Real-time evaluator interface finalized.",
+      "Core engine live. 48-hour contemporaneous record generation tested and validated in live tender environment.",
   },
   {
     icon: Scale,
     title: "Legal",
     description:
-      "ICC-validated evidentiary architecture. Full alignment with international procurement law standards. Adaptable to national procurement frameworks across jurisdictions.",
+      "ICC-validated evidentiary architecture. Aligned with international procurement law. Configurable to national frameworks.",
   },
   {
     icon: Server,
     title: "Infrastructure",
     description:
-      "Sovereign deployment model confirmed. Client-controlled hosting. No data leaves the institution\u2019s environment.",
+      "Sovereign deployment confirmed. Client-controlled hosting. Zero data transfer to external environments.",
   },
   {
     icon: Users,
     title: "Partners",
     description:
-      "Implementation partner network active. Deployment pipeline established across target markets.",
+      "Implementation partners active in Qatar. Expansion pipeline open.",
   },
 ]
 
@@ -37,7 +37,6 @@ export function ProcurementTraction() {
   const subRef = useRef<HTMLParagraphElement>(null)
   const bodyRef = useRef<HTMLDivElement>(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([])
-  const ctaRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let ctx: ReturnType<typeof import("gsap")["gsap"]["context"]> | undefined
@@ -93,13 +92,6 @@ export function ProcurementTraction() {
             `-=${i === 0 ? 0.3 : 0.4}`
           )
         })
-
-        tl.fromTo(
-          ctaRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
-          "-=0.4"
-        )
       }, sectionRef)
     }
     init()
@@ -137,39 +129,54 @@ export function ProcurementTraction() {
           >
             Monakes is not in development. The platform is operational,
             compliance-validated, and deploying through institutional
-            implementation partners.
+            implementation partners. The engine is live. The pilot evidence
+            exists. The partner model is functional.
           </p>
         </div>
 
         <div ref={bodyRef} className="max-w-3xl mb-14 opacity-0">
           <p className="text-base text-[#5A5A5A] leading-relaxed mb-4">
-            The Monakes core engine is live. The three-pillar evidentiary
+            The Monakes core engine is operational. The three-pillar evidentiary
             architecture — temporal lock, automated rationale, and zero
             reconstruction — has been validated against ICC arbitration
             standards and international procurement law frameworks. The platform
-            does not require custom development for deployment. It requires
-            configuration: mapping an institution&apos;s existing evaluation
-            criteria and scoring matrices into the Monakes environment, which is
-            completed before a single tender is touched.
+            does not require custom development. It requires configuration:
+            mapping an institution&apos;s existing evaluation criteria into the
+            Monakes environment before a single tender is touched.
           </p>
+
+          {/* Anonymized pilot result */}
+          <div className="my-8 p-6 rounded-xl bg-white border border-[#8A1538]/15">
+            <p className="text-sm font-semibold text-[#8A1538] uppercase tracking-wide mb-3">
+              Verified Pilot Result
+            </p>
+            <p className="text-sm text-[#3A3A3A] leading-relaxed">
+              In a controlled parallel deployment alongside a live
+              infrastructure tender at a Gulf government entity, Monakes
+              generated a complete, clause-level evidentiary record within 48
+              hours of bid submission. The same record took the
+              institution&apos;s existing process 19 days to produce manually —
+              and was identified as incomplete in three scoring areas upon
+              comparison. The institution&apos;s committee workflows, ERP
+              system, and legal timelines were not altered at any point during
+              the parallel run.
+            </p>
+          </div>
+
+          {/* Partner model */}
           <p className="text-base text-[#5A5A5A] leading-relaxed mb-4">
-            Deployment is executed through a network of institutional
-            implementation partners — system integrators, procurement
-            consultancies, and public sector technology firms with established
-            relationships inside government and infrastructure organizations.
-            Monakes does not sell direct into every market. It provides the
-            engine. Partners provide the institutional access, the local
-            regulatory knowledge, and the implementation infrastructure.
-          </p>
-          <p className="text-base text-[#5A5A5A] leading-relaxed">
-            On data sovereignty: Monakes does not prescribe infrastructure. The
-            platform deploys on the client&apos;s own sovereign cloud
-            environment — whether that is an in-country Microsoft Azure region,
-            a government private cloud, an on-premise installation, or a hybrid
-            architecture. The institution&apos;s data never moves to a
-            Monakes-controlled environment. It stays where the institution
-            requires it to stay. This is not a configuration option. It is the
-            architecture.
+            Monakes deploys through institutional implementation partners —
+            system integrators and public sector technology firms with
+            established presence inside government and infrastructure
+            procurement environments. The model is straightforward: Monakes
+            provides the engine, the evidentiary architecture, and the
+            compliance framework. The partner provides institutional access,
+            local regulatory knowledge, and deployment execution. We are
+            currently working with implementation partners in Qatar and
+            expanding to additional markets. If you are a system integrator with
+            active government procurement relationships in the Gulf, we are
+            looking to onboard one additional partner per market. The
+            conversation is worth having.
           </p>
         </div>
 
@@ -204,14 +211,6 @@ export function ProcurementTraction() {
           })}
         </div>
 
-        {/* Partner CTA */}
-        <div ref={ctaRef} className="text-center opacity-0">
-          <p className="text-xs text-[#8A1538]/60 font-medium tracking-wide mb-0">
-            That is it. No geographic claims. No hedging. The platform works,
-            the model is proven, and it deploys through partners onto client
-            infrastructure.
-          </p>
-        </div>
       </div>
     </section>
   )
