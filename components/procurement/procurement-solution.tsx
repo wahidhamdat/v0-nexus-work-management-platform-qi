@@ -8,25 +8,25 @@ const features = [
     icon: Link2,
     title: "Seamless Ingestion",
     description:
-      "Monakes ingests RFPs and bids from your ERP, procurement system, or simple drag-and-drop upload \u2013 your choice.",
+      "Monakes connects to your ERP, procurement system, or accepts direct upload. The record starts the moment the documents do.",
   },
   {
     icon: Eye,
     title: "Multi-Agent Scoring",
     description:
-      "Multi-agent AI scores technical, financial, and compliance criteria against your exact evaluation matrix.",
+      "Multi-agent AI evaluates technical, financial, and compliance criteria against your exact evaluation matrix. Every score is generated and locked at the moment of creation.",
   },
   {
     icon: Shield,
     title: "Full Traceability",
     description:
-      "Every score is traceable back to the original clause and page, so evaluators can see why a bid was ranked the way it was.",
+      "Every score traces back to the specific clause, page, and criterion in the original tender document. Not a summary. A citation. The kind that holds in an arbitration proceeding.",
   },
   {
     icon: UserCheck,
     title: "Human Control",
     description:
-      "Your committee retains full decision authority. AI assists, humans decide.",
+      "Committees retain complete decision authority. Monakes does not award contracts. It ensures that whatever the committee decides is documented, timestamped, and defensible from the moment the decision is made.",
   },
 ]
 
@@ -125,8 +125,8 @@ export function ProcurementSolution() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              AI-powered evaluation that is fast, fair, and defendable in any
-              audit.
+              AI-powered evaluation. Contemporaneous documentation. No
+              reconstruction required.
             </span>
           </h2>
         </div>

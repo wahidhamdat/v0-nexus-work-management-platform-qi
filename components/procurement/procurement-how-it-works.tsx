@@ -7,15 +7,15 @@ const steps = [
   {
     number: "01",
     icon: Upload,
-    title: "Get your documents in",
+    title: "Documents in",
     items: [
       {
         label: "ERP Integration",
-        text: "Pulls RFPs and bids directly from SAP, Oracle, Procore, or your existing procurement system.",
+        text: "Pulls RFPs and bids from SAP, Oracle, Procore, or your existing procurement system. The evaluation clock starts. So does the evidentiary record.",
       },
       {
-        label: "Simple Upload",
-        text: "Drag-and-drop PDFs, Word docs, Excel sheets \u2013 whatever format your bidders use.",
+        label: "Direct Upload",
+        text: "Accepts PDFs, Word documents, and Excel sheets. The record starts the moment the documents do.",
       },
     ],
   },
@@ -26,7 +26,7 @@ const steps = [
     items: [
       {
         label: "Multi-Agent Analysis",
-        text: "Multi-agent models evaluate compliance, pricing, and technical responses in minutes, flagging anomalies and risks automatically.",
+        text: "Multi-agent models score compliance, technical response, and financial criteria in parallel. Anomalies and risks are flagged automatically. Every scoring action is timestamped, attributed, and locked.",
       },
     ],
   },
@@ -37,7 +37,7 @@ const steps = [
     items: [
       {
         label: "Human Review",
-        text: "Your team reviews ranked bids with full justifications, adjusts scores if needed, and exports an audit-ready report.",
+        text: "Your team reviews ranked bids with full clause-level justifications, adjusts scores where required, and exports a complete audit-ready report. The record is not produced after the committee decides. It is produced as the committee works.",
       },
     ],
   },
@@ -124,7 +124,7 @@ export function ProcurementHowItWorks() {
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Three steps to audit-ready evaluation
+            Three steps to a record that holds.
           </h2>
         </div>
 

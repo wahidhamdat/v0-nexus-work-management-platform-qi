@@ -1,36 +1,29 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Globe, Database, TrendingUp, Target } from "lucide-react"
+import { Globe, TrendingUp, Building2 } from "lucide-react"
 
 const marketStats = [
   {
     icon: Globe,
-    figure: "13\u201320%",
-    context: "of GDP worldwide",
+    figure: "USD 13T+",
+    context: "annual procurement flow",
     detail:
-      "Public procurement = 13\u201320% of GDP worldwide (USD 13T+ annually).",
-  },
-  {
-    icon: Database,
-    figure: "~USD 15T",
-    context: "global flow",
-    detail:
-      "15% of global GDP flows through public procurement systems (~USD 15T).",
+      "Annual public procurement flow worldwide.",
   },
   {
     icon: TrendingUp,
-    figure: "USD 362.8B",
-    context: "opened annually",
+    figure: "59%",
+    context: "Saudi arbitration growth",
     detail:
-      "USD 362.8B in value opened up annually by procurement open data alone (2.81% of total spend).",
+      "Increase in Saudi arbitration caseload in one year. Construction disputes led at 38% of all cases.",
   },
   {
-    icon: Target,
-    figure: "50%+",
-    context: "savings potential",
+    icon: Building2,
+    figure: "USD 1.2B",
+    context: "GCC claims market",
     detail:
-      "Centralized procurement delivers 50%+ savings; most tools achieve 5\u201310% price savings.",
+      "Value of GCC construction claims and dispute services market today.",
   },
 ]
 
@@ -99,16 +92,34 @@ export function ProcurementWhyNow() {
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <span className="text-balance block">
-              A trillion-dollar market waiting for better tools
+              National mandates are turning best practice into legal requirement.
             </span>
           </h2>
           <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
-            Monakes captures the evaluation bottleneck in this trillion-dollar
-            market.
+            Across Saudi Arabia, the UAE, and Qatar, national digital
+            transformation agendas are not aspirational. They are operational
+            directives with timelines, oversight committees, and compliance
+            requirements. Qatar established a Smart Government and Digital
+            Excellence Steering Committee in March 2025, chaired at the Prime
+            Minister level, with a specific mandate over procurement governance.
+            Saudi Arabia recorded a 59 percent increase in commercial arbitration
+            caseload in one year — construction and engineering disputes led at
+            38 percent of all cases. The UAE has a mature arbitration
+            infrastructure actively processing billion-dollar claims.
           </p>
+          <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg mt-4 font-medium">
+            The institutions that deploy contemporaneous documentation
+            infrastructure now will not be in the caseload. The institutions that
+            do not will fund the next generation of construction arbitration
+            practices.
+          </p>
+          <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg mt-4">
+            The window to get ahead of this is measurable. It is not permanent.
+          </p>
+          <div className="mt-8 w-16 h-[2px] bg-[#8A1538]/20" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {marketStats.map((stat, i) => {
             const Icon = stat.icon
             return (

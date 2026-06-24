@@ -91,7 +91,7 @@ export function ProcurementDualCTA() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-center mb-14 opacity-0"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Two conversations. Both matter.
+          Two conversations. Both serious.
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -110,20 +110,18 @@ export function ProcurementDualCTA() {
             </div>
 
             <p className="text-sm text-white/65 leading-relaxed mb-7">
-              Monakes offers a non-disruptive parallel pilot. Your existing
-              workflows, committees, legal timelines, and ERP systems remain
-              unchanged. Monakes runs alongside a live tender cycle, generating
-              its own record in parallel. At the end, you compare. There is no
-              integration requirement, no disruption, and no commitment to
-              replace existing systems. The pilot is designed to produce
-              evidence — for your institution, on your terms.
+              Monakes deploys as a parallel run alongside your existing tender
+              cycle. Nothing changes — not your committee, not your legal
+              timelines, not your ERP. Monakes runs alongside and generates its
+              own contemporaneous record. At the end, you compare the record
+              against what your current process produced. The pilot is
+              structured to produce institutional evidence, not a sales outcome.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
               If you are responsible for procurement governance at a government
-              entity, state-owned enterprise, or major infrastructure
-              organization in Qatar or the GCC, the right next step is a
-              thirty-minute technical conversation.
+              entity, state-owned enterprise, or major infrastructure authority,
+              the conversation starts with a thirty-minute technical briefing.
             </p>
 
             <a
@@ -166,20 +164,22 @@ export function ProcurementDualCTA() {
             </div>
 
             <p className="text-sm text-white/65 leading-relaxed mb-7">
-              Monakes is building the compliance infrastructure layer for public
-              procurement across the GCC and beyond. The market is structurally
-              underserved: enterprise ERP platforms were not designed for
-              evidentiary documentation, and manual advisory services do not
-              scale. The regulatory environment across Qatar, Saudi Arabia, and
-              the UAE is actively creating demand — national digital
-              transformation mandates are converting what was once a
-              best-practice into a legal requirement.
+              Monakes is the documentation infrastructure layer for public
+              procurement. The market is structurally exposed — institutions
+              managing billion-dollar tender pipelines have no contemporaneous
+              evidentiary architecture, and the arbitration caseload is
+              accelerating. National digital mandates across the GCC are
+              converting what was once voluntary governance best practice into a
+              regulatory requirement. The platform is operational. The partner
+              model is established. The deployment pipeline spans Qatar and
+              Saudi Arabia, with UAE and broader GCC markets on a defined
+              timeline.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
               We are seeking investors and strategic partners who understand B2G
-              infrastructure, the GCC institutional landscape, or both. If that
-              describes you, we want to talk.
+              infrastructure software, institutional sales cycles, or the GCC
+              procurement environment. If that is you, we want to talk.
             </p>
 
             <a
@@ -195,9 +195,8 @@ export function ProcurementDualCTA() {
         {/* Supporting line */}
         <div ref={footerRef} className="text-center pt-10 border-t border-white/[0.08] opacity-0">
           <p className="text-sm text-white/40">
-            Monakes is a QSTP portfolio company headquartered in Doha, Qatar,
-            with a strategic roadmap extending to Saudi Arabia and the UAE by
-            2027.
+            Monakes is a QSTP portfolio company. Headquartered in Doha.
+            Deploying globally.
           </p>
         </div>
       </div>
