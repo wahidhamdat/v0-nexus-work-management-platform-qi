@@ -6,22 +6,22 @@ const team = [
   {
     name: "Mohammed H",
     role: "Founder & Systems Architect",
-    bio: "Mohammed designed the core platform and the three-pillar evidentiary architecture from first principles. His background is in translating complex operational and legal requirements into automated software logic — not the other way around. He has built AI systems for logistics and operations-heavy environments where document complexity, SLA pressure, and high-stakes decisions are the baseline, not the exception. At Monakes, he has taken that execution discipline into public procurement: an environment where the output of a system is read by lawyers, auditors, and arbitrators, not just operators. The platform reflects that standard in every layer.",
+    bio: "Mohammed engineered the core platform and the three-pillar evidentiary architecture. His background is in building AI systems for operations-heavy environments — logistics, complex document workflows, high-stakes decision pipelines — where the output of a system is read under pressure by people who are looking for gaps. At Monakes, that discipline is applied to an environment where the reader is an arbitrator. The platform is built to that standard throughout.",
   },
   {
     name: "Dr. Abdelfadel H",
     role: "Board Member, Strategy & Institutional Partnerships",
-    bio: "Dr. Abdelfadel brings an MBA in Leadership and Sustainability and a track record of building institutional partnerships across government and semi-government environments. His role at Monakes is to ensure that the platform\u2019s commercial strategy maps precisely to how public institutions actually evaluate, procure, and adopt enterprise technology — a process that is fundamentally different from private sector sales. His network spans senior decision-makers across the GCC government and development institution landscape.",
+    bio: "Dr. Abdelfadel\u2019s role is to ensure that Monakes\u2019 commercial model maps precisely to how public institutions actually evaluate, procure, and adopt technology. That process does not resemble private sector sales. It requires institutional credibility, regulatory alignment, and the ability to operate across government decision-making structures. His network spans senior principals across GCC government and development institutions.",
   },
   {
     name: "Sofiene C",
     role: "Head of Secure Infrastructure",
-    bio: "Sofiene is a veteran of Qatar\u2019s TASMU national digital transformation program — the sovereign technology infrastructure initiative that established the baseline for Qatar\u2019s smart government ecosystem. That background is not incidental to his role at Monakes. It means the platform\u2019s infrastructure architecture was designed by someone who has built compliant systems inside Qatar\u2019s regulatory environment, not someone who has subsequently tried to adapt a foreign system to meet it. NCSA alignment, QCF compliance, and PDPL data protection are not boxes checked after the fact. They are structural decisions made at the architecture level.",
+    bio: "Sofiene is a veteran of Qatar\u2019s TASMU national digital transformation program — the sovereign technology initiative that established Qatar\u2019s smart government infrastructure baseline. He designed Monakes\u2019 infrastructure architecture from inside Qatar\u2019s regulatory environment, not from the outside looking for compliance. NCSA alignment, data sovereignty, and encryption architecture are not additions. They are the foundation.",
   },
   {
     name: "Hussein S",
     role: "Board Member, Procurement Operations",
-    bio: "Hussein\u2019s value to Monakes is singular: he has served on government procurement evaluation committees from the inside. He understands how scores are assigned, how decisions are documented, how committees operate under institutional and legal pressure, and where the gaps in current practice create exposure. That operational knowledge is embedded directly into the platform\u2019s evaluation workflow design. Monakes does not model how procurement should work in theory. It models how it actually works — and where it needs institutional protection.",
+    bio: "Hussein has served on government procurement evaluation committees. He knows how scores are assigned under institutional pressure, where documentation gaps form, and what the record looks like when a challenge arrives. That operational knowledge is embedded directly into Monakes\u2019 evaluation workflow. The platform does not model how procurement should work. It models how it works — and where it needs protection.",
   },
 ]
 
@@ -122,10 +122,9 @@ export function ProcurementTeam() {
             ref={subRef}
             className="text-base text-[#5A5A5A] leading-relaxed opacity-0"
           >
-            Monakes was not built by software engineers who discovered
-            procurement. It was built by people who have sat inside the
-            institutional, legal, and infrastructure environments that public
-            procurement operates in.
+            Monakes was not built by software engineers who discovered a market.
+            It was built by people who understand what happens when a procurement
+            record fails — legally, institutionally, and operationally.
           </p>
         </div>
 
@@ -184,11 +183,10 @@ export function ProcurementTeam() {
           </h3>
           <p className="text-sm text-[#5A5A5A] leading-relaxed max-w-3xl">
             The Monakes advisory network includes a former Qatar Government
-            Procurement Committee Chair and an ICC Arbitration Specialist. These
-            are not honorary titles. Their function is to ensure that the
-            platform&apos;s evidentiary architecture holds under the precise
-            conditions in which it will be tested: formal legal challenge,
-            arbitration proceeding, and institutional audit.
+            Procurement Committee Chair and an ICC Arbitration Specialist. Their
+            role is to ensure the platform&apos;s evidentiary architecture
+            survives the precise conditions in which it will be tested: formal
+            arbitration, institutional audit, and regulatory inquiry.
           </p>
         </div>
       </div>

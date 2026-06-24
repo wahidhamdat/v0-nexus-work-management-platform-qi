@@ -37,29 +37,31 @@ interface Metric {
 
 const metrics: Metric[] = [
   {
+    value: 154,
+    suffix: "M USD",
+    label: "average dispute cost",
+    description:
+      "Per Middle East infrastructure project. One case. One documentation gap.",
+  },
+  {
     value: 80,
     suffix: "\u201390%",
     label: "faster evaluation",
-    description: "Compress 6-week evaluations into a few days.",
+    description: "Reduction in evaluation cycle time. Weeks become days.",
   },
   {
-    value: 70,
-    suffix: "\u201392%",
-    label: "time savings",
-    description: "On manual document review and scoring.",
-  },
-  {
-    value: 25,
-    suffix: "\u201340%",
-    label: "productivity gains",
-    description: "For procurement teams across tender cycles.",
+    value: 35,
+    suffix: "% of CAPEX",
+    label: "dispute exposure",
+    description:
+      "Average value claimed in disputes globally. Monakes exists to protect that exposure.",
   },
   {
     value: 4.8,
     suffix: "M USD",
     label: "annual ROI",
     description:
-      "Mid-sized government agencies see up to 4.8M USD annual ROI from AI-powered bid evaluation.",
+      "Estimated annual ROI for a mid-sized government agency from reduced evaluation overhead alone. Before dispute protection is counted.",
     isDecimal: true,
   },
 ]
@@ -133,7 +135,7 @@ export function ProcurementImpact() {
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Results that speak for themselves
+            The cost of inaction is already quantified. So is ours.
           </h2>
         </div>
 

@@ -95,7 +95,7 @@ export function ProcurementHero() {
   }, [])
 
   const headlineText =
-    "Cut Tender Evaluation Time by 80\u201390% with Explainable AI for Public Procurement"
+    "Protect the Decision. Close the Documentation Gap. Before It Costs You."
   const words = headlineText.split(" ")
 
   const cardItems = [
@@ -160,9 +160,9 @@ export function ProcurementHero() {
             ref={subtextRef}
             className="text-base sm:text-lg text-[#5A5A5A] leading-relaxed max-w-xl mb-10 opacity-0"
           >
-            Monakes helps governments and large enterprises evaluate complex
-            construction and infrastructure tenders in days instead of 6+ weeks
-            {" \u2013 "}with full transparency, auditability, and human control.
+            Monakes gives governments and large enterprises AI-powered tender
+            evaluation with complete, contemporaneous audit records — so every
+            procurement decision is defensible the moment it is made.
           </p>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-start gap-4 opacity-0">
@@ -172,15 +172,15 @@ export function ProcurementHero() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#8A1538] text-white text-base font-semibold hover:bg-[#6D1030] transition-all duration-300 shadow-[0_2px_16px_rgba(138,21,56,0.15)] hover:shadow-[0_4px_24px_rgba(138,21,56,0.25)]"
             >
-              Book a 30-Minute Demo
+              Request a Pilot Conversation
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#solution"
+              href="mailto:wahidhamdat30@gmail.com"
               className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-[#1A1A1A]/15 text-[#1A1A1A] text-base font-medium hover:bg-[#1A1A1A]/5 transition-all duration-300"
             >
               <FileText className="w-4 h-4" />
-              View 1-Page Overview
+              Investor & Partner Inquiry
             </a>
           </div>
         </div>

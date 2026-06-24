@@ -6,21 +6,21 @@ import { FileSearch, Building2, Gavel } from "lucide-react"
 const differentiators = [
   {
     icon: FileSearch,
-    title: "Explainability by design",
+    title: "Contemporaneous by architecture",
     description:
-      "Every score Monakes generates is traceable to a specific clause, page, and criterion in the original tender document. Not summarized. Not inferred. Cited. When a procurement committee faces an audit, a formal challenge, or a parliamentary inquiry, the record does not require reconstruction — it already exists.",
+      "The documentation gap that exposes institutions in formal challenges exists because records are built retrospectively. Monakes eliminates that gap structurally. Every score is timestamped at the moment of creation, tied to the evaluator who created it, and locked against retroactive editing. The complete record exists before any challenge is filed. Not because someone built it under pressure. Because the system built it as it ran.",
   },
   {
     icon: Building2,
-    title: "Sovereign infrastructure",
+    title: "Sovereign infrastructure, client-controlled",
     description:
-      "Monakes operates on Microsoft Azure Qatar Central — sovereign, in-country cloud infrastructure aligned with Qatar\u2019s National Cyber Security Agency standards, PDPL data protection requirements, and QCF compliance architecture. Institutions do not send sensitive tender data outside their jurisdiction.",
+      "Monakes does not prescribe where data lives. The platform deploys on the client\u2019s own environment — in-country sovereign cloud, government private cloud, on-premise installation, or hybrid architecture. Sensitive tender data stays where the institution requires it to stay. This is not a configuration option. It is the architecture.",
   },
   {
     icon: Gavel,
-    title: "Human authority, always",
+    title: "Evidentiary standard, not workflow standard",
     description:
-      "Monakes is not an autonomous decision system. It is an institutional intelligence layer. Committees retain complete authority over final awards. Monakes ensures that whatever decision they make is documented, justified, and defensible before, during, and after any challenge.",
+      "The three-pillar architecture — temporal lock, automated rationale, zero reconstruction — was designed against ICC arbitration standards and international procurement law frameworks. Most procurement software is designed to manage workflow. Monakes is designed so that its output survives formal legal scrutiny.",
   },
 ]
 
@@ -130,15 +130,14 @@ export function ProcurementDifferent() {
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight mb-4 opacity-0"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Built for institutions that cannot afford to be wrong.
+            Built for the moment a decision gets challenged. Not the moment it
+            gets made.
           </h2>
           <p
             ref={subRef}
             className="text-base text-[#5A5A5A] leading-relaxed opacity-0"
           >
-            Most procurement software was built for speed. Monakes is built for
-            defensibility — the standard that actually matters in public sector
-            evaluation.
+            Speed is a feature. Defensibility is the product.
           </p>
         </div>
 

@@ -3,9 +3,9 @@
 import { useEffect, useRef } from "react"
 
 const stats = [
-  { value: "USD 15T", label: "annual global public procurement flow" },
-  { value: "USD 39.2B", label: "projected AI procurement market by 2035" },
-  { value: "28% CAGR", label: "growth rate of AI in procurement, 2026\u20132035" },
+  { value: "USD 154M", label: "average dispute cost per project in the Middle East (HKA / AECOM, 2025)" },
+  { value: "83%", label: "average project delay overrun across the MENA region" },
+  { value: "80%+", label: "contractors anticipating increased formal disputes in the next three years" },
 ]
 
 export function ProcurementMarketMoment() {
@@ -117,33 +117,37 @@ export function ProcurementMarketMoment() {
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-6 opacity-0"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Public procurement is the largest undigitized market on earth. That
-            is changing now.
+            The world's largest spending mechanism has a documentation problem.
+            It is becoming a liability.
           </h2>
 
           <div ref={bodyRef} className="opacity-0">
             <p className="text-base text-white/60 leading-relaxed mb-4">
-              Governments worldwide spend between 13 and 20 percent of GDP
-              through public procurement systems — over USD 15 trillion
-              annually. For decades, the evaluation of that spending has relied
-              on manual committee work, paper-based scoring, and retrospective
-              documentation assembled under legal pressure.
+              Governments worldwide direct between 13 and 20 percent of GDP
+              through public procurement — over USD 15 trillion annually. The
+              decisions are made by qualified committees following established
+              procedures. The problem is not the decision. The problem is what
+              happens when that decision is challenged.
             </p>
             <p className="text-base text-white/60 leading-relaxed mb-4">
-              That model is breaking. In 2025, the UK government doubled its AI
-              procurement spend year-on-year. The United States committed USD
-              5.6 billion to federal AI projects between 2022 and 2024. Across
-              the GCC, Saudi Arabia, the UAE, and Qatar are under national
-              mandate to make every procurement decision transparent, auditable,
-              and digitally defensible — not as a future ambition, but as a
-              present regulatory requirement.
+              In the Middle East alone, construction and infrastructure disputes
+              average USD 154 million per project. Projects run 83 percent over
+              schedule on average. Over 80 percent of contractors in the region
+              anticipate an increase in formal disputes in the next three years.
+              The Saudi Centre for Commercial Arbitration recorded a 59 percent
+              increase in construction caseload in a single year. When a dispute
+              is filed, the first thing a tribunal asks for is contemporaneous
+              documentation — the record that existed at the moment the decision
+              was made, not the record assembled in the weeks after a claim
+              arrives.
             </p>
             <p className="text-base text-white/60 leading-relaxed">
-              The window to define the infrastructure layer for this shift is
-              open. It will not stay open. Monakes is built for this moment:
-              purpose-built for the legal, regulatory, and institutional
-              realities of public procurement — not adapted from enterprise
-              software designed for something else.
+              Most institutions cannot produce it. Not because the decision was
+              wrong. Because the documentation architecture was never built to
+              survive a challenge.
+            </p>
+            <p className="text-base text-white/60 leading-relaxed mt-5 font-medium">
+              That gap is what Monakes closes.
             </p>
           </div>
         </div>
@@ -174,8 +178,8 @@ export function ProcurementMarketMoment() {
 
         {/* Source note */}
         <p className="mt-8 text-xs text-white/25">
-          Sources: OECD, Precedence Research, Open Contracting Partnership,
-          Jaggaer GCC market analysis (2025–2026)
+          Sources: HKA CRUX Insight Report; AECOM 2025 Middle East Review;
+          Youssef + Partners Regional Survey
         </p>
       </div>
     </section>

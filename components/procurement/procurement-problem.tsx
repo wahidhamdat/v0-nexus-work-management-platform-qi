@@ -9,21 +9,21 @@ const stats = [
     value: "150\u2013300",
     unit: "staff hours",
     description:
-      "per tender cycle are spent reading and scoring thousands of pages by hand.",
+      "per tender cycle spent on manual scoring and documentation.",
   },
   {
     icon: Clock,
     value: "6+",
     unit: "weeks",
     description:
-      "Evaluation cycles stretch to 6 weeks or more for complex construction and infrastructure projects.",
+      "before a complete evaluation record exists in most institutions.",
   },
   {
     icon: AlertTriangle,
-    value: "High",
-    unit: "risk",
+    value: "USD 98.7M",
+    unit: "average claim",
     description:
-      "Human error and inconsistent scoring create disputes, audit findings, and reputational risk.",
+      "per project dispute globally — 35% of total project CAPEX.",
   },
 ]
 
@@ -140,12 +140,27 @@ export function ProcurementProblem() {
               style={{ fontFamily: "var(--font-heading)" }}
             >
               <span className="text-balance block">
-                Public procurement teams are drowning in manual work.
+                The decision was sound. The record could not prove it.
               </span>
             </h2>
             <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg">
-              Manual tender evaluation doesn{"'"}t scale when you{"'"}re managing
-              billion-dollar project pipelines.
+              Procurement committees evaluate billion-dollar tenders under
+              institutional pressure, tight timelines, and complex scoring
+              matrices. The evaluations are rigorous. The decisions are
+              defensible. The documentation is assembled afterward — sometimes
+              weeks after — from notes, emails, and committee memory.
+            </p>
+            <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg mt-4">
+              When a contractor files a formal protest, an informal complaint
+              reaches the minister's office, or an international arbitration
+              claim is lodged, that retrospective record becomes the
+              institution's entire line of defense. Arbitral tribunals and audit
+              bodies do not evaluate what the committee intended to do. They
+              evaluate what the record shows was done, at the time it was done.
+            </p>
+            <p className="text-base text-[#5A5A5A] leading-relaxed max-w-lg mt-4 font-medium">
+              The exposure is not the decision. The exposure is the gap between
+              when the decision was made and when the record was built.
             </p>
             {/* Accent line */}
             <div className="mt-8 w-16 h-[2px] bg-[#8A1538]/20" />
