@@ -1,12 +1,13 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight, Building2 } from "lucide-react"
+import { ArrowRight, Building2, Handshake } from "lucide-react"
 
 export function ProcurementDualCTA() {
   const sectionRef = useRef<HTMLElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
   const govCardRef = useRef<HTMLDivElement>(null)
+  const integratorCardRef = useRef<HTMLDivElement>(null)
   const investorCardRef = useRef<HTMLDivElement>(null)
   const footerRef = useRef<HTMLDivElement>(null)
 
@@ -44,6 +45,18 @@ export function ProcurementDualCTA() {
             "-=0.3"
           )
           .fromTo(
+            integratorCardRef.current,
+            { opacity: 0, y: 40, scale: 0.97 },
+            {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              duration: 0.7,
+              ease: "power3.out",
+            },
+            "-=0.5"
+          )
+          .fromTo(
             investorCardRef.current,
             { opacity: 0, y: 40, scale: 0.97 },
             {
@@ -53,7 +66,7 @@ export function ProcurementDualCTA() {
               duration: 0.7,
               ease: "power3.out",
             },
-            "-=0.4"
+            "-=0.5"
           )
           .fromTo(
             footerRef.current,
@@ -91,10 +104,10 @@ export function ProcurementDualCTA() {
           className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-center mb-14 opacity-0"
           style={{ fontFamily: "var(--font-heading)" }}
         >
-          Two conversations. Both serious.
+          Three conversations. All serious.
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Government CTA */}
           <div
             ref={govCardRef}
@@ -113,9 +126,10 @@ export function ProcurementDualCTA() {
               Monakes deploys as a parallel run alongside your existing tender
               cycle. Nothing changes — not your committee, not your legal
               timelines, not your ERP. Monakes runs alongside and generates its
-              own contemporaneous record. At the end, you compare the record
-              against what your current process produced. The pilot is
-              structured to produce institutional evidence, not a sales outcome.
+              own contemporaneous record. At the end, you compare what Monakes
+              produced against what your current process produced. The pilot is
+              structured to generate institutional evidence on your terms,
+              inside your infrastructure, with zero operational disruption.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
@@ -135,6 +149,52 @@ export function ProcurementDualCTA() {
                 Request a Pilot Conversation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </span>
+            </a>
+          </div>
+
+          {/* Integrator CTA */}
+          <div
+            ref={integratorCardRef}
+            className="relative p-8 lg:p-10 rounded-2xl bg-white/[0.04] border border-white/[0.08] opacity-0 hover:border-white/15 transition-colors duration-500"
+          >
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
+                <Handshake className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xs font-semibold tracking-[0.15em] uppercase text-white/50">
+                For System Integrators &amp; Partners
+              </span>
+            </div>
+
+            <p className="text-sm text-white/65 leading-relaxed mb-7">
+              If you have active relationships inside government procurement —
+              ministries, infrastructure authorities, state-owned enterprises —
+              and you are looking for a technically differentiated product to
+              bring to those clients, the Monakes partner model is designed for
+              you.
+            </p>
+
+            <p className="text-sm text-white/65 leading-relaxed mb-7">
+              What the model looks like: you own the client relationship and
+              deployment execution. Monakes provides the platform, the
+              evidentiary architecture, the compliance documentation, and the
+              technical onboarding. Margin is built into the deployment fee.
+              There is no competing direct sales motion in your market.
+            </p>
+
+            <p className="text-sm text-white/50 leading-relaxed mb-7">
+              We are currently onboarding system integrators in the Gulf with
+              active government procurement access. One partner per market. If
+              that is a conversation worth having, the next step is a
+              thirty-minute technical and commercial briefing.
+            </p>
+
+            <a
+              href="mailto:wahidhamdat30@gmail.com"
+              className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/20 text-white text-base font-semibold hover:bg-white/10 transition-all duration-300"
+            >
+              Partner &amp; Integration Inquiry
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
 
@@ -167,21 +227,24 @@ export function ProcurementDualCTA() {
               Monakes is the documentation infrastructure layer for public
               procurement. The market is structurally exposed — institutions
               managing billion-dollar tender pipelines have no contemporaneous
-              evidentiary architecture, and the arbitration caseload is
-              accelerating. National digital mandates across the GCC are
-              converting what was once voluntary governance best practice into a
-              regulatory requirement. The platform is operational. The partner
-              model is established. Monakes for Artificial Intelligence
-              Solutions LLC is a registered QSTP portfolio company operating
-              within Qatar Foundation's sovereign technology free zone. The
-              deployment pipeline spans Qatar and Saudi Arabia, with UAE and
-              broader GCC markets on a defined timeline.
+              evidentiary architecture, and arbitration caseloads across the
+              Gulf are accelerating. National digital mandates are converting
+              what was once voluntary governance best practice into a regulatory
+              requirement. The platform is operational. The partner model is
+              established. A parallel pilot has been completed inside a live
+              Gulf government tender environment with documented results.
+            </p>
+
+            <p className="text-sm text-white/50 leading-relaxed mb-4">
+              Monakes for Artificial Intelligence Solutions LLC is a registered
+              QSTP portfolio company operating within Qatar Foundation's
+              sovereign technology free zone.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
               We are seeking investors and strategic partners who understand B2G
-              infrastructure software, institutional sales cycles, or the GCC
-              procurement environment. If that is you, we want to talk.
+              infrastructure software, institutional sales cycles, or the Gulf
+              procurement environment.
             </p>
 
             <a
