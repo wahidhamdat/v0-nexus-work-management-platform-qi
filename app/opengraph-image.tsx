@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "Monakes AI — Autonomous Export Compliance | Shield"
+export const alt = "Monakes — Protect the Decision. Close the Documentation Gap."
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -10,7 +10,7 @@ export default function Image() {
     (
       <div
         style={{
-          background: "#07111F",
+          background: "#1A1A1A",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -21,7 +21,7 @@ export default function Image() {
       >
         <div
           style={{
-            color: "#4A7FA5",
+            color: "#8A1538",
             fontSize: 28,
             fontWeight: 700,
             marginBottom: 16,
@@ -35,37 +35,38 @@ export default function Image() {
               width: 12,
               height: 12,
               borderRadius: 3,
-              background: "#4A7FA5",
+              background: "#8A1538",
               transform: "rotate(45deg)",
             }}
           />
-          Monakes AI
+          Monakes
         </div>
         <div
           style={{
-            color: "#e8ecf1",
+            color: "#F7F5F2",
             fontSize: 48,
             fontWeight: 800,
             lineHeight: 1.15,
             maxWidth: 800,
           }}
         >
-          Autonomous Export Compliance | Shield
+          Protect the Decision. Close the Documentation Gap.
         </div>
         <div
           style={{
-            color: "#8892a4",
+            color: "#5A5A5A",
             fontSize: 22,
             marginTop: 24,
           }}
         >
-          Real-time screening. Deterministic classification. Immutable audit trail.
+          AI-powered procurement evaluation. 48-hour evidentiary record. Deployed on your infrastructure.
         </div>
         <div
           style={{
-            color: "#5a6478",
+            color: "#8A1538",
             fontSize: 16,
             marginTop: 16,
+            fontWeight: 600,
           }}
         >
           monakes.com
