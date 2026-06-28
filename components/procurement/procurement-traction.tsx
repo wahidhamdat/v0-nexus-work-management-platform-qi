@@ -8,13 +8,13 @@ const validations = [
     icon: CheckCircle2,
     title: "Platform",
     description:
-      "Core engine live. 48-hour contemporaneous record generation tested and validated in live tender environment.",
+      "Core engine live. Clause-level evidentiary record generation tested and validated against real Gulf tender documentation. Real-time evaluator interface finalized.",
   },
   {
     icon: Scale,
     title: "Legal",
     description:
-      "ICC-validated evidentiary architecture. Aligned with international procurement law. Configurable to national frameworks.",
+      "ICC-validated evidentiary architecture. Aligned with international procurement law. Configurable to national procurement frameworks across jurisdictions.",
   },
   {
     icon: Server,
@@ -24,9 +24,9 @@ const validations = [
   },
   {
     icon: Users,
-    title: "Partners",
+    title: "Pipeline",
     description:
-      "Implementation partners active in Qatar. Expansion pipeline open.",
+      "Active partner conversations in Qatar for ministry-level parallel pilots. Deployment structured to run alongside live tender cycles with zero operational disruption.",
   },
 ]
 
@@ -120,17 +120,15 @@ export function ProcurementTraction() {
             className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1A1A1A] leading-tight mb-4 opacity-0"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Built, validated, and ready to deploy.
+            Built, validated, and moving to deployment.
           </h2>
 
           <p
             ref={subRef}
             className="text-lg text-[#5A5A5A] leading-relaxed mb-0 opacity-0"
           >
-            Monakes is not in development. The platform is operational,
-            compliance-validated, and deploying through institutional
-            implementation partners. The engine is live. The pilot evidence
-            exists. The partner model is functional.
+            The engine is live. The architecture is validated. The deployment
+            conversations are active.
           </p>
         </div>
 
@@ -140,43 +138,37 @@ export function ProcurementTraction() {
             architecture — temporal lock, automated rationale, and zero
             reconstruction — has been validated against ICC arbitration
             standards and international procurement law frameworks. The platform
-            does not require custom development. It requires configuration:
-            mapping an institution&apos;s existing evaluation criteria into the
-            Monakes environment before a single tender is touched.
+            does not require custom development for deployment. It requires
+            configuration: mapping an institution&apos;s existing evaluation
+            criteria into the Monakes environment before a single tender is
+            touched.
           </p>
 
-          {/* Anonymized pilot result */}
-          <div className="my-8 p-6 rounded-xl bg-white border border-[#8A1538]/15">
-            <p className="text-sm font-semibold text-[#8A1538] uppercase tracking-wide mb-3">
-              Verified Pilot Result
-            </p>
-            <p className="text-sm text-[#3A3A3A] leading-relaxed">
-              In a controlled parallel deployment alongside a live
-              infrastructure tender at a Gulf government entity, Monakes
-              generated a complete, clause-level evidentiary record within 48
-              hours of bid submission. The same record took the
-              institution&apos;s existing process 19 days to produce manually —
-              and was identified as incomplete in three scoring areas upon
-              comparison. The institution&apos;s committee workflows, ERP
-              system, and legal timelines were not altered at any point during
-              the parallel run.
-            </p>
-          </div>
-
-          {/* Partner model */}
           <p className="text-base text-[#5A5A5A] leading-relaxed mb-4">
-            Monakes deploys through institutional implementation partners —
-            system integrators and public sector technology firms with
-            established presence inside government and infrastructure
-            procurement environments. The model is straightforward: Monakes
-            provides the engine, the evidentiary architecture, and the
-            compliance framework. The partner provides institutional access,
-            local regulatory knowledge, and deployment execution. We are
-            currently working with implementation partners in Qatar and
-            expanding to additional markets. If you are a system integrator with
-            active government procurement relationships in the Gulf, we are
-            looking to onboard one additional partner per market. The
-            conversation is worth having.
+            Internal benchmarking against real Gulf tender documentation
+            structures demonstrates compression of a standard 6-week evaluation
+            cycle to under 48 hours, with complete clause-level traceability
+            across technical, financial, and compliance scoring. Every score
+            timestamped. Every score locked. Every score traceable to its source
+            document.
+          </p>
+
+          <p className="text-base text-[#5A5A5A] leading-relaxed mb-4">
+            Monakes is currently in active conversations with institutional
+            implementation partners in Qatar to deploy parallel pilots across
+            government ministries. These pilots will run alongside live tender
+            cycles — zero disruption to existing workflows, committees, or ERP
+            systems — and will produce the third-party verifiable deployment
+            record that confirms what the platform already demonstrates
+            internally.
+          </p>
+
+          <p className="text-base text-[#5A5A5A] leading-relaxed">
+            On data sovereignty: the platform deploys on the client&apos;s own
+            controlled environment. There is no Monakes-controlled data store.
+            Tender records, evaluation data, and institutional information never
+            leave the client&apos;s infrastructure. This holds regardless of
+            jurisdiction, region, or hosting model.
           </p>
         </div>
 

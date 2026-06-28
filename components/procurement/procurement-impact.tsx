@@ -37,31 +37,32 @@ interface Metric {
 
 const metrics: Metric[] = [
   {
-    value: 154,
-    suffix: "M USD",
-    label: "average dispute cost",
-    description:
-      "Per Middle East infrastructure project. One case. One documentation gap.",
-  },
-  {
     value: 80,
     suffix: "\u201390%",
-    label: "faster evaluation",
-    description: "Reduction in evaluation cycle time. Weeks become days.",
+    label: "cycle compression",
+    description:
+      "Projected evaluation cycle compression based on internal benchmarking against real Gulf tender documentation structures.",
   },
   {
-    value: 35,
-    suffix: "% of CAPEX",
-    label: "dispute exposure",
+    value: 48,
+    suffix: " hours",
+    label: "evidentiary record",
     description:
-      "Average value claimed in disputes globally. Monakes exists to protect that exposure.",
+      "Target evidentiary record generation time from evaluation completion to complete audit trail.",
+  },
+  {
+    value: 0,
+    suffix: "",
+    label: "changes required",
+    description:
+      "Changes required to existing ERP, committee structure, or legal timelines during parallel deployment.",
   },
   {
     value: 4.8,
     suffix: "M USD",
     label: "annual ROI",
     description:
-      "Estimated annual ROI for a mid-sized government agency from reduced evaluation overhead alone. Before dispute protection is counted.",
+      "Estimated annual ROI for a mid-sized government agency from reduced evaluation overhead, legal exposure, and protest response costs.",
     isDecimal: true,
   },
 ]
