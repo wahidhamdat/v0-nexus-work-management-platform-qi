@@ -1,5 +1,5 @@
-import { ClaimsPlatform } from "@/components/claims/claims-platform"
+import { redirect } from "next/navigation"
 
 export default function ClaimsPage() {
-  return <ClaimsPlatform />
+  redirect("/")
 }
