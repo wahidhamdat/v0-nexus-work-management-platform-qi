@@ -22,10 +22,10 @@ export function ProcurementFooter() {
         </p>
         <div className="flex items-center gap-6 mt-4">
           <a
-            href="mailto:wahidhamdat30@gmail.com"
+            href="mailto:info@monakes.com"
             className="text-sm text-white/50 hover:text-white/80 transition-colors duration-300"
           >
-            wahidhamdat30@gmail.com
+            info@monakes.com
           </a>
           <div className="w-px h-4 bg-white/10" />
           <a

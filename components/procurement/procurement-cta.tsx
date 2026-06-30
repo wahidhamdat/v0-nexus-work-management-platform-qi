@@ -96,7 +96,7 @@ export function ProcurementCTA() {
               </span>
             </a>
             <a
-              href="mailto:wahidhamdat30@gmail.com"
+              href="mailto:info@monakes.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white text-base font-medium hover:bg-white/10 transition-colors duration-300"
             >
               Talk to Founder

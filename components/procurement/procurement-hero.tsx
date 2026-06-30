@@ -181,7 +181,7 @@ export function ProcurementHero() {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:wahidhamdat30@gmail.com"
+              href="mailto:investors@monakes.com"
               className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-[#1A1A1A]/15 text-[#1A1A1A] text-base font-medium hover:bg-[#1A1A1A]/5 transition-all duration-300"
             >
               <FileText className="w-4 h-4" />
