@@ -190,7 +190,7 @@ export function ProcurementDualCTA() {
             </p>
 
             <a
-              href="mailto:wahidhamdat30@gmail.com"
+              href="mailto:partners@monakes.com"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/20 text-white text-base font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Partner &amp; Integration Inquiry
@@ -248,7 +248,7 @@ export function ProcurementDualCTA() {
             </p>
 
             <a
-              href="mailto:wahidhamdat30@gmail.com"
+              href="mailto:investors@monakes.com"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border border-white/20 text-white text-base font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Investor &amp; Partner Inquiry
