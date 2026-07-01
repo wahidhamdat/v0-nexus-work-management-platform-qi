@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react"
 
 const team = [
   {
-    name: "Mohamed H",
+    name: "Mohameda H",
     role: "Founder & Systems Architect",
-    bio: "Mohamed engineered the core platform and the three-pillar evidentiary architecture. His background is in building AI systems for operations-heavy environments — logistics, complex document workflows, high-stakes decision pipelines — where the output of a system is read under pressure by people who are looking for gaps. At Monakes, that discipline is applied to an environment where the reader is an arbitrator. The platform is built to that standard throughout.",
+    bio: "Mohameda engineered the core platform and the three-pillar evidentiary architecture. His background is in building AI systems for operations-heavy environments — logistics, complex document workflows, high-stakes decision pipelines — where the output of a system is read under pressure by people who are looking for gaps. At Monakes, that discipline is applied to an environment where the reader is an arbitrator. The platform is built to that standard throughout.",
   },
   {
     name: "Dr. Abdelfadel H",
