@@ -26,7 +26,7 @@ const validations = [
     icon: Users,
     title: "Pipeline",
     description:
-      "Active partner conversations in Qatar for ministry-level parallel pilots. Deployment structured to run alongside live tender cycles with zero operational disruption.",
+      "Partner conversations underway for deployment within government ministries.",
   },
 ]
 
@@ -155,8 +155,8 @@ export function ProcurementTraction() {
 
           <p className="text-base text-[#5A5A5A] leading-relaxed mb-4">
             Monakes is currently in active conversations with institutional
-            implementation partners in Qatar to deploy parallel pilots across
-            government ministries. These pilots will run alongside live tender
+            implementation partners in Qatar to deploy across government
+            ministries. These deployments will run alongside live tender
             cycles — zero disruption to existing workflows, committees, or ERP
             systems — and will produce the third-party verifiable deployment
             record that confirms what the platform already demonstrates
