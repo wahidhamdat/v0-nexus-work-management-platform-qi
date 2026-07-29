@@ -177,7 +177,7 @@ export function ProcurementHero() {
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-[#8A1538] text-white text-base font-semibold hover:bg-[#6D1030] transition-all duration-300 shadow-[0_2px_16px_rgba(138,21,56,0.15)] hover:shadow-[0_4px_24px_rgba(138,21,56,0.25)]"
             >
-              Request a Pilot Conversation
+              Schedule a Demo
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a

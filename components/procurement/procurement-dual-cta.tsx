@@ -123,13 +123,11 @@ export function ProcurementDualCTA() {
             </div>
 
             <p className="text-sm text-white/65 leading-relaxed mb-7">
-              Monakes deploys as a parallel run alongside your existing tender
-              cycle. Nothing changes — not your committee, not your legal
-              timelines, not your ERP. Monakes runs alongside and generates its
-              own contemporaneous record. At the end, you compare what Monakes
-              produced against what your current process produced. The pilot is
-              structured to generate institutional evidence on your terms,
-              inside your infrastructure, with zero operational disruption.
+              Monakes deploys alongside your existing procurement workflows,
+              generating a complete contemporaneous record without changing your
+              committee, legal timelines, or ERP. The platform provides
+              institutional evidence on your terms, inside your infrastructure,
+              with zero operational disruption.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-7">
@@ -146,7 +144,7 @@ export function ProcurementDualCTA() {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#8A1538]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10 flex items-center gap-2">
-                Request a Pilot Conversation
+                Request a Demo
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </span>
             </a>
@@ -230,9 +228,9 @@ export function ProcurementDualCTA() {
               evidentiary architecture, and arbitration caseloads across the
               Gulf are accelerating. National digital mandates are converting
               what was once voluntary governance best practice into a regulatory
-              requirement. The platform is operational. The partner model is
-              established. A parallel pilot has been completed inside a live
-              Gulf government tender environment with documented results.
+              requirement. The platform is operational and validated against
+              international arbitration standards. Monakes delivers defensible
+              AI decisions that meet sovereign compliance requirements.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed mb-4">
