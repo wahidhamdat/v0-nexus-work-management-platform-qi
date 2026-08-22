@@ -210,7 +210,7 @@ export const en: SiteContent = {
       "Monakes was not built by engineers who found a market. It was built by people who have been in the rooms where procurement decisions are made, and who understand what happens when the record supporting one of those decisions does not hold.",
     people: [
       {
-        name: "Abdelwahed Hamdat",
+        name: "Mohameda Hamdat",
         role: "FOUNDER & SYSTEMS ARCHITECT",
         bio:
           "Built the core platform and the three-pillar evidentiary architecture. Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps.",
