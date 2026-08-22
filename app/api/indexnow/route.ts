@@ -11,7 +11,7 @@ export async function POST() {
       host: "monakes.com",
       key,
       keyLocation: `${baseUrl}/${key}.txt`,
-      urlList: [`${baseUrl}/`, `${baseUrl}/shield`],
+      urlList: [`${baseUrl}/`, `${baseUrl}/ar/`],
     }),
   })
 

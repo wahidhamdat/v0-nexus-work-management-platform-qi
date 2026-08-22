@@ -1,38 +1,21 @@
 import type { MetadataRoute } from "next"
 
-const baseUrl = "https://monakes.com"
-
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date().toISOString()
   return [
     {
-      url: `${baseUrl}/`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
+      url: "https://monakes.com/",
+      lastModified,
+      changeFrequency: "monthly",
       priority: 1,
+      alternates: { languages: { en: "https://monakes.com/", ar: "https://monakes.com/ar/" } },
     },
     {
-      url: `${baseUrl}/shield`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/pharma`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/procurement`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/claims`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      url: "https://monakes.com/ar/",
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: { languages: { en: "https://monakes.com/", ar: "https://monakes.com/ar/" } },
     },
   ]
 }
