@@ -37,13 +37,14 @@ export const en: SiteContent = {
     eyebrow: "A QSTP PORTFOLIO COMPANY · EDUCATION CITY, DOHA",
     headline: ["The decision was sound.", "Three years later, the record has to prove it."],
     lede:
-      "Monakes gives governments and large enterprises AI-powered tender evaluation that produces a complete, contemporaneous record — every score timestamped at creation, attributed to its evaluator, locked against retroactive edit, and traced to the clause it came from.",
+      "Monakes turns tender evaluation into a fast, defensible record — every score timestamped at creation, attributed to its evaluator, locked against edit, and traced to the clause it came from. In a third of the time.",
     ctas: [
       { label: "Request a briefing", href: BRIEFING },
       { label: "Partner inquiry", href: "mailto:partners@monakes.com" },
     ],
     strip: [
-      "DEPLOYED ON YOUR INFRASTRUCTURE",
+      "RUNS ONLINE OR ON YOUR INFRASTRUCTURE",
+      "EVALUATIONS IN A THIRD OF THE TIME",
       "COMPLETE RECORD IN 48 HOURS",
       "EVERY SCORE TIED TO ITS SOURCE CLAUSE",
       "PARALLEL RUN — NOTHING CHANGES",
@@ -68,6 +69,8 @@ export const en: SiteContent = {
       "The direction is settled. Contemporaneous documents are the primary evidence. Recollection is tested against them, not the reverse.",
     close:
       "Which leaves one question most procurement authorities cannot answer: three years from now, what will your record show — and will it exist before anyone asks for it?",
+    speed:
+      "Two things every evaluation needs and rarely has: it has to be fast, and it has to survive being challenged. Monakes delivers both — the same rigorous evaluation, in a fraction of the time, with a record built to hold.",
     sources: [
       {
         label: "ICC COMMISSION REPORT ON THE ACCURACY OF FACT WITNESS MEMORY (2020)",
@@ -153,7 +156,7 @@ export const en: SiteContent = {
       },
     ],
     closing:
-      "Monakes does not award contracts. The committee decides. Monakes ensures that whatever the committee decides is documented, timestamped, and defensible from the moment it is decided.",
+      "Monakes never makes the decision. The evaluator — your committee, or your firm's experts — stays fully in charge. Monakes makes their evaluation faster and their record defensible.",
   },
 
   workflow: {
@@ -167,22 +170,22 @@ export const en: SiteContent = {
       {
         title: "The system evaluates",
         body:
-          "Multi-agent models score technical, financial, and compliance criteria in parallel, against your evaluation matrix as your entity has published it. Anomalies and inconsistencies are flagged. Every scoring action is timestamped, attributed, and locked.",
+          "Multi-agent models score technical, financial, and compliance criteria in parallel, against the published evaluation criteria. Anomalies and inconsistencies are flagged. Every scoring action is timestamped, attributed, and locked.",
       },
       {
-        title: "The committee decides",
+        title: "The evaluator decides",
         body:
-          "Your team reviews ranked bids with clause-level justification for every score, adjusts where required, and exports an audit-ready record. The record is not produced after the committee decides. It is produced as the committee works.",
+          "Your team reviews ranked bids with clause-level justification for every score, adjusts where required, and exports an audit-ready record. The record is not produced after the decision is made. It is produced as the evaluation runs.",
       },
     ],
   },
 
   security: {
     label: "§06 — WHERE THE DATA LIVES",
-    heading: "We do not hold your tender data. Anywhere.",
+    heading: "You choose where your data lives, and which model reads it.",
     paras: [
-      "Monakes deploys on your own controlled environment — in-country sovereign cloud, government private cloud, on-premise, or hybrid. There is no Monakes-operated data store. Tender records, evaluation data, and institutional information never enter infrastructure we control.",
-      "This is not a deployment option added to satisfy a procurement checklist. It is the architecture, and it is why the platform deploys in jurisdictions with strict residency requirements without redesign.",
+      "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it.",
+      "Either way, you choose the AI provider — your own OpenAI or Anthropic key, an in-region model, or a fully self-hosted one — and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
     ],
     blocks: [
       {
@@ -223,7 +226,7 @@ export const en: SiteContent = {
       },
       {
         name: "Sofiene Chouchine",
-        role: "DEPLOYMENT ENGINEER",
+        role: "PLATFORM & INFRASTRUCTURE",
         bio:
           "Veteran of Qatar’s TASMU national digital transformation programme. Designed the infrastructure architecture from inside a sovereign regulatory environment rather than from outside it.",
       },
@@ -239,7 +242,7 @@ export const en: SiteContent = {
   },
 
   contact: {
-    label: "§08 — THREE CONVERSATIONS",
+    label: "§08 — FOUR CONVERSATIONS",
     columns: [
       {
         title: "Government & institutional teams",
@@ -252,6 +255,12 @@ export const en: SiteContent = {
         body:
           "You own the client relationship and deployment execution. Monakes provides the platform, the evidentiary architecture, the compliance documentation, and technical onboarding. Margin is built into the deployment fee, and there is no competing direct sales motion in your market. One partner per market.",
         cta: { label: "Partner inquiry", href: "mailto:partners@monakes.com" },
+      },
+      {
+        title: "Advisory & evaluation-support firms",
+        body:
+          "Run bid evaluations for your public-sector and enterprise clients in a fraction of the time, and hand each client a record that's defensible if it's ever challenged — your name safely on it. Already offer evaluation support? Do it faster, take on more engagements, protect every deliverable. Don't offer it yet? Add it as a service without building a team.",
+        cta: { label: "Talk to us", href: BRIEFING },
       },
       {
         title: "Investors & strategic partners",

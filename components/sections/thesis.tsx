@@ -30,6 +30,10 @@ export function Thesis({ content }: { content: SiteContent }) {
           </p>
 
           <p>{thesis.close}</p>
+
+          <p className="strong" style={{ marginTop: 32 }}>
+            {thesis.speed}
+          </p>
         </div>
 
         <SourceLine sources={thesis.sources} />

@@ -60,6 +60,8 @@ export interface SiteContent {
     gestmin: { before: string; cite: string; after: string }
     emphasis: string
     close: string
+    /** Speed as a co-equal promise beside defensibility. */
+    speed: string
     sources: Source[]
   }
   exposure: {

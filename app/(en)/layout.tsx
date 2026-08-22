@@ -6,7 +6,7 @@ import "../globals.css"
 
 const TITLE = "Monakes — Tender Evaluation That Produces a Defensible Record"
 const DESCRIPTION =
-  "Monakes gives governments and large enterprises AI-powered tender evaluation that produces a complete, contemporaneous record: every score timestamped at creation, attributed to its evaluator, locked against retroactive edit, and traced to the clause it came from."
+  "Monakes turns tender evaluation into a fast, defensible record: every score timestamped at creation, attributed to its evaluator, locked against edit, and traced to the clause it came from. In a third of the time. Runs online or inside your own environment."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monakes.com/"),
