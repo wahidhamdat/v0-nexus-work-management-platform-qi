@@ -210,25 +210,25 @@ export const en: SiteContent = {
       "Monakes was not built by engineers who found a market. It was built by people who have been in the rooms where procurement decisions are made, and who understand what happens when the record supporting one of those decisions does not hold.",
     people: [
       {
-        name: "Abdelwahed",
+        name: "Abdelwahed Hamdat",
         role: "FOUNDER & SYSTEMS ARCHITECT",
         bio:
           "Built the core platform and the three-pillar evidentiary architecture. Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps.",
       },
       {
-        name: "Hamdat",
+        name: "Abdelfadel Hamdat",
         role: "BOARD MEMBER · STRATEGY & INSTITUTIONAL PARTNERSHIPS",
         bio:
           "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology — a process that does not resemble private-sector sales.",
       },
       {
-        name: "Sofiene",
+        name: "Sofiene Chouchine",
         role: "DEPLOYMENT ENGINEER",
         bio:
           "Veteran of Qatar’s TASMU national digital transformation programme. Designed the infrastructure architecture from inside a sovereign regulatory environment rather than from outside it.",
       },
       {
-        name: "Husain",
+        name: "Husain Sairy",
         role: "BOARD MEMBER · PROCUREMENT OPERATIONS",
         bio:
           "Has served on government procurement evaluation committees. Knows how scores are assigned under institutional pressure and where documentation gaps form.",
