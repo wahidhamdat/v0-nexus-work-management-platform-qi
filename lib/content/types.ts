@@ -5,112 +5,148 @@ export interface Link {
   href: string
 }
 
-export interface Figure {
-  value: string
-  label: string
-}
-
-export interface Source {
-  label: string
+/** A cited authority, rendered as a stamped card. Never prose. */
+export interface Exhibit {
+  /** "Exhibit B" — translated. */
+  tag: string
+  /** "ICC · 2020" — stays Latin. */
+  ref: string
+  title: string
+  /** The holding, compressed to one mono line. */
+  note: string
   href: string
+  /** Latin refs are isolated LTR on the Arabic page. */
+  latinRef?: boolean
 }
 
-export interface Entry {
+/** A collapsed row: title always visible, body only for the diligence reader. */
+export interface Clause {
+  /** "2.1" — omitted on rows that carry a name instead of a numeral. */
+  num?: string
+  title: string
+  body: string
+  /** Optional stamped chip beside the title. */
+  flag?: string
+}
+
+export interface ChainLink {
+  num: string
+  title: string
+  body: string
+}
+
+/**
+ * A number set as a monument. `numeral` is a template whose {0}, {1} slots are
+ * filled by `counts` in order, each counting up on intersection.
+ */
+export interface Monument {
+  counts: number[]
+  numeral: string
+  unit?: string
+  label: string
+}
+
+/** Depth demoted behind a disclosure — the prompt's "read the memorandum". */
+export interface Memo {
+  label: string
+  paras: string[]
+}
+
+export interface Person {
   name: string
   role: string
   bio: string
 }
 
-export interface Item {
-  title: string
-  body: string
-}
-
-export interface Column {
-  title: string
-  body: string
-  cta: Link
+export interface SectionHead {
+  /** "§01" — always Latin, never translated. */
+  num: string
+  kicker: string
+  /** Appended to the kicker in mono, e.g. "· DPS-1". */
+  suffix?: string
+  verdict: string
+  support?: string
 }
 
 export interface SiteContent {
   locale: Locale
   dir: "ltr" | "rtl"
-  /** Section labels the audit spine logs, in scroll order. Always Latin. */
-  spine: { id: string; label: string }[]
+  skip: string
+  /** The one action on the entire site. */
+  cta: Link
+
+  rail: {
+    title: string
+    /** Case-file index, in scroll order. Numerals stay Latin. */
+    entries: { id: string; num: string; label: string }[]
+  }
+
   nav: {
     brand: string
     links: Link[]
-    cta: Link
     menu: string
     altLang: Link
   }
-  skip: string
+
   hero: {
-    eyebrow: string
-    headline: string[]
-    lede: string
-    ctas: Link[]
-    strip: string[]
+    badge: string
+    city: string
+    headline: string
+    sub: string
+    standardLine: string
+    rope: string
+    exhibitA: string
   }
-  thesis: {
-    label: string
-    heading: string
-    paras: string[]
-    /** Split so the case name can be italicised. */
-    gestmin: { before: string; cite: string; after: string }
-    emphasis: string
-    close: string
-    /** Speed as a co-equal promise beside defensibility. */
-    speed: string
-    sources: Source[]
+
+  thesis: SectionHead & {
+    exhibits: Exhibit[]
+    memo: Memo
   }
-  exposure: {
-    label: string
-    heading: string
-    figures: Figure[]
-    body: string
-    quote: { label: string; text: string; after: string; emphasis: string }
-    sources: Source[]
+
+  standard: SectionHead & {
+    degrees: { key: string; label?: string }[]
+    /** Readouts keyed by degree, plus `def` at rest. */
+    readouts: Record<string, string>
+    clauses: Clause[]
   }
-  mechanism: {
-    label: string
-    heading: string
-    paras: string[]
-    emphasis: string
-    figures: Figure[]
+
+  interval: SectionHead & {
+    memo: Memo
   }
-  architecture: {
-    label: string
-    heading: string
-    paras: string[]
-    pillars: Item[]
-    closing: string
+
+  method: SectionHead & {
+    chainLabel: string
+    links: ChainLink[]
   }
-  workflow: {
-    label: string
-    steps: Item[]
+
+  applications: SectionHead & {
+    monuments: Monument[]
+    items: Clause[]
   }
-  security: {
-    label: string
-    heading: string
-    paras: string[]
-    blocks: Item[]
+
+  security: SectionHead & {
+    chips: string[]
+    confidentiality: string
+    memo: Memo
   }
-  team: {
-    label: string
-    heading: string
-    intro: string
-    people: Entry[]
-    advisory: string
+
+  engagement: SectionHead & {
+    monuments: Monument[]
+    rope: string
   }
-  contact: {
-    label: string
-    columns: Column[]
+
+  firm: SectionHead & {
+    people: Person[]
+    stamps: string[]
   }
-  footer: {
-    entity: string
+
+  seal: {
+    sealed: string
+    endOfRecord: string
+    hashTitle: string
+    closed: string
+    legal: string
     address: string
-    status: string
     email: string
     rights: string
   }

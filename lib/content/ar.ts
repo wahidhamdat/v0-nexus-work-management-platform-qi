@@ -3,280 +3,297 @@ import type { SiteContent } from "./types"
 const BRIEFING = "https://calendly.com/wahidhamdat30/30min"
 
 /**
- * Arabic (MSA, institutional register). Legal citations and the audit spine stay
- * in Latin script deliberately — case names and statistics are checked as filed.
+ * Arabic (MSA, institutional register). Three things stay in Latin script on
+ * purpose, exactly as the v4 design specifies: the case-file rail, the cited
+ * authorities (a case name is checked as filed), and the memoranda — the long
+ * exhibits are marked "(بالإنجليزية)" rather than machine-rendered into Arabic.
  */
 export const ar: SiteContent = {
   locale: "ar",
   dir: "rtl",
+  skip: "انتقل إلى المحتوى",
+  cta: { label: "اطلب إحاطة", href: BRIEFING },
 
-  spine: [
-    { id: "thesis", label: "§01 THESIS" },
-    { id: "exposure", label: "§02 EXPOSURE" },
-    { id: "mechanism", label: "§03 MECHANISM" },
-    { id: "architecture", label: "§04 ARCHITECTURE" },
-    { id: "workflow", label: "§05 WORKFLOW" },
-    { id: "security", label: "§06 SOVEREIGNTY" },
-    { id: "team", label: "§07 TEAM" },
-    { id: "contact", label: "§08 CONTACT" },
-  ],
-
-  skip: "تخطَّ إلى المحتوى",
+  rail: {
+    title: "Case file",
+    entries: [
+      { id: "main", num: "00", label: "Record" },
+      { id: "thesis", num: "01", label: "Thesis" },
+      { id: "standard", num: "02", label: "Standard" },
+      { id: "interval", num: "03", label: "Interval" },
+      { id: "method", num: "04", label: "Method" },
+      { id: "applications", num: "05", label: "Applications" },
+      { id: "security", num: "06", label: "Security" },
+      { id: "engagement", num: "07", label: "Engagement" },
+      { id: "firm", num: "08", label: "Firm" },
+      { id: "seal", num: "09", label: "Seal" },
+    ],
+  },
 
   nav: {
-    brand: "مُناكس",
+    brand: "MONAKES",
     links: [
       { label: "الأطروحة", href: "#thesis" },
-      { label: "التعرّض", href: "#exposure" },
-      { label: "المنصة", href: "#architecture" },
+      { label: "المعيار", href: "#standard" },
+      { label: "المنهج", href: "#method" },
+      { label: "التطبيقات", href: "#applications" },
       { label: "الأمن", href: "#security" },
-      { label: "الفريق", href: "#team" },
+      { label: "الشركة", href: "#firm" },
     ],
-    cta: { label: "اطلب جلسة إحاطة", href: BRIEFING },
     menu: "القائمة",
     altLang: { label: "EN", href: "/" },
   },
 
   hero: {
-    eyebrow: "شركة ضمن محفظة واحة قطر للعلوم والتكنولوجيا · المدينة التعليمية، الدوحة",
-    headline: ["كان القرار سليماً.", "وبعد ثلاث سنوات، على السجل أن يُثبت ذلك."],
-    lede:
-      "تحوّل مُناكس تقييم العطاءات إلى سجل سريع وقابل للدفاع عنه: كل درجة مختومة زمنياً لحظة إنشائها، ومنسوبة إلى مُقيّمها، ومحصّنة ضد التعديل، ومُسندة إلى البند الذي استُخلصت منه. وفي ثلث الوقت.",
-    ctas: [
-      { label: "اطلب جلسة إحاطة", href: BRIEFING },
-      { label: "استفسار الشراكة", href: "mailto:partners@monakes.com" },
-    ],
-    strip: [
-      "يعمل عبر الإنترنت أو على بنيتكم التحتية",
-      "تقييمات في ثلث الوقت",
-      "سجل كامل خلال 48 ساعة",
-      "كل درجة مرتبطة ببندها المصدر",
-      "تشغيل موازٍ لا يغيّر شيئاً",
-    ],
+    badge: "شركة ضمن محفظة واحة قطر للعلوم والتكنولوجيا · المدينة التعليمية، الدوحة",
+    city: "الدوحة",
+    headline: "القرار كان سليمًا. بعد ثلاث سنوات، على السجل أن يثبت ذلك.",
+    sub: "السجل المعاصر وراء الأحكام المؤسسية المصيرية — مختوم لحظة إنشائه، وقابل للتحقق مستقلاً عنا.",
+    standardLine: "وفق معيار حماية القرار (DPS-1)",
+    rope: "بقيادة الشركاء. تكليفات محدودة كل ربع. فحص تعارض المصالح قائم.",
+    exhibitA: "المستند «أ» — هذه الصفحة",
   },
 
   thesis: {
-    label: "\u2066§01\u2069 — الأطروحة",
-    heading: "أفضل ما لديكم من أدلة ذاكرة. والذاكرة تُعيد كتابة نفسها.",
-    paras: [
-      "حين يُطعن في قرار شراء، سواء باعتراض على عطاء أو ملاحظة تدقيق أو دعوى تحكيم، تدافع المؤسسة عنه بأمرين: ما يتوفر من وثائق، وما يتذكره من كانوا في القاعة.",
-      "والثاني أقل قيمة بكثير مما يفترضه أغلب الناس.",
-      "في عام 2020 نشرت لجنة التحكيم في غرفة التجارة الدولية تقريراً عن دقة ذاكرة شهود الواقعة في التحكيم الدولي، أُعِدّ بإسهام علمي من متخصصين في علم النفس المعني بالذاكرة. وخلص إلى أن الذاكرة البشرية هشّة وقابلة للتشكيل، وأن الذكريات تفسد دون أن يدرك صاحبها ذلك، وأن المعلومات اللاحقة للحدث قد تحلّ محل الذاكرة الواقعية بدل أن تضيف إليها، وأنها تصل عبر قنوات اعتيادية تماماً: حديث مع زميل، أو نقاش مع المستشار القانوني، أو مجرد إعادة سرد الرواية نفسها عدة مرات.",
-    ],
-    gestmin: {
-      before: "وبلغت المحاكم النتيجة ذاتها بشكل مستقل. ففي قضية ",
-      cite: "Gestmin v Credit Suisse",
-      after:
-        " قضت المحكمة التجارية الإنجليزية بأن على القاضي ألّا يعوّل كثيراً على ما يتذكره الشهود من اجتماعات، وأن يبني استنتاجاته على السجل المستندي.",
-    },
-    emphasis:
-      "الاتجاه مستقر. الوثائق المتزامنة مع الحدث هي الدليل الأصلي، والتذكّر يُختبر في ضوئها لا العكس.",
-    close:
-      "وهو ما يترك سؤالاً واحداً تعجز أغلب جهات الشراء عن الإجابة عنه: ماذا سيُظهر سجلكم بعد ثلاث سنوات من الآن، وهل سيكون موجوداً قبل أن يطلبه أحد؟",
-    speed:
-      "أمران يحتاجهما كل تقييم ونادراً ما يتوفّران معاً: أن يكون سريعاً، وأن يصمد أمام الطعن. ومُناكس تقدّم الاثنين — التقييم الدقيق نفسه، في جزء من الوقت، بسجل مبنيّ ليثبت.",
-    sources: [
+    num: "§01",
+    kicker: "الأطروحة",
+    verdict: "أفضل دليل لديك ذاكرة. والذاكرة تعيد كتابة نفسها.",
+    support: "الوثائق المعاصرة هي الدليل الأول، والذاكرة تُختبر في ضوئها — لا العكس.",
+    exhibits: [
       {
-        label: "ICC COMMISSION REPORT ON THE ACCURACY OF FACT WITNESS MEMORY (2020)",
+        tag: "المستند «ب»",
+        ref: "ICC · 2020",
+        title: "The Accuracy of Fact Witness Memory in International Arbitration",
+        note: "Memory is fragile and malleable · post-event information overwrites fact",
         href: "https://iccwbo.org/news-publications/arbitration-adr-rules-and-tools/icc-arbitration-and-adr-commission-report-on-the-accuracy-of-fact-witness-memory-in-international-arbitration/",
+        latinRef: true,
       },
       {
-        label: "GESTMIN SGPS SA v CREDIT SUISSE (UK) LTD [2013] EWHC 3560 (COMM)",
+        tag: "المستند «ج»",
+        ref: "[2013] EWHC 3560",
+        title: "Gestmin SGPS SA v Credit Suisse (UK) Ltd",
+        note: "Little reliance on recollection · findings from the documentary record",
         href: "https://www.bailii.org/ew/cases/EWHC/Comm/2013/3560.html",
+        latinRef: true,
       },
     ],
-  },
-
-  exposure: {
-    label: "\u2066§02\u2069 — التعرّض",
-    heading: "المنتدى مزدحم ومكلف، ويقوم على المستندات.",
-    figures: [
-      { value: "881", label: "قضية تحكيم جديدة سُجّلت لدى غرفة التجارة الدولية في 2025" },
-      { value: "US$299B", label: "القيمة الإجمالية للقضايا القائمة" },
-      { value: "28%", label: "من القضايا الجديدة في قطاع الإنشاءات والهندسة، وهو القطاع الأكبر" },
-    ],
-    body:
-      "ولّد قطاع الإنشاءات والهندسة 246 قضية لدى غرفة التجارة الدولية في 2025، أكثر من أي قطاع آخر. والتعرّض لا يقتصر على المشاريع الكبرى: 41% من القضايا الجديدة تتعلق بمبالغ لا تتجاوز 4 ملايين دولار أمريكي، وهو الحد الذي تُطبَّق عنده الإجراءات المعجّلة تلقائياً. والإجراءات المعجّلة تعني جداول زمنية مضغوطة، والجداول المضغوطة تعني ألّا وقت لإعادة بناء سجل لم يُبنَ أصلاً.",
-    quote: {
-      label: "IBA RULES ON THE TAKING OF EVIDENCE, ARTICLE 9(6)",
-      text:
-        "إذا لم يقدّم أحد الأطراف، دون تفسير مُرضٍ، مستنداً أمرت هيئة التحكيم بتقديمه، جاز للهيئة أن تستنتج أن ذلك المستند كان ليأتي في غير مصلحة ذلك الطرف.",
-      after:
-        "اقرأوا ذلك بلغة المشتريات. إذا لم يكن سجل كيفية التوصل إلى الدرجة موجوداً، فإن غيابه ليس محايداً.",
-      emphasis: "الفجوة في السجل ليست فجوة. إنها إفادة.",
+    memo: {
+      label: "اقرأ المذكرة الكاملة (بالإنجليزية)",
+      paras: [
+        "When a consequential decision is challenged — a bid protest, an audit finding, an arbitration claim — the institution defends it with two things: whatever documentation exists, and the recollection of the people who were in the room. The second is worth less than almost anyone assumes.",
+        "In 2020 the ICC Commission on Arbitration published a report on the accuracy of fact witness memory, produced with scientific input from psychologists specialising in memory. Its findings: human memory is fragile and malleable. Memories become corrupted without the person knowing. Post-event information can overwrite a factual memory rather than merely add to it — and it arrives through entirely ordinary channels. A conversation with a colleague. A discussion with counsel. Simply retelling the same account several times.",
+        "Courts arrived at the same place independently. In Gestmin v Credit Suisse, the English Commercial Court held that a judge should place little reliance on witnesses' recollections of meetings, and base findings on inferences drawn from the documentary record instead.",
+        "This is true of a tender score, a compliance determination, a financial-reporting judgment, and a closed investigation alike. The failure is never the decision. It is the distance between the decision and its record.",
+      ],
     },
-    sources: [
+  },
+
+  standard: {
+    num: "§02",
+    kicker: "المعيار",
+    suffix: "· DPS-1",
+    verdict: "منهجية، لا وعود.",
+    support: "منهجية منشورة لإنتاج سجلات قرار تصمد أمام الفحص الخصومي.",
+    degrees: [
+      { key: "E0", label: "غائب" },
+      { key: "E1", label: "مُدّعى" },
+      { key: "E2" },
+      { key: "E3" },
+      { key: "E4", label: "معاصر ومستقل" },
+    ],
+    readouts: {
+      def: "درجات الإثبات الخمس — الاستنتاج يحمل درجة أضعف أدلته",
+      E0: "E0 · غائب — لا يوجد سجل وراء الاستنتاج",
+      E1: "E1 · مُدّعى — الادعاء ليس دليلاً على الواقعة المدّعاة، بل دليل على وقوع الادعاء",
+      E2: "E2 · درجة وسيطة معرَّفة في DPS-1",
+      E3: "E3 · درجة وسيطة معرَّفة في DPS-1",
+      E4: "E4 · معاصر ومستقل — الدرجة التي يُبنى سجل القرار ليحوزها",
+    },
+    clauses: [
       {
-        label: "ICC DISPUTE RESOLUTION STATISTICS 2025",
-        href: "https://iccwbo.org/dispute-resolution/resources/icc-dispute-resolution-statistics/",
+        num: "2.1",
+        title: "درجات الإثبات",
+        body: "Every conclusion is graded on a five-degree scale, from E0 (absent) through E1 (asserted) to E4 (contemporaneous and independent). A conclusion holds the grade of its weakest load-bearing evidence. An assertion is not evidence of the fact asserted; it is evidence that an assertion was made.",
       },
       {
-        label: "IBA RULES ON THE TAKING OF EVIDENCE IN INTERNATIONAL ARBITRATION (2020)",
-        href: "https://www.ibanet.org/resources",
+        num: "2.2",
+        title: "حزم المعايير",
+        body: "Each domain is examined against a versioned pack of criteria — what must be evidenced, to what degree, and what an adversary asks first. Packs are maintained against the live enforcement and case record and versioned like any controlled document.",
+      },
+      {
+        num: "2.3",
+        title: "التحقق الخصومي",
+        body: "Before any finding reaches a human reviewer, an independent verification pass — isolated from the first analysis — attacks it on four fronts: fidelity to the quoted source, integrity of the inference, contradiction elsewhere in the corpus, and congruence with scope. Findings that fail do not survive.",
+      },
+      {
+        num: "2.4",
+        title: "البتّ البشري",
+        body: "People decide; the methodology proves they did. Every finding is accepted, overridden with recorded rationale, or escalated — by a named person, at a recorded time, with what they saw preserved alongside what they decided.",
+      },
+      {
+        num: "2.5",
+        title: "سجل القرار",
+        body: "The output: a sealed, hash-chained record in which every claim is traceable to its page and verifiable by your own counsel, auditor or committee — without Monakes in the room.",
       },
     ],
   },
 
-  mechanism: {
-    label: "\u2066§03\u2069 — الآلية",
-    heading: "لا شيء يختلّ لحظة القرار. الخلل يقع بعدها.",
-    paras: [
-      "تُقيّم اللجان العطاءات الكبيرة بدقة، تحت ضغط حقيقي وقيود زمنية حقيقية. والتقييمات متأنية، والقرارات صائبة في الغالب.",
-      "أما التوثيق فيُجمَع لاحقاً. أحياناً بعد أيام، وغالباً بعد أسابيع، وأحياناً بعد أن يكون الطعن قد قُدّم فعلاً. وعندها تكون المؤسسة تعيد بناء قرار من ملاحظات ورسائل بريد وذاكرة أشخاص ظلّت ذاكرتهم عنه تُعيد ترتيب نفسها بهدوء منذ ذلك الحين.",
-      "وتصبح إعادة البناء تلك هي رواية المؤسسة لما جرى. ويواجه كل عنصر فيها سؤالاً واحداً: هل كان هذا موجوداً وقتها، أم أُنتج من أجل هذه الدعوى؟",
-    ],
-    emphasis: "التعرّض ليس في القرار، بل في المدة الفاصلة بين القرار والسجل.",
-    figures: [
-      { value: "150–300", label: "ساعة عمل لكل دورة عطاء في التقييم والتوثيق اليدوي" },
-      { value: "6+ أسابيع", label: "قبل وجود سجل تقييم كامل في أغلب المؤسسات" },
+  interval: {
+    num: "§03",
+    kicker: "الفاصل",
+    verdict: "الخطر ليس في القرار، بل في الفاصل بين القرار وسجله.",
+    memo: {
+      label: "اقرأ الآلية (بالإنجليزية)",
+      paras: [
+        "Committees evaluate rigorously, under real pressure and real time constraints. The evaluations are careful. The decisions are usually right. The documentation is assembled afterwards. Sometimes days. Often weeks. Occasionally only once a challenge has already been filed — at which point the institution is reconstructing, from notes and email and recollection, a decision made by people whose memory of it has been quietly reorganising ever since.",
+        "That reconstruction becomes the institution's account of what happened. And every element of it faces one question: did this exist at the time, or was it produced for this proceeding?",
+      ],
+    },
+  },
+
+  method: {
+    num: "§04",
+    kicker: "المنهج",
+    verdict: "معاصرٌ بالبناء، لا بالانضباط.",
+    chainLabel: "السلسلة تُختم أثناء قراءتك",
+    links: [
+      {
+        num: "01",
+        title: "إدخال الملف",
+        body: "الوثائق التي يقوم عليها القرار — لا غيرها — تُحدد كتابةً، وتُستوعب، وتُجزّأ (هاش).",
+      },
+      {
+        num: "02",
+        title: "الفحص وفق الحزمة",
+        body: "يُقرأ الملف كاملاً وفق كل معيار — لا عيّنة. كل نتيجة تُربط ببندها وصفحتها ونصها. اقتباس، لا تلخيص.",
+      },
+      { num: "03", title: "التحقق", body: "مسار مستقل يهاجم كل نتيجة قبل أن يراها إنسان." },
+      {
+        num: "04",
+        title: "البتّ",
+        body: "فريقكم يقبل أو يتجاوز أو يُصعّد. باسم صاحبه وتوقيته. والتعديلات تُسجل بوصفها تعديلات.",
+      },
+      { num: "05", title: "الختم", body: "يُقفل لحظة إنشائه، وقابل لإعادة التحقق من دوننا." },
     ],
   },
 
-  architecture: {
-    label: "\u2066§04\u2069 — البنية",
-    heading: "متزامن بحكم البناء، لا بحكم الانضباط.",
-    paras: [
-      "كل مؤسسة تنوي أصلاً توثيق تقييماتها كما ينبغي. والنية ليست موضع الخلل، بل التسلسل. فالسجلات التي تُبنى بعد الواقعة تبقى مبنية بعد الواقعة، مهما بلغ اجتهاد من يبنيها.",
-      "ومُناكس تُزيل هذه المدة بنيوياً.",
-    ],
-    pillars: [
+  applications: {
+    num: "§05",
+    kicker: "التطبيقات",
+    verdict: "معيار واحد، حيثما تُفحص السجلات.",
+    monuments: [
       {
-        title: "القفل الزمني",
-        body:
-          "تُنشأ كل درجة وتُختم زمنياً وتُنسب إلى مُقيّم محدّد وتُقفل لحظة إنشائها. وتُسجَّل التعديلات بوصفها تعديلات، فيبقى الأصل قائماً بزمنه وصاحبه. ولا يمكن تحسين سجل القرار بعد صدور القرار.",
+        counts: [150, 300],
+        numeral: "{0}–{1}",
+        label: "ساعة عمل لكل دورة مناقصة على التقييم والتوثيق اليدويين",
       },
       {
-        title: "التسبيب الآلي",
-        body:
-          "تحمل كل درجة تسبيبها، مُسنداً إلى البند والصفحة والمعيار في المستند المصدر. ليس ملخصاً للعطاء، بل إحالة داخله، من النوع الذي يمكن عرضه على هيئة تحكيم وتتبّعه رجوعاً.",
-      },
-      {
-        title: "صفر إعادة بناء",
-        body:
-          "لأن السجل يُنشأ أثناء سير التقييم، لا يبقى شيء يُجمَع لاحقاً. ولا يُطلب من أي لجنة، بعد أشهر، أن تتذكّر لماذا نال أحد مقدّمي العطاءات سبعاً بدل تسع.",
+        counts: [6],
+        numeral: "{0}+",
+        unit: "أسابيع",
+        label: "قبل اكتمال سجل التقييم في معظم المؤسسات",
       },
     ],
-    closing:
-      "مُناكس لا تتخذ القرار أبداً. المُقيّم — لجنتكم أو خبراء شركتكم — يبقى المسؤول بالكامل. ومُناكس تجعل تقييمه أسرع وسجله قابلاً للدفاع عنه.",
-  },
-
-  workflow: {
-    label: "\u2066§05\u2069 — سير العمل",
-    steps: [
+    items: [
       {
-        title: "المستندات تدخل",
-        body:
-          "استيعاب من SAP أو Oracle أو Procore أو منصة المشتريات القائمة لديكم، أو برفع مباشر لملفات PDF وWord وExcel. تبدأ ساعة التقييم، ويبدأ السجل معها.",
+        title: "تقييم المناقصات والعطاءات",
+        flag: "الأداة الرائدة",
+        body: "Evaluation and record produced simultaneously: every score timestamped, attributed, locked, and traced to the clause it came from — in a fraction of committee time. Runs in parallel with a live evaluation; nothing in your process changes.",
       },
       {
-        title: "النظام يُقيّم",
-        body:
-          "تُقيّم نماذج متعددة الوكلاء المعايير الفنية والمالية ومعايير الامتثال بالتوازي، وفق معايير التقييم المنشورة. وتُعلَّم الحالات الشاذة والتناقضات. وكل إجراء تقييم مختوم زمنياً ومنسوب ومقفل.",
+        title: "برامج الامتثال",
+        body: "The distance between a programme that exists and one that can be evidenced as operating is where modern examinations are decided. We read the record behind effectiveness assertions — escalations, dispositions, attestations — before someone else does.",
       },
       {
-        title: "المُقيّم يقرّر",
-        body:
-          "يراجع فريقكم العطاءات المرتّبة مع تسبيب على مستوى البند لكل درجة، ويعدّل عند الاقتضاء، ويُصدّر سجلاً جاهزاً للتدقيق. السجل لا يُنتج بعد اتخاذ القرار، بل يُنتج أثناء سير التقييم.",
+        title: "التقارير المالية والتصديق",
+        body: "Certifications rest on chains of internal attestations and judgment memoranda. We read what the file would produce if examined: what each signature rested on, whether the basis of each judgment is contemporaneous, and what the representation letter is actually supported by.",
+      },
+      {
+        title: "الملفات القانونية والتحقيقات واللجان",
+        body: "Closed matters, deliberations and determinations — read for whether the file shows who decided what, when, on what basis.",
       },
     ],
   },
 
   security: {
-    label: "\u2066§06\u2069 — أين تقيم البيانات",
-    heading: "أنتم تختارون أين تقيم بياناتكم، وأي نموذج يقرأها.",
-    paras: [
-      "شغّلوا مُناكس عبر الإنترنت للسرعة ودون أي إعداد، أو انشروها داخل بيئتكم الخاصة حين يقتضي العمل ذلك.",
-      "وفي الحالتين، أنتم تختارون مزوّد الذكاء الاصطناعي: مفتاحكم الخاص لدى OpenAI أو Anthropic، أو نموذج داخل الإقليم، أو نموذج مستضاف ذاتياً بالكامل. ولا تذهب بياناتكم إلى أي مكان لم تُعدّوه بأنفسكم. وتتوفّر عمليات نشر سيادية وداخل المقر ومعزولة عن الشبكة للأعمال الأكثر حساسية.",
-    ],
-    blocks: [
-      {
-        title: "امتثال قابل للتكيّف مع الولاية القضائية",
-        body:
-          "تُهيّأ طبقة الامتثال وفق قوانين المشتريات وأطر حوكمة البيانات الوطنية بدل أن تكون محصورة في نظام واحد. والولاية القضائية الجديدة تعني تهيئة لا إعادة بناء.",
-      },
-      {
-        title: "التحكم في الوصول وسلامة البيانات",
-        body:
-          "تُسجَّل هوية المُقيّم وإجراءات التقييم والأختام الزمنية والتعديلات، وتُنسب، وتبقى غير قابلة للتغيير. والسجل الذي كان قائماً لحظة القرار هو السجل القائم لحظة الطعن.",
-      },
-      {
-        title: "مبنيّ على معيار إثباتي",
-        body:
-          "أغلب برمجيات المشتريات مبنية ليسير الإجراء بسلاسة. ومُناكس مبنية ليصمد ناتج ذلك الإجراء أمام من تتمثل وظيفته في العثور على الثغرة فيه.",
-      },
-    ],
+    num: "§06",
+    kicker: "الأمن والسيادة",
+    verdict: "أنت تختار أين يقيم عملك، وما الذي يقرؤه.",
+    chips: ["سحابي", "على بنيتكم التحتية", "سيادي · معزول تمامًا"],
+    confidentiality:
+      "التكليفات سرية للجهة المكلِّفة. تُجزّأ الملفات عند الاستلام وتُتلف بعد التأكيد عند الإقفال.",
+    memo: {
+      label: "اقرأ مذكرة النشر (بالإنجليزية)",
+      paras: [
+        "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it. Either way, you choose the model that reads the work — your own keys, an in-region model, or a fully self-hosted one — and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
+        "The compliance layer configures to national procurement law and data governance frameworks rather than being locked to one regime. Identity, actions, timestamps, and amendments are logged, attributed, and immutable — the record that existed at the moment of decision is the record that exists at the moment of challenge. Most software is built so a process runs smoothly. Monakes is built so the output of that process survives being read by someone whose job is to find the gap in it.",
+      ],
+    },
   },
 
-  team: {
-    label: "\u2066§07\u2069 — الفريق",
-    heading: "بناه من يعرفون تكلفة سجل لا يصمد.",
-    intro:
-      "لم تُبنَ مُناكس على يد مهندسين عثروا على سوق. بناها أشخاص كانوا في القاعات التي تُتخذ فيها قرارات الشراء، ويدركون ما يحدث حين لا يصمد السجل الذي يسند أحد تلك القرارات.",
+  engagement: {
+    num: "§07",
+    kicker: "التكليف",
+    verdict: "باب واحد.",
+    monuments: [
+      {
+        counts: [30],
+        numeral: "{0}",
+        unit: "دقيقة",
+        label: "إحاطة · معيار واحد من البداية إلى النهاية على عيّنة اصطناعية — وأنتم مدعوون لمهاجمتها",
+      },
+      {
+        counts: [10],
+        numeral: "{0}",
+        unit: "أيام عمل",
+        label: "تشخيص · ملف واحد، بأتعاب ثابتة، يُسلَّم مذكرةً مكتوبة",
+      },
+    ],
+    rope: "بقيادة الشركاء. عدد محدود من التكليفات كل ربع. نعمل حصراً للجهة التي تكلّفنا، ولا نعمل أبداً لأطراف خصومة معها، ويسبق كلَّ تكليفٍ فحصُ تعارض مصالح. لسنا شركة تدقيق ولا نقدم رأي تأكيد؛ ويمكن أن يتم التكليف عبر المستشار القانوني.",
+  },
+
+  firm: {
+    num: "§08",
+    kicker: "الشركة",
+    verdict: "أشخاص يعرفون كلفة سجلٍ لا يصمد.",
     people: [
       {
-        name: "محمدة حمدات",
-        role: "المؤسس ومهندس الأنظمة",
-        bio:
-          "بنى المنصة الأساسية والبنية الإثباتية ثلاثية الركائز. خلفيته في أنظمة الذكاء الاصطناعي للبيئات كثيفة العمليات، حيث يُقرأ الناتج تحت الضغط ممن يبحثون عن الثغرات.",
+        name: "Mohameda Hamdat",
+        role: "المؤسس وكبير مهندسي الأنظمة",
+        bio: "Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps. Designed the Decision Protection Standard and the instrument that executes it.",
       },
       {
-        name: "عبد الفاضل حمدات",
-        role: "عضو مجلس الإدارة · الاستراتيجية والشراكات المؤسسية",
-        bio:
-          "يضمن انسجام النموذج التجاري مع الطريقة التي تُقيّم بها المؤسسات العامة التقنية وتشتريها وتتبنّاها فعلياً، وهي عملية لا تشبه المبيعات في القطاع الخاص.",
+        name: "Abdelfadel Hamdat",
+        role: "مجلس الإدارة · الاستراتيجية والشراكات المؤسسية",
+        bio: "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology — a process that does not resemble private-sector sales.",
       },
       {
-        name: "سفيان شوشين",
-        role: "المنصة والبنية التحتية",
-        bio:
-          "من قدامى برنامج تسمو الوطني للتحول الرقمي في قطر. صمّم البنية التحتية من داخل بيئة تنظيمية سيادية لا من خارجها.",
+        name: "Sofiene Chouchine",
+        role: "البنية التحتية",
+        bio: "Veteran of Qatar's TASMU national digital transformation programme. Designed the infrastructure architecture from inside a sovereign regulatory environment rather than from outside it.",
       },
       {
-        name: "حسين صايري",
-        role: "عضو مجلس الإدارة · عمليات المشتريات",
-        bio:
-          "عمل في لجان تقييم المشتريات الحكومية. يعرف كيف تُمنح الدرجات تحت الضغط المؤسسي، وأين تتكوّن فجوات التوثيق.",
+        name: "Husain Sairy",
+        role: "مجلس الإدارة · عمليات المشتريات",
+        bio: "Has served on government procurement evaluation committees. Knows how scores are assigned under institutional pressure and where documentation gaps form.",
       },
     ],
-    advisory:
-      "تضم الشبكة الاستشارية رئيساً سابقاً للجنة المشتريات الحكومية في قطر، ومتخصصاً في التحكيم لدى غرفة التجارة الدولية.",
-  },
-
-  contact: {
-    label: "\u2066§08\u2069 — أربع محادثات",
-    columns: [
-      {
-        title: "الجهات الحكومية والمؤسسية",
-        body:
-          "تعمل مُناكس بالتوازي مع تقييمكم القائم لعطاء حيّ. تعمل لجنتكم كما تعمل اليوم، ويبقى نظام تخطيط الموارد وجداولكم القانونية دون مساس. وفي النهاية يكون بين أيديكم سجلان للتقييم نفسه، جنباً إلى جنب، تقارنونهما من حيث الاكتمال وقابلية التتبّع والزمن الذي استغرقه كلٌّ منهما ليوجد.",
-        cta: { label: "اطلب جلسة إحاطة — 30 دقيقة", href: BRIEFING },
-      },
-      {
-        title: "مُكاملو الأنظمة والشركاء",
-        body:
-          "أنتم تملكون العلاقة مع العميل وتنفيذ النشر. وتوفّر مُناكس المنصة والبنية الإثباتية ووثائق الامتثال والتهيئة الفنية. والهامش مدمج في رسوم النشر، ولا توجد حركة مبيعات مباشرة منافسة في سوقكم. شريك واحد لكل سوق.",
-        cta: { label: "استفسار الشراكة", href: "mailto:partners@monakes.com" },
-      },
-      {
-        title: "شركات الاستشارات ودعم التقييم",
-        body:
-          "أجروا تقييم العطاءات لعملائكم في القطاع العام والمؤسسات في جزء من الوقت، وسلّموا كل عميل سجلاً قابلاً للدفاع عنه إن جرى الطعن فيه يوماً، واسمكم عليه بأمان. أتقدّمون خدمات دعم التقييم بالفعل؟ أنجزوها أسرع، وتولّوا ارتباطات أكثر، واحموا كل مُخرَج. أما إن لم تقدّموها بعد، فأضيفوها كخدمة دون بناء فريق.",
-        cta: { label: "تحدّثوا إلينا", href: BRIEFING },
-      },
-      {
-        title: "المستثمرون والشركاء الاستراتيجيون",
-        body:
-          "مُناكس هي طبقة البنية التحتية التوثيقية للمشتريات العامة. تدير المؤسسات محافظ عطاءات بمليارات الدولارات دون بنية إثباتية متزامنة، وأحمال قضايا التحكيم عند مستويات قياسية، والتفويضات الرقمية الوطنية تحوّل ممارسات الحوكمة إلى متطلب تنظيمي.",
-        cta: { label: "استفسار الاستثمار", href: "mailto:investors@monakes.com" },
-      },
+    stamps: [
+      "ضمن محفظة واحة قطر للعلوم والتكنولوجيا",
+      "برنامج تسمو — خبرة سابقة",
+      "رئيس سابق للجنة المشتريات الحكومية — استشاري",
+      "متخصص تحكيم لدى غرفة التجارة الدولية — استشاري",
     ],
   },
 
-  footer: {
-    entity: "مُناكس لحلول الذكاء الاصطناعي ذ.م.م",
+  seal: {
+    sealed: "خُتم",
+    endOfRecord: "نهاية السجل",
+    hashTitle: "هذه الصفحة، مُجزّأة في متصفحك — الخاصية التي يحملها كل سجل من موناكس.",
+    closed: "أُقفل السجل في",
+    legal: "شركة موناكس لحلول الذكاء الاصطناعي ذ.م.م",
     address: "واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية، الدوحة",
-    status: "شركة ضمن محفظة واحة قطر للعلوم والتكنولوجيا",
     email: "info@monakes.com",
-    rights: "© 2026. جميع الحقوق محفوظة.",
+    rights: "جميع الحقوق محفوظة",
   },
 }

@@ -1,18 +1,22 @@
-import { AuditSpine } from "@/components/audit-spine"
+import { CaseRail } from "@/components/case-rail"
 import { Enhancements } from "@/components/enhancements"
 import { SiteNav } from "@/components/site-nav"
-import { Architecture } from "@/components/sections/architecture"
-import { Contact } from "@/components/sections/contact"
-import { Exposure } from "@/components/sections/exposure"
+import { Applications } from "@/components/sections/applications"
+import { Engagement } from "@/components/sections/engagement"
+import { Firm } from "@/components/sections/firm"
 import { Hero } from "@/components/sections/hero"
-import { Mechanism } from "@/components/sections/mechanism"
+import { Interval } from "@/components/sections/interval"
+import { Method } from "@/components/sections/method"
+import { Seal } from "@/components/sections/seal"
 import { Security } from "@/components/sections/security"
-import { SiteFooter } from "@/components/sections/site-footer"
-import { Team } from "@/components/sections/team"
+import { Standard } from "@/components/sections/standard"
 import { Thesis } from "@/components/sections/thesis"
-import { Workflow } from "@/components/sections/workflow"
 import type { SiteContent } from "@/lib/content/types"
 
+/**
+ * Alternating acts: the vault opens and closes the record, paper carries the
+ * argument, and §03 — the fear — gets a dark viewport to itself.
+ */
 export function PageShell({ content }: { content: SiteContent }) {
   return (
     <>
@@ -20,23 +24,21 @@ export function PageShell({ content }: { content: SiteContent }) {
         {content.skip}
       </a>
 
+      <CaseRail rail={content.rail} />
       <SiteNav content={content} />
-      <AuditSpine entries={content.spine} />
 
-      <main id="main">
-        <Hero content={content} />
-        <Thesis content={content} />
-        <Exposure content={content} />
-        <Mechanism content={content} />
-        <Architecture content={content} />
-        <Workflow content={content} />
-        <Security content={content} />
-        <Team content={content} />
-        <Contact content={content} />
-      </main>
+      <Hero content={content} />
+      <Thesis content={content} />
+      <Standard content={content} />
+      <Interval content={content} />
+      <Method content={content} />
+      <Applications content={content} />
+      <Security content={content} />
+      <Engagement content={content} />
+      <Firm content={content} />
+      <Seal content={content} />
 
-      <SiteFooter content={content} />
-      <Enhancements content={content} />
+      <Enhancements />
     </>
   )
 }

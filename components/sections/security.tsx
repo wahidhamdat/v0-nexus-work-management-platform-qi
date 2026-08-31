@@ -1,33 +1,51 @@
 import type { CSSProperties } from "react"
-import { Label } from "@/components/primitives"
+import { Kicker, MemoBlock } from "@/components/primitives"
 import type { SiteContent } from "@/lib/content/types"
 
 export function Security({ content }: { content: SiteContent }) {
   const { security } = content
+
   return (
-    <section className="section" id="security" aria-labelledby="security-heading">
-      <div className="wrap">
-        <div className="section-head reveal">
-          <Label>{security.label}</Label>
-          <h2 className="h2 measure" id="security-heading">
-            {security.heading}
-          </h2>
+    <section className="section section--ruled" id="security" data-case aria-labelledby="security-h">
+      <div className="shift">
+        <div className="reveal">
+          <Kicker head={security} />
         </div>
 
-        <div className="measure reveal" style={{ "--i": 1 } as CSSProperties}>
-          {security.paras.map((para) => (
-            <p key={para.slice(0, 40)}>{para}</p>
+        <h2
+          className="verdict verdict--wide reveal"
+          id="security-h"
+          style={{ "--i": 1 } as CSSProperties}
+        >
+          {security.verdict}
+        </h2>
+
+        <div className="chips mono reveal" style={{ "--i": 2 } as CSSProperties}>
+          {security.chips.map((chip) => (
+            <span className="chip" key={chip}>
+              {chip}
+            </span>
           ))}
         </div>
 
-        <div className="blocks" style={{ marginTop: 64 }}>
-          {security.blocks.map((block, i) => (
-            <div key={block.title} className="block reveal" style={{ "--i": i } as CSSProperties}>
-              <h3 className="h3">{block.title}</h3>
-              <p className="block__body muted">{block.body}</p>
-            </div>
-          ))}
-        </div>
+        <p
+          className="reveal"
+          style={
+            {
+              marginTop: 44,
+              fontSize: 16,
+              lineHeight: 1.7,
+              color: "var(--prose)",
+              maxWidth: "56ch",
+              textWrap: "pretty",
+              "--i": 3,
+            } as CSSProperties
+          }
+        >
+          {security.confidentiality}
+        </p>
+
+        <MemoBlock memo={security.memo} i={4} />
       </div>
     </section>
   )

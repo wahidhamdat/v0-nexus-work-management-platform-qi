@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { arabicVars } from "@/lib/fonts/arabic"
-import { JS_FLAG } from "@/lib/fonts/flag"
 import "../globals.css"
 
-const TITLE = "مُناكس — تقييم عطاءات يُنتج سجلاً قابلاً للدفاع عنه"
+const TITLE = "موناكس — حماية القرار"
 const DESCRIPTION =
-  "تحوّل مُناكس تقييم العطاءات إلى سجل سريع وقابل للدفاع عنه: كل درجة مختومة زمنياً لحظة إنشائها، ومنسوبة إلى مُقيّمها، ومحصّنة ضد التعديل، ومُسندة إلى البند الذي استُخلصت منه. وفي ثلث الوقت. يعمل عبر الإنترنت أو داخل بيئتكم الخاصة."
+  "موناكس شركة لحماية القرار. سجلات قرار مختومة ومتحقَّق منها خصومياً وفق معيار حماية القرار (DPS-1) — معاصرة لحظة إنشائها، ومُسندة إلى بندها، وقابلة للتحقق مستقلاً عنا."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monakes.com/"),
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#8A1538",
+  themeColor: "#0B0D10",
   colorScheme: "light",
 }
 
@@ -36,7 +35,6 @@ export default function ArabicLayout({ children }: { children: React.ReactNode }
   return (
     <html lang="ar" dir="rtl" className={arabicVars}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: JS_FLAG }} />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>

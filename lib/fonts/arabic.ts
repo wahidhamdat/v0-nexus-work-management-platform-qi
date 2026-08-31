@@ -1,21 +1,27 @@
-import { IBM_Plex_Mono, IBM_Plex_Sans_Arabic } from "next/font/google"
+import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Sans_Arabic } from "next/font/google"
 
 const arabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-arabic",
   display: "swap",
 })
 
-/** The spine and the legal citations stay Latin on the Arabic page. */
-const mono = IBM_Plex_Mono({
+/** Fallback for the Latin runs inside Arabic prose. */
+const body = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["500"],
-  variable: "--font-mono",
+  weight: ["400", "500"],
+  variable: "--font-body",
   display: "swap",
-  // Only small labels use mono; preloading it competes with the CSS and the
-  // display face for bandwidth on the critical path.
   preload: false,
 })
 
-export const arabicVars = `${arabic.variable} ${mono.variable}`
+/** The rail, the hashes, the clock and the case numerals stay Latin mono. */
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+})
+
+export const arabicVars = `${arabic.variable} ${body.variable} ${mono.variable}`

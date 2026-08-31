@@ -1,12 +1,11 @@
 import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { latinVars } from "@/lib/fonts/latin"
-import { JS_FLAG } from "@/lib/fonts/flag"
 import "../globals.css"
 
-const TITLE = "Monakes — Tender Evaluation That Produces a Defensible Record"
+const TITLE = "Monakes — Decision Protection"
 const DESCRIPTION =
-  "Monakes turns tender evaluation into a fast, defensible record: every score timestamped at creation, attributed to its evaluator, locked against edit, and traced to the clause it came from. In a third of the time. Runs online or inside your own environment."
+  "Monakes is a decision-protection firm. Sealed, adversarially verified decision records under the Decision Protection Standard (DPS-1) — contemporaneous at creation, traceable to the clause, verifiable without us."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monakes.com/"),
@@ -17,13 +16,15 @@ export const metadata: Metadata = {
   creator: "Monakes",
   publisher: "Monakes",
   keywords: [
-    "tender evaluation",
-    "public procurement",
+    "decision protection",
+    "Decision Protection Standard",
+    "DPS-1",
     "contemporaneous record",
-    "evidentiary record",
-    "procurement audit trail",
-    "arbitration evidence",
+    "decision record",
+    "adversarial verification",
+    "tender evaluation",
     "bid protest defence",
+    "arbitration evidence",
     "sovereign deployment",
     "Monakes",
   ],
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#8A1538",
+  themeColor: "#0B0D10",
   colorScheme: "light",
 }
 
@@ -58,7 +59,6 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
   return (
     <html lang="en" dir="ltr" className={latinVars}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: JS_FLAG }} />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>

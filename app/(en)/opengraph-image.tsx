@@ -2,10 +2,11 @@ import { readFile } from "node:fs/promises"
 import { join } from "node:path"
 import { ImageResponse } from "next/og"
 
-export const alt = "Monakes — tender evaluation that produces a defensible record"
+export const alt = "Monakes — sealed, adversarially verified decision records"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
+/** The card is the vault: the same ground the hero opens on. */
 export default async function Image() {
   const [serif, mono] = await Promise.all([
     readFile(join(process.cwd(), "assets/SourceSerif4-SemiBold.ttf")),
@@ -21,14 +22,19 @@ export default async function Image() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#FBFBFC",
+          background: "#0B0D10",
           padding: "72px 80px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ width: 12, height: 12, background: "#8A1538" }} />
-          <span style={{ fontFamily: "Mono", fontSize: 20, letterSpacing: 4, color: "#0E1116" }}>
-            MONAKES
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            <div style={{ width: 12, height: 12, background: "#8A1538" }} />
+            <span style={{ fontFamily: "Mono", fontSize: 20, letterSpacing: 4, color: "#FBFBFC" }}>
+              MONAKES
+            </span>
+          </div>
+          <span style={{ fontFamily: "Mono", fontSize: 15, letterSpacing: 2.4, color: "#6B727C" }}>
+            EXHIBIT A
           </span>
         </div>
 
@@ -36,11 +42,11 @@ export default async function Image() {
           <div
             style={{
               fontFamily: "Serif",
-              fontSize: 62,
-              lineHeight: 1.08,
-              letterSpacing: -1.2,
-              color: "#0E1116",
-              maxWidth: 880,
+              fontSize: 66,
+              lineHeight: 1.04,
+              letterSpacing: -1.6,
+              color: "#FBFBFC",
+              maxWidth: 900,
               display: "flex",
               flexDirection: "column",
             }}
@@ -54,13 +60,13 @@ export default async function Image() {
         <div
           style={{
             fontFamily: "Mono",
-            fontSize: 17,
+            fontSize: 16,
             letterSpacing: 1.6,
-            color: "#5A616B",
+            color: "#6B727C",
             display: "flex",
           }}
         >
-          CONTEMPORANEOUS RECORDS FOR PUBLIC PROCUREMENT · MONAKES.COM
+          DECISION PROTECTION · DPS-1 · MONAKES.COM
         </div>
       </div>
     ),

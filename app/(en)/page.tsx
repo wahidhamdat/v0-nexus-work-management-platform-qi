@@ -12,7 +12,7 @@ const jsonLd = {
       url: "https://monakes.com",
       email: "info@monakes.com",
       description:
-        "Monakes builds AI tender evaluation that produces a complete, contemporaneous record of every procurement decision.",
+        "Monakes is a decision-protection firm. It produces sealed, adversarially verified decision records under the Decision Protection Standard (DPS-1).",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Qatar Science & Technology Park, Education City",

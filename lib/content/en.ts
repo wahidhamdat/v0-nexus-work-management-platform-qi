@@ -5,277 +5,294 @@ const BRIEFING = "https://calendly.com/wahidhamdat30/30min"
 export const en: SiteContent = {
   locale: "en",
   dir: "ltr",
-
-  spine: [
-    { id: "thesis", label: "§01 THESIS" },
-    { id: "exposure", label: "§02 EXPOSURE" },
-    { id: "mechanism", label: "§03 MECHANISM" },
-    { id: "architecture", label: "§04 ARCHITECTURE" },
-    { id: "workflow", label: "§05 WORKFLOW" },
-    { id: "security", label: "§06 SOVEREIGNTY" },
-    { id: "team", label: "§07 TEAM" },
-    { id: "contact", label: "§08 CONTACT" },
-  ],
-
   skip: "Skip to content",
+  cta: { label: "Request a briefing", href: BRIEFING },
+
+  rail: {
+    title: "Case file",
+    entries: [
+      { id: "main", num: "00", label: "Record" },
+      { id: "thesis", num: "01", label: "Thesis" },
+      { id: "standard", num: "02", label: "Standard" },
+      { id: "interval", num: "03", label: "Interval" },
+      { id: "method", num: "04", label: "Method" },
+      { id: "applications", num: "05", label: "Applications" },
+      { id: "security", num: "06", label: "Security" },
+      { id: "engagement", num: "07", label: "Engagement" },
+      { id: "firm", num: "08", label: "Firm" },
+      { id: "seal", num: "09", label: "Seal" },
+    ],
+  },
 
   nav: {
     brand: "MONAKES",
     links: [
       { label: "Thesis", href: "#thesis" },
-      { label: "Exposure", href: "#exposure" },
-      { label: "Platform", href: "#architecture" },
+      { label: "The Standard", href: "#standard" },
+      { label: "Method", href: "#method" },
+      { label: "Applications", href: "#applications" },
       { label: "Security", href: "#security" },
-      { label: "Team", href: "#team" },
+      { label: "Firm", href: "#firm" },
     ],
-    cta: { label: "Request a briefing", href: BRIEFING },
     menu: "Menu",
     altLang: { label: "عربي", href: "/ar" },
   },
 
   hero: {
-    eyebrow: "A QSTP PORTFOLIO COMPANY · EDUCATION CITY, DOHA",
-    headline: ["The decision was sound.", "Three years later, the record has to prove it."],
-    lede:
-      "Monakes turns tender evaluation into a fast, defensible record — every score timestamped at creation, attributed to its evaluator, locked against edit, and traced to the clause it came from. In a third of the time.",
-    ctas: [
-      { label: "Request a briefing", href: BRIEFING },
-      { label: "Partner inquiry", href: "mailto:partners@monakes.com" },
-    ],
-    strip: [
-      "RUNS ONLINE OR ON YOUR INFRASTRUCTURE",
-      "EVALUATIONS IN A THIRD OF THE TIME",
-      "COMPLETE RECORD IN 48 HOURS",
-      "EVERY SCORE TIED TO ITS SOURCE CLAUSE",
-      "PARALLEL RUN — NOTHING CHANGES",
-    ],
+    badge: "A QSTP Portfolio Company · Education City, Doha",
+    city: "Doha",
+    headline: "The decision was sound. Three years later, the record has to prove it.",
+    sub: "The contemporaneous record behind consequential institutional judgments — sealed at creation, verifiable without us.",
+    standardLine: "Under the Decision Protection Standard (DPS-1)",
+    rope: "Principal-led. Limited engagements each quarter. Conflicts checked.",
+    exhibitA: "Exhibit A — this page",
   },
 
   thesis: {
-    label: "§01 — THE THESIS",
-    heading: "Your best evidence is a memory. Memories rewrite themselves.",
-    paras: [
-      "When a procurement decision is challenged — a bid protest, an audit finding, an arbitration claim — the institution defends it with two things: whatever documentation exists, and the recollection of the people who were in the room.",
-      "The second is worth less than almost anyone assumes.",
-      "In 2020 the ICC Commission on Arbitration published a report on the accuracy of fact witness memory in international arbitration, produced with scientific input from psychologists specialising in memory. Its findings: human memory is fragile and malleable. Memories become corrupted without the person knowing. Post-event information can overwrite a factual memory rather than merely add to it — and it arrives through entirely ordinary channels. A conversation with a colleague. A discussion with counsel. Simply retelling the same account several times.",
-    ],
-    gestmin: {
-      before: "Courts arrived at the same place independently. In ",
-      cite: "Gestmin v Credit Suisse",
-      after:
-        ", the English Commercial Court held that a judge should place little reliance on witnesses’ recollections of meetings, and base findings on inferences drawn from the documentary record instead.",
-    },
-    emphasis:
-      "The direction is settled. Contemporaneous documents are the primary evidence. Recollection is tested against them, not the reverse.",
-    close:
-      "Which leaves one question most procurement authorities cannot answer: three years from now, what will your record show — and will it exist before anyone asks for it?",
-    speed:
-      "Two things every evaluation needs and rarely has: it has to be fast, and it has to survive being challenged. Monakes delivers both — the same rigorous evaluation, in a fraction of the time, with a record built to hold.",
-    sources: [
+    num: "§01",
+    kicker: "The Thesis",
+    verdict: "Your best evidence is a memory. Memories rewrite themselves.",
+    support:
+      "Contemporaneous documents are the primary evidence. Recollection is tested against them, not the reverse.",
+    exhibits: [
       {
-        label: "ICC COMMISSION REPORT ON THE ACCURACY OF FACT WITNESS MEMORY (2020)",
+        tag: "Exhibit B",
+        ref: "ICC · 2020",
+        title: "The Accuracy of Fact Witness Memory in International Arbitration",
+        note: "Memory is fragile and malleable · post-event information overwrites fact",
         href: "https://iccwbo.org/news-publications/arbitration-adr-rules-and-tools/icc-arbitration-and-adr-commission-report-on-the-accuracy-of-fact-witness-memory-in-international-arbitration/",
       },
       {
-        label: "GESTMIN SGPS SA v CREDIT SUISSE (UK) LTD [2013] EWHC 3560 (COMM)",
+        tag: "Exhibit C",
+        ref: "[2013] EWHC 3560",
+        title: "Gestmin SGPS SA v Credit Suisse (UK) Ltd",
+        note: "Little reliance on recollection · findings from the documentary record",
         href: "https://www.bailii.org/ew/cases/EWHC/Comm/2013/3560.html",
+        latinRef: true,
       },
     ],
-  },
-
-  exposure: {
-    label: "§02 — THE EXPOSURE",
-    heading: "The forum is busy, expensive, and runs on documents.",
-    figures: [
-      { value: "881", label: "NEW ICC ARBITRATIONS FILED IN 2025" },
-      { value: "US$299B", label: "TOTAL CASELOAD VALUE" },
-      {
-        value: "28%",
-        label: "OF NEW FILINGS WERE CONSTRUCTION & ENGINEERING — THE LARGEST SECTOR",
-      },
-    ],
-    body:
-      "Construction and engineering generated 246 ICC cases in 2025, more than any other sector. And the exposure is not confined to mega-projects: 41% of new cases involved amounts not exceeding US$4 million — the threshold at which the ICC’s expedited procedure applies automatically. Expedited means compressed timetables. Compressed timetables mean there is no time to reconstruct a record you never built.",
-    quote: {
-      label: "IBA RULES ON THE TAKING OF EVIDENCE, ARTICLE 9(6)",
-      text:
-        "Where a party fails without satisfactory explanation to produce a document the tribunal has ordered, the tribunal may infer that the document would have been adverse to that party’s interests.",
-      after:
-        "Read that in procurement terms. If the record of how a score was reached does not exist, the absence is not neutral.",
-      emphasis: "A gap in the record is not a gap. It is a submission.",
+    memo: {
+      label: "Read the memorandum",
+      paras: [
+        "When a consequential decision is challenged — a bid protest, an audit finding, an arbitration claim — the institution defends it with two things: whatever documentation exists, and the recollection of the people who were in the room. The second is worth less than almost anyone assumes.",
+        "In 2020 the ICC Commission on Arbitration published a report on the accuracy of fact witness memory, produced with scientific input from psychologists specialising in memory. Its findings: human memory is fragile and malleable. Memories become corrupted without the person knowing. Post-event information can overwrite a factual memory rather than merely add to it — and it arrives through entirely ordinary channels. A conversation with a colleague. A discussion with counsel. Simply retelling the same account several times.",
+        "Courts arrived at the same place independently. In Gestmin v Credit Suisse, the English Commercial Court held that a judge should place little reliance on witnesses' recollections of meetings, and base findings on inferences drawn from the documentary record instead.",
+        "This is true of a tender score, a compliance determination, a financial-reporting judgment, and a closed investigation alike. The failure is never the decision. It is the distance between the decision and its record.",
+      ],
     },
-    sources: [
+  },
+
+  standard: {
+    num: "§02",
+    kicker: "The Standard",
+    suffix: "· DPS-1",
+    verdict: "A methodology, not a promise.",
+    support:
+      "A published methodology for producing decision records that withstand adversarial examination.",
+    degrees: [
+      { key: "E0", label: "Absent" },
+      { key: "E1", label: "Asserted" },
+      { key: "E2" },
+      { key: "E3" },
+      { key: "E4", label: "Contemporaneous & independent" },
+    ],
+    readouts: {
+      def: "The five degrees of evidence — a conclusion holds the grade of its weakest load-bearing evidence",
+      E0: "E0 · Absent — no record exists behind the conclusion",
+      E1: "E1 · Asserted — an assertion is not evidence of the fact asserted; it is evidence an assertion was made",
+      E2: "E2 · Intermediate degree, defined in DPS-1",
+      E3: "E3 · Intermediate degree, defined in DPS-1",
+      E4: "E4 · Contemporaneous and independent — the grade a Decision Record is built to hold",
+    },
+    clauses: [
       {
-        label: "ICC DISPUTE RESOLUTION STATISTICS 2025",
-        href: "https://iccwbo.org/dispute-resolution/resources/icc-dispute-resolution-statistics/",
+        num: "2.1",
+        title: "Degrees of evidence",
+        body: "Every conclusion is graded on a five-degree scale, from E0 (absent) through E1 (asserted) to E4 (contemporaneous and independent). A conclusion holds the grade of its weakest load-bearing evidence. An assertion is not evidence of the fact asserted; it is evidence that an assertion was made.",
       },
       {
-        label: "IBA RULES ON THE TAKING OF EVIDENCE IN INTERNATIONAL ARBITRATION (2020)",
-        href: "https://www.ibanet.org/resources",
+        num: "2.2",
+        title: "Criteria packs",
+        body: "Each domain is examined against a versioned pack of criteria — what must be evidenced, to what degree, and what an adversary asks first. Packs are maintained against the live enforcement and case record and versioned like any controlled document.",
+      },
+      {
+        num: "2.3",
+        title: "Adversarial verification",
+        body: "Before any finding reaches a human reviewer, an independent verification pass — isolated from the first analysis — attacks it on four fronts: fidelity to the quoted source, integrity of the inference, contradiction elsewhere in the corpus, and congruence with scope. Findings that fail do not survive.",
+      },
+      {
+        num: "2.4",
+        title: "Human determination",
+        body: "People decide; the methodology proves they did. Every finding is accepted, overridden with recorded rationale, or escalated — by a named person, at a recorded time, with what they saw preserved alongside what they decided.",
+      },
+      {
+        num: "2.5",
+        title: "The Decision Record",
+        body: "The output: a sealed, hash-chained record in which every claim is traceable to its page and verifiable by your own counsel, auditor or committee — without Monakes in the room.",
       },
     ],
   },
 
-  mechanism: {
-    label: "§03 — THE MECHANISM",
-    heading: "Nothing goes wrong at the moment of decision. It goes wrong afterwards.",
-    paras: [
-      "Committees evaluate large tenders rigorously, under real pressure and real time constraints. The evaluations are careful. The decisions are usually right.",
-      "The documentation is assembled afterwards. Sometimes days. Often weeks. Occasionally only once a challenge has already been filed — at which point the institution is reconstructing, from notes and email and recollection, a decision made by people whose memory of it has been quietly reorganising ever since.",
-      "That reconstruction becomes the institution’s account of what happened. And every element of it faces one question: did this exist at the time, or was it produced for this proceeding?",
-    ],
-    emphasis: "The exposure is not the decision. It is the interval between the decision and the record.",
-    figures: [
-      { value: "150–300", label: "STAFF HOURS PER TENDER CYCLE ON MANUAL SCORING AND DOCUMENTATION" },
-      { value: "6+ WEEKS", label: "BEFORE A COMPLETE EVALUATION RECORD EXISTS IN MOST INSTITUTIONS" },
+  interval: {
+    num: "§03",
+    kicker: "The Interval",
+    verdict: "The exposure is not the decision. It is the interval between the decision and its record.",
+    memo: {
+      label: "Read the mechanism",
+      paras: [
+        "Committees evaluate rigorously, under real pressure and real time constraints. The evaluations are careful. The decisions are usually right. The documentation is assembled afterwards. Sometimes days. Often weeks. Occasionally only once a challenge has already been filed — at which point the institution is reconstructing, from notes and email and recollection, a decision made by people whose memory of it has been quietly reorganising ever since.",
+        "That reconstruction becomes the institution's account of what happened. And every element of it faces one question: did this exist at the time, or was it produced for this proceeding?",
+      ],
+    },
+  },
+
+  method: {
+    num: "§04",
+    kicker: "Method",
+    verdict: "Contemporaneous by construction, not by discipline.",
+    chainLabel: "The chain seals as you read",
+    links: [
+      {
+        num: "01",
+        title: "Corpus in",
+        body: "The documents that carry the decision — and nothing else — scoped in writing, ingested, hashed.",
+      },
+      {
+        num: "02",
+        title: "Examination under the pack",
+        body: "The entire corpus read against every criterion — not a sample. Each finding bound to its exact clause, page and passage. A citation, not a summary.",
+      },
+      {
+        num: "03",
+        title: "Verification",
+        body: "The independent pass attacks every finding before a person sees it.",
+      },
+      {
+        num: "04",
+        title: "Determination",
+        body: "Your people accept, override or escalate. Named. Timestamped. Amendments recorded as amendments.",
+      },
+      { num: "05", title: "Seal", body: "Locked at creation. Re-verifiable without us." },
     ],
   },
 
-  architecture: {
-    label: "§04 — THE ARCHITECTURE",
-    heading: "Contemporaneous by construction, not by discipline.",
-    paras: [
-      "Every institution already intends to document its evaluations properly. Intention is not the failure point — sequence is. Records built after the fact are built after the fact, however diligent the people building them.",
-      "Monakes removes the interval structurally.",
-    ],
-    pillars: [
+  applications: {
+    num: "§05",
+    kicker: "Applications",
+    verdict: "One standard. Applied where records are examined.",
+    monuments: [
       {
-        title: "Temporal lock",
-        body:
-          "Each score is generated, timestamped, attributed to a named evaluator, and sealed at the moment of creation. Amendments are recorded as amendments — the original stands, with its own time and author. The record of a decision cannot be improved after the decision.",
+        counts: [150, 300],
+        numeral: "{0}–{1}",
+        label: "Staff hours per tender cycle on manual scoring and documentation",
       },
       {
-        title: "Automated rationale",
-        body:
-          "Each score carries its justification, traced to the exact clause, page, and criterion in the source document. Not a summary of the bid. A citation into it — the kind that can be put in front of a tribunal and followed back.",
-      },
-      {
-        title: "Zero reconstruction",
-        body:
-          "Because the record is generated as the evaluation runs, there is nothing to assemble later. No committee is asked, months afterwards, to recall why a bidder scored seven rather than nine.",
+        counts: [6],
+        numeral: "{0}+",
+        unit: "weeks",
+        label: "Before a complete evaluation record exists in most institutions",
       },
     ],
-    closing:
-      "Monakes never makes the decision. The evaluator — your committee, or your firm's experts — stays fully in charge. Monakes makes their evaluation faster and their record defensible.",
-  },
-
-  workflow: {
-    label: "§05 — THE WORKFLOW",
-    steps: [
+    items: [
       {
-        title: "Documents in",
-        body:
-          "Ingests from SAP, Oracle, Procore, or your existing procurement platform — or by direct upload of PDF, Word, and Excel. The evaluation clock starts. So does the record.",
+        title: "Tender & bid evaluation",
+        flag: "Flagship instrument",
+        body: "Evaluation and record produced simultaneously: every score timestamped, attributed, locked, and traced to the clause it came from — in a fraction of committee time. Runs in parallel with a live evaluation; nothing in your process changes.",
       },
       {
-        title: "The system evaluates",
-        body:
-          "Multi-agent models score technical, financial, and compliance criteria in parallel, against the published evaluation criteria. Anomalies and inconsistencies are flagged. Every scoring action is timestamped, attributed, and locked.",
+        title: "Compliance programmes",
+        body: "The distance between a programme that exists and one that can be evidenced as operating is where modern examinations are decided. We read the record behind effectiveness assertions — escalations, dispositions, attestations — before someone else does.",
       },
       {
-        title: "The evaluator decides",
-        body:
-          "Your team reviews ranked bids with clause-level justification for every score, adjusts where required, and exports an audit-ready record. The record is not produced after the decision is made. It is produced as the evaluation runs.",
+        title: "Financial reporting & certification",
+        body: "Certifications rest on chains of internal attestations and judgment memoranda. We read what the file would produce if examined: what each signature rested on, whether the basis of each judgment is contemporaneous, and what the representation letter is actually supported by.",
+      },
+      {
+        title: "Legal, investigation & committee files",
+        body: "Closed matters, deliberations and determinations — read for whether the file shows who decided what, when, on what basis.",
       },
     ],
   },
 
   security: {
-    label: "§06 — WHERE THE DATA LIVES",
-    heading: "You choose where your data lives, and which model reads it.",
-    paras: [
-      "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it.",
-      "Either way, you choose the AI provider — your own OpenAI or Anthropic key, an in-region model, or a fully self-hosted one — and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
-    ],
-    blocks: [
-      {
-        title: "Jurisdiction-adaptable compliance",
-        body:
-          "The compliance layer configures to national procurement law and data governance frameworks rather than being locked to one regime. A new jurisdiction means configuration, not a rebuild.",
-      },
-      {
-        title: "Access control and integrity",
-        body:
-          "Evaluator identity, scoring actions, timestamps, and amendments are logged, attributed, and immutable. The record that existed at the moment of decision is the record that exists at the moment of challenge.",
-      },
-      {
-        title: "Built to an evidentiary standard",
-        body:
-          "Most procurement software is built so a process runs smoothly. Monakes is built so the output of that process survives being read by someone whose job is to find the gap in it.",
-      },
-    ],
+    num: "§06",
+    kicker: "Security & Sovereignty",
+    verdict: "You choose where your work lives, and what reads it.",
+    chips: ["Online", "On your infrastructure", "Sovereign · air-gapped"],
+    confidentiality:
+      "Engagements are confidential to the commissioning party. Corpora are hashed on intake and destroyed on confirmation at close.",
+    memo: {
+      label: "Read the deployment memorandum",
+      paras: [
+        "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it. Either way, you choose the model that reads the work — your own keys, an in-region model, or a fully self-hosted one — and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
+        "The compliance layer configures to national procurement law and data governance frameworks rather than being locked to one regime. Identity, actions, timestamps, and amendments are logged, attributed, and immutable — the record that existed at the moment of decision is the record that exists at the moment of challenge. Most software is built so a process runs smoothly. Monakes is built so the output of that process survives being read by someone whose job is to find the gap in it.",
+      ],
+    },
   },
 
-  team: {
-    label: "§07 — TEAM",
-    heading: "Built by people who know what a failed record costs.",
-    intro:
-      "Monakes was not built by engineers who found a market. It was built by people who have been in the rooms where procurement decisions are made, and who understand what happens when the record supporting one of those decisions does not hold.",
+  engagement: {
+    num: "§07",
+    kicker: "Engagement",
+    verdict: "One door.",
+    monuments: [
+      {
+        counts: [30],
+        numeral: "{0}",
+        unit: "minutes",
+        label: "Briefing · one criterion, end to end, on a synthetic specimen — you are invited to attack it",
+      },
+      {
+        counts: [10],
+        numeral: "{0}",
+        unit: "working days",
+        label: "Diagnostic · a single file, fixed fee, delivered as a written memorandum",
+      },
+    ],
+    rope: "Principal-led. A limited number of engagements each quarter. We act only for the function that engages us, never for parties adverse to it, and a conflicts check precedes every engagement. We are not an audit firm; we provide no assurance opinion; engagements may be commissioned through counsel.",
+  },
+
+  firm: {
+    num: "§08",
+    kicker: "The Firm",
+    verdict: "People who know what a failed record costs.",
     people: [
       {
         name: "Mohameda Hamdat",
-        role: "FOUNDER & SYSTEMS ARCHITECT",
-        bio:
-          "Built the core platform and the three-pillar evidentiary architecture. Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps.",
+        role: "Founder & Systems Architect",
+        bio: "Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps. Designed the Decision Protection Standard and the instrument that executes it.",
       },
       {
         name: "Abdelfadel Hamdat",
-        role: "BOARD MEMBER · STRATEGY & INSTITUTIONAL PARTNERSHIPS",
-        bio:
-          "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology — a process that does not resemble private-sector sales.",
+        role: "Board · Strategy & Institutional Partnerships",
+        bio: "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology — a process that does not resemble private-sector sales.",
       },
       {
         name: "Sofiene Chouchine",
-        role: "PLATFORM & INFRASTRUCTURE",
-        bio:
-          "Veteran of Qatar’s TASMU national digital transformation programme. Designed the infrastructure architecture from inside a sovereign regulatory environment rather than from outside it.",
+        role: "Infrastructure",
+        bio: "Veteran of Qatar's TASMU national digital transformation programme. Designed the infrastructure architecture from inside a sovereign regulatory environment rather than from outside it.",
       },
       {
         name: "Husain Sairy",
-        role: "BOARD MEMBER · PROCUREMENT OPERATIONS",
-        bio:
-          "Has served on government procurement evaluation committees. Knows how scores are assigned under institutional pressure and where documentation gaps form.",
+        role: "Board · Procurement Operations",
+        bio: "Has served on government procurement evaluation committees. Knows how scores are assigned under institutional pressure and where documentation gaps form.",
       },
     ],
-    advisory:
-      "The advisory network includes a former Qatar Government Procurement Committee Chair and an ICC arbitration specialist.",
-  },
-
-  contact: {
-    label: "§08 — FOUR CONVERSATIONS",
-    columns: [
-      {
-        title: "Government & institutional teams",
-        body:
-          "Monakes runs alongside your existing evaluation of a live tender. Your committee works as it works today; your ERP and legal timelines are untouched. At the end you hold two records of the same evaluation, side by side, and compare them on completeness, traceability, and the time each took to exist.",
-        cta: { label: "Request a briefing — 30 minutes", href: BRIEFING },
-      },
-      {
-        title: "System integrators & partners",
-        body:
-          "You own the client relationship and deployment execution. Monakes provides the platform, the evidentiary architecture, the compliance documentation, and technical onboarding. Margin is built into the deployment fee, and there is no competing direct sales motion in your market. One partner per market.",
-        cta: { label: "Partner inquiry", href: "mailto:partners@monakes.com" },
-      },
-      {
-        title: "Advisory & evaluation-support firms",
-        body:
-          "Run bid evaluations for your public-sector and enterprise clients in a fraction of the time, and hand each client a record that's defensible if it's ever challenged — your name safely on it. Already offer evaluation support? Do it faster, take on more engagements, protect every deliverable. Don't offer it yet? Add it as a service without building a team.",
-        cta: { label: "Talk to us", href: BRIEFING },
-      },
-      {
-        title: "Investors & strategic partners",
-        body:
-          "Monakes is the documentation infrastructure layer for public procurement. Institutions run billion-dollar tender pipelines with no contemporaneous evidentiary architecture, arbitration caseloads are at record levels, and national digital mandates are converting governance practice into regulatory requirement.",
-        cta: { label: "Investor inquiry", href: "mailto:investors@monakes.com" },
-      },
+    stamps: [
+      "QSTP Portfolio Company",
+      "TASMU Programme — veteran",
+      "Fmr Govt Procurement Committee Chair — advisory",
+      "ICC arbitration specialist — advisory",
     ],
   },
 
-  footer: {
-    entity: "MONAKES FOR ARTIFICIAL INTELLIGENCE SOLUTIONS LLC",
+  seal: {
+    sealed: "Sealed",
+    endOfRecord: "End of record",
+    hashTitle: "This page, hashed in your browser — the property every Monakes record carries.",
+    closed: "Record closed",
+    legal: "Monakes for Artificial Intelligence Solutions LLC",
     address: "Qatar Science & Technology Park, Education City, Doha",
-    status: "A QSTP Portfolio Company",
     email: "info@monakes.com",
-    rights: "© 2026. All rights reserved.",
+    rights: "All rights reserved",
   },
 }
