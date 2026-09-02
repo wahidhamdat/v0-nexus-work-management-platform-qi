@@ -201,6 +201,18 @@ summary::-webkit-details-marker { display: none; }
   font-size: 13px;
   letter-spacing: 0.18em;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* The mark sits a hair below the caps' optical centre, so nudge it up. */
+.nav__mark {
+  width: 18px;
+  height: 18px;
+  display: block;
+  flex-shrink: 0;
+  transform: translateY(-0.5px);
 }
 
 .nav__links {

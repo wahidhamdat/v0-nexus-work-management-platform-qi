@@ -1,4 +1,5 @@
 import type { SiteContent } from "@/lib/content/types"
+import { BrandMark } from "@/components/brand-mark"
 
 export function SiteNav({ content }: { content: SiteContent }) {
   const { nav } = content
@@ -7,6 +8,7 @@ export function SiteNav({ content }: { content: SiteContent }) {
     <div className="nav" data-nav>
       <div className="nav__inner">
         <a className="nav__brand" href={content.locale === "ar" ? "/ar" : "/"}>
+          <BrandMark />
           {nav.brand}
         </a>
 
