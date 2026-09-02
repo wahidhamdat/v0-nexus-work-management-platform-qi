@@ -1179,3 +1179,118 @@ html[dir="rtl"] .monument__value { font-weight: 400; }
   .js .reveal { opacity: 1; transform: none; }
   .section--dark { background: var(--paper); color: var(--ink); }
 }
+
+/* --- briefing form -------------------------------------------------------- */
+/* Built from the same parts as the rest of the page: mono labels, hairline
+   rules, one saturated colour. The only input surface on the site, so it
+   borrows the document's vocabulary rather than introducing a widget style. */
+
+.brief__title {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.brief { max-width: 560px; }
+
+.brief__intro {
+  color: var(--prose);
+  margin: 0 0 22px;
+  max-width: 52ch;
+}
+
+.brief__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.brief__field { display: flex; flex-direction: column; gap: 7px; }
+.brief__field--wide { grid-column: 1 / -1; }
+
+.brief__label {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brief__label em { font-style: normal; color: var(--faint); text-transform: none; letter-spacing: 0.04em; }
+
+.brief input,
+.brief textarea {
+  font: inherit;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  padding: 7px 2px;
+  transition: border-color 0.2s ease;
+}
+.brief textarea { resize: vertical; min-height: 66px; line-height: 1.55; }
+
+.brief input:focus,
+.brief textarea:focus {
+  outline: none;
+  border-bottom-color: var(--ink);
+}
+
+/* The honeypot. Off-screen rather than display:none, because some bots skip
+   fields they can tell are hidden. */
+.brief__trap {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.brief__act {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.brief__submit {
+  font: inherit;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  color: var(--paper);
+  background: var(--seal);
+  border: 0;
+  border-radius: 2px;
+  padding: 13px 26px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.brief__submit:hover { opacity: 0.9; }
+.brief__submit:disabled { opacity: 0.55; cursor: default; }
+
+.brief__alt {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-underline-offset: 4px;
+}
+.brief__alt:hover { color: var(--ink); }
+
+.brief__error { font-size: 12px; color: var(--seal); margin: 14px 0 0; }
+
+.brief--done { border-inline-start: 2px solid var(--seal); padding-inline-start: 18px; }
+.brief__done-title {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.brief__done-body { color: var(--prose); margin: 0; max-width: 46ch; }
+
+@media (max-width: 640px) {
+  .brief__grid { grid-template-columns: 1fr; }
+}

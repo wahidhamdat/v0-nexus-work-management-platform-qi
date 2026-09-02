@@ -135,6 +135,19 @@ export interface SiteContent {
     rope: string
   }
 
+  briefing: {
+    title: string
+    intro: string
+    fields: { name: string; email: string; phone: string; company: string; note: string }
+    optional: string
+    submit: string
+    sending: string
+    success: { title: string; body: string }
+    error: string
+    fallback: string
+    fallbackHref: string
+  }
+
   firm: SectionHead & {
     people: Person[]
     stamps: string[]

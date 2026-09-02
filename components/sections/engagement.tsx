@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react"
-import { Cta, Kicker, MonumentBlock } from "@/components/primitives"
+import { Kicker, MonumentBlock } from "@/components/primitives"
+import { BriefingForm } from "@/components/briefing-form"
 import type { SiteContent } from "@/lib/content/types"
 
 /** One door. No secondary action exists anywhere on the page. */
@@ -35,7 +36,10 @@ export function Engagement({ content }: { content: SiteContent }) {
             {engagement.rope}
           </p>
           <div className="engagement__act reveal" style={{ "--i": 5 } as CSSProperties}>
-            <Cta cta={content.cta} large />
+            <h3 className="brief__title" id="briefing">
+              {content.briefing.title}
+            </h3>
+            <BriefingForm content={content} />
           </div>
         </div>
       </div>

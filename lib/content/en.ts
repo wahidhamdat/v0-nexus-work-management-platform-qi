@@ -6,7 +6,7 @@ export const en: SiteContent = {
   locale: "en",
   dir: "ltr",
   skip: "Skip to content",
-  cta: { label: "Request a briefing", href: BRIEFING },
+  cta: { label: "Request a briefing", href: "#briefing" },
 
   rail: {
     title: "Case file",
@@ -249,6 +249,29 @@ export const en: SiteContent = {
       },
     ],
     rope: "Principal-led. A limited number of engagements each quarter. We act only for the function that engages us, never for parties adverse to it, and a conflicts check precedes every engagement. We are not an audit firm; we provide no assurance opinion; engagements may be commissioned through counsel.",
+  },
+
+  briefing: {
+    title: "Request a briefing",
+    intro:
+      "Thirty minutes, principal-led, on a synthetic specimen you are invited to attack. Tell us where to reach you and we will come back to you shortly.",
+    fields: {
+      name: "Name",
+      email: "Email",
+      phone: "Phone",
+      company: "Organisation",
+      note: "What you would want the briefing to cover",
+    },
+    optional: "optional",
+    submit: "Send the request",
+    sending: "Sending…",
+    success: {
+      title: "Received.",
+      body: "We will come back to you shortly, at the address you gave. Nothing else happens to it.",
+    },
+    error: "That did not send. Try again, or write to info@monakes.com.",
+    fallback: "Or book a time directly",
+    fallbackHref: BRIEFING,
   },
 
   firm: {
