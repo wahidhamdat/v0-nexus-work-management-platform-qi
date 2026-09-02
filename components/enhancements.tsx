@@ -87,16 +87,28 @@ function boot(){
     return {id:row.getAttribute("data-rail-row"),row:row,time:row.querySelector("[data-rail-time]"),seen:false};
   });
   var cases=$$("[data-case]");
+  // Marking by index rather than per-observer-hit is what lets the sweep recover
+  // a jump: every row at or above the current one is stamped, so skipping five
+  // sections at once never leaves a hole in the file.
+  var markRail=function(idx){
+    if(idx<0)return;
+    rows.forEach(function(r,i){
+      r.row.classList.toggle("is-current",i===idx);
+      r.row.classList.toggle("is-passed",i<idx);
+      if(i<=idx&&!r.seen){r.seen=true;if(r.time)r.time.textContent=stamp(new Date());}
+    });
+  };
+  var railSweep=function(){
+    if(!rows.length||!cases.length)return;
+    var mark=innerHeight*0.35, idx=-1;
+    for(var i=0;i<cases.length;i++)if(cases[i].getBoundingClientRect().top<=mark)idx=i;
+    if(idx<0)return;
+    for(var j=0;j<rows.length;j++)if(rows[j].id===cases[idx].id){markRail(j);return;}
+  };
   if(rows.length&&IO){
     var caseIO=new IO(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;
-      var idx=rows.findIndex(function(r){return r.id===e.target.id;});
-      if(idx<0)return;
-      rows.forEach(function(r,i){
-        r.row.classList.toggle("is-current",i===idx);
-        r.row.classList.toggle("is-passed",i<idx);
-        if(i===idx&&!r.seen){r.seen=true;if(r.time)r.time.textContent=stamp(new Date());}
-      });
+      markRail(rows.findIndex(function(r){return r.id===e.target.id;}));
     });},{rootMargin:"-35% 0px -50% 0px",threshold:0});
     cases.forEach(function(s){caseIO.observe(s);});
   }
@@ -118,18 +130,32 @@ function boot(){
   // --- §04: the chain seals as you read
   var chainCount=d.querySelector("[data-chaincount]"), sealed=0;
   var chainLinks=$$("[data-link]");
-  if(rm||!IO){
-    chainLinks.forEach(function(l){l.classList.add("is-sealed");});
-    if(chainCount)chainCount.textContent=String(chainLinks.length);
-  }else{
+  var chainSweep=function(){};
+  var sealLink=function(el){
+    if(el.classList.contains("is-sealed"))return;
+    el.classList.add("is-sealed");
+    sealed++;
+    if(chainCount)chainCount.textContent=String(sealed);
+  };
+  if(rm||!IO)chainLinks.forEach(sealLink);
+  else{
     var chainIO=new IO(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;
       chainIO.unobserve(e.target);
-      e.target.classList.add("is-sealed");
-      sealed++;
-      if(chainCount)chainCount.textContent=String(sealed);
+      sealLink(e.target);
     });},{rootMargin:"-42% 0px -42% 0px",threshold:0});
     chainLinks.forEach(function(l){chainIO.observe(l);});
+    // That band is 16% of the viewport tall. A flick-scroll, an anchor jump or a
+    // reload that restores scroll carries a link straight past it, and the
+    // counter then sticks for the rest of the page.
+    chainSweep=function(){
+      for(var i=0;i<chainLinks.length;i++){
+        var l=chainLinks[i];
+        if(l.classList.contains("is-sealed"))continue;
+        var r=l.getBoundingClientRect();
+        if(r.top+r.height/2<innerHeight*0.58){chainIO.unobserve(l);sealLink(l);}
+      }
+    };
   }
 
   // --- monuments count up
@@ -177,11 +203,14 @@ function boot(){
   }
 
   // --- the seal ceremony
-  var stage=d.querySelector("[data-sealstage]");
+  var stage=d.querySelector("[data-sealstage]"), sealSweep=function(){};
   if(stage){
     var nodes=$$("[data-schain]"), slinks=$$("[data-slink]");
     var stampEl=d.querySelector("[data-stamp]"), stime=d.querySelector("[data-sealtime]");
+    var fired=false;
     var fire=function(){
+      if(fired)return;
+      fired=true;
       if(stime)stime.textContent=stamp(new Date());
       nodes.forEach(function(sq,i){
         setTimeout(function(){
@@ -197,6 +226,13 @@ function boot(){
         if(e.isIntersecting){sealIO.unobserve(e.target);fire();}
       });},{threshold:0.35});
       sealIO.observe(stage);
+      // A stage taller than the viewport never reaches 0.35 visible, so the
+      // ceremony would wait forever on a short window.
+      sealSweep=function(){
+        if(fired)return;
+        var r=stage.getBoundingClientRect();
+        if(r.top<innerHeight*0.9&&r.bottom>0)fire();
+      };
     }
   }
 
@@ -208,6 +244,7 @@ function boot(){
     raf=requestAnimationFrame(function(){
       raf=0;
       if(pending&&pending.length)sweep();
+      chainSweep();railSweep();sealSweep();
       if(nav)nav.classList.toggle("is-scrolled",scrollY>100);
       if(rail&&darks.length){
         var h=rail.offsetHeight||280, top=120, bot=120+h, overlap=0;
@@ -255,8 +292,21 @@ function boot(){
 // React owns every node on this page, so nothing may touch the DOM until
 // hydration has finished — a text node changed underneath React makes it throw
 // the whole tree away and re-render, discarding all of the above.
-if(document.readyState==="complete")boot();
-else addEventListener("load",boot);
+//
+// "load" is not that moment. React 19 hydrates concurrently and can still be
+// walking the tree when the last subresource lands, which is why this used to
+// fail hardest on a reload that restores scroll: the scramble starts rewriting
+// text that React has not reached yet. HydrationSignal fires from a useEffect,
+// which cannot run before hydration is done.
+var started=false;
+var go=function(){if(started)return;started=true;boot();};
+if(window.__monakesHydrated)go();
+else{
+  addEventListener("monakes:hydrated",go);
+  // If the signal never arrives — a throw higher in the tree, a stale bundle —
+  // run anyway rather than shipping a dead page.
+  addEventListener("load",function(){setTimeout(go,1500);});
+}
 })();`
 
 export function Enhancements() {

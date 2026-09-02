@@ -1,5 +1,6 @@
 import { CaseRail } from "@/components/case-rail"
 import { Enhancements } from "@/components/enhancements"
+import { HydrationSignal } from "@/components/hydration-signal"
 import { SiteNav } from "@/components/site-nav"
 import { Applications } from "@/components/sections/applications"
 import { Engagement } from "@/components/sections/engagement"
@@ -38,6 +39,7 @@ export function PageShell({ content }: { content: SiteContent }) {
       <Firm content={content} />
       <Seal content={content} />
 
+      <HydrationSignal />
       <Enhancements />
     </>
   )
