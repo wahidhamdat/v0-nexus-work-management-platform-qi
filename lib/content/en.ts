@@ -42,9 +42,9 @@ export const en: SiteContent = {
     badge: "A QSTP Portfolio Company · Education City, Doha",
     city: "Doha",
     headline: "The decision was sound. Three years later, the record has to prove it.",
-    sub: "The contemporaneous record behind consequential institutional judgments — sealed at creation, verifiable without us.",
+    sub: "The contemporaneous record behind consequential institutional judgments. Sealed at creation, verifiable without us.",
     standardLine: "Under the Decision Protection Standard (DPS-1)",
-    rope: "Principal-led. Limited engagements each quarter. Conflicts checked.",
+    rope: "Principal-led, with a limited number of engagements each quarter and a conflicts check before each one.",
     exhibitA: "Exhibit A — this page",
   },
 
@@ -74,10 +74,10 @@ export const en: SiteContent = {
     memo: {
       label: "Read the memorandum",
       paras: [
-        "When a consequential decision is challenged — a bid protest, an audit finding, an arbitration claim — the institution defends it with two things: whatever documentation exists, and the recollection of the people who were in the room. The second is worth less than almost anyone assumes.",
-        "In 2020 the ICC Commission on Arbitration published a report on the accuracy of fact witness memory, produced with scientific input from psychologists specialising in memory. Its findings: human memory is fragile and malleable. Memories become corrupted without the person knowing. Post-event information can overwrite a factual memory rather than merely add to it — and it arrives through entirely ordinary channels. A conversation with a colleague. A discussion with counsel. Simply retelling the same account several times.",
+        "When a protest letter lands, or an audit finding, or a notice of arbitration, the institution defends the decision with two things: whatever documentation exists, and the recollection of the people who were in the room. The second is worth less than almost anyone assumes.",
+        "In 2020 the ICC Commission on Arbitration published a report on the accuracy of fact witness memory, produced with scientific input from psychologists specialising in memory. Its findings: human memory is fragile and malleable. Memories become corrupted without the person knowing. Post-event information can overwrite a factual memory rather than merely add to it, and it arrives through entirely ordinary channels: a conversation with a colleague, a discussion with counsel, or simply retelling the same account several times until the retelling is what survives.",
         "Courts arrived at the same place independently. In Gestmin v Credit Suisse, the English Commercial Court held that a judge should place little reliance on witnesses' recollections of meetings, and base findings on inferences drawn from the documentary record instead.",
-        "This is true of a tender score, a compliance determination, a financial-reporting judgment, and a closed investigation alike. The failure is never the decision. It is the distance between the decision and its record.",
+        "This is true of a tender score, a compliance determination, a financial-reporting judgment, and a closed investigation alike. What gets examined years later is the record, and by then nobody can testify to what was in the room.",
       ],
     },
   },
@@ -86,7 +86,7 @@ export const en: SiteContent = {
     num: "§02",
     kicker: "The Standard",
     suffix: "· DPS-1",
-    verdict: "A methodology, not a promise.",
+    verdict: "A published methodology, open to examination.",
     support:
       "A published methodology for producing decision records that withstand adversarial examination.",
     degrees: [
@@ -113,22 +113,22 @@ export const en: SiteContent = {
       {
         num: "2.2",
         title: "Criteria packs",
-        body: "Each domain is examined against a versioned pack of criteria — what must be evidenced, to what degree, and what an adversary asks first. Packs are maintained against the live enforcement and case record and versioned like any controlled document.",
+        body: "Each domain is examined against a versioned pack of criteria: what must be evidenced, to what degree, and what an adversary asks first. We maintain the packs against the live enforcement and case record and version them like any controlled document.",
       },
       {
         num: "2.3",
         title: "Adversarial verification",
-        body: "Before any finding reaches a human reviewer, an independent verification pass — isolated from the first analysis — attacks it on four fronts: fidelity to the quoted source, integrity of the inference, contradiction elsewhere in the corpus, and congruence with scope. Findings that fail do not survive.",
+        body: "Before any finding reaches a human reviewer, an independent verification pass, isolated from the first analysis, attacks it on four fronts: fidelity to the quoted source, integrity of the inference, contradiction elsewhere in the corpus, and congruence with scope. Findings that fail it do not survive.",
       },
       {
         num: "2.4",
         title: "Human determination",
-        body: "People decide; the methodology proves they did. Every finding is accepted, overridden with recorded rationale, or escalated — by a named person, at a recorded time, with what they saw preserved alongside what they decided.",
+        body: "People decide; the methodology proves they did. Every finding is accepted, overridden with recorded rationale, or escalated by a named person at a recorded time, with what they saw preserved alongside what they decided.",
       },
       {
         num: "2.5",
         title: "The Decision Record",
-        body: "The output: a sealed, hash-chained record in which every claim is traceable to its page and verifiable by your own counsel, auditor or committee — without Monakes in the room.",
+        body: "The output is a sealed, hash-chained record in which every claim is traceable to its page and verifiable by your own counsel, auditor or committee, without Monakes in the room.",
       },
     ],
   },
@@ -140,8 +140,8 @@ export const en: SiteContent = {
     memo: {
       label: "Read the mechanism",
       paras: [
-        "Committees evaluate rigorously, under real pressure and real time constraints. The evaluations are careful. The decisions are usually right. The documentation is assembled afterwards. Sometimes days. Often weeks. Occasionally only once a challenge has already been filed — at which point the institution is reconstructing, from notes and email and recollection, a decision made by people whose memory of it has been quietly reorganising ever since.",
-        "That reconstruction becomes the institution's account of what happened. And every element of it faces one question: did this exist at the time, or was it produced for this proceeding?",
+        "Committees evaluate rigorously, under real pressure and real time constraints. The evaluations are careful. The decisions are usually right. The documentation is assembled afterwards, sometimes days later, often weeks, and occasionally only once a challenge has already been filed, at which point the institution is reconstructing a decision from calendar entries, email threads and recollection, made by people whose memory of it has been reorganising ever since.",
+        "That reconstruction becomes the institution's account of what happened, and every element of it faces one question: did this exist at the time, or was it produced for this proceeding?",
       ],
     },
   },
@@ -149,18 +149,18 @@ export const en: SiteContent = {
   method: {
     num: "§04",
     kicker: "Method",
-    verdict: "Contemporaneous by construction, not by discipline.",
+    verdict: "The record is finished when the evaluation is.",
     chainLabel: "The chain seals as you read",
     links: [
       {
         num: "01",
         title: "Corpus in",
-        body: "The documents that carry the decision — and nothing else — scoped in writing, ingested, hashed.",
+        body: "The documents that carry the decision, and nothing else, scoped in writing, ingested and hashed.",
       },
       {
         num: "02",
         title: "Examination under the pack",
-        body: "The entire corpus read against every criterion — not a sample. Each finding bound to its exact clause, page and passage. A citation, not a summary.",
+        body: "Every criterion is run against the entire corpus rather than a sample, and each finding is bound to the clause, page and passage it came from, so what you get back is a citation you can turn to.",
       },
       {
         num: "03",
@@ -170,7 +170,7 @@ export const en: SiteContent = {
       {
         num: "04",
         title: "Determination",
-        body: "Your people accept, override or escalate. Named. Timestamped. Amendments recorded as amendments.",
+        body: "Your people accept, override or escalate, and every action carries the name of whoever took it and the time they took it. Amendments are recorded as amendments.",
       },
       { num: "05", title: "Seal", body: "Locked at creation. Re-verifiable without us." },
     ],
@@ -197,11 +197,11 @@ export const en: SiteContent = {
       {
         title: "Tender & bid evaluation",
         flag: "Flagship instrument",
-        body: "Evaluation and record produced simultaneously: every score timestamped, attributed, locked, and traced to the clause it came from — in a fraction of committee time. Runs in parallel with a live evaluation; nothing in your process changes.",
+        body: "Evaluation and record are produced simultaneously: every score timestamped, attributed, locked, and traced to the clause it came from, in a fraction of committee time. It runs in parallel with a live evaluation, and nothing in your process changes.",
       },
       {
         title: "Compliance programmes",
-        body: "The distance between a programme that exists and one that can be evidenced as operating is where modern examinations are decided. We read the record behind effectiveness assertions — escalations, dispositions, attestations — before someone else does.",
+        body: "Modern examinations turn on the distance between a programme that exists and one that can be evidenced as operating. We read the record behind the effectiveness assertions, the escalations, dispositions and attestations, before someone else does.",
       },
       {
         title: "Financial reporting & certification",
@@ -209,7 +209,7 @@ export const en: SiteContent = {
       },
       {
         title: "Legal, investigation & committee files",
-        body: "Closed matters, deliberations and determinations — read for whether the file shows who decided what, when, on what basis.",
+        body: "Closed matters, deliberations and determinations, read for whether the file shows who decided what, when and on what basis.",
       },
     ],
   },
@@ -224,8 +224,8 @@ export const en: SiteContent = {
     memo: {
       label: "Read the deployment memorandum",
       paras: [
-        "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it. Either way, you choose the model that reads the work — your own keys, an in-region model, or a fully self-hosted one — and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
-        "The compliance layer configures to national procurement law and data governance frameworks rather than being locked to one regime. Identity, actions, timestamps, and amendments are logged, attributed, and immutable — the record that existed at the moment of decision is the record that exists at the moment of challenge. Most software is built so a process runs smoothly. Monakes is built so the output of that process survives being read by someone whose job is to find the gap in it.",
+        "Run Monakes online for speed and zero setup, or deploy it inside your own environment when the work demands it. Either way, you choose the model that reads the work, whether that is your own keys, an in-region model or a fully self-hosted one, and your data goes nowhere you didn't configure. Sovereign, on-premise, and air-gapped deployments are available for the most sensitive work.",
+        "The compliance layer configures to national procurement law and data governance frameworks rather than being locked to one regime. Identity, actions, timestamps, and amendments are logged, attributed, and immutable. The record that existed at the moment of decision is the record that exists at the moment of challenge. Most software is built so a process runs smoothly; Monakes is built so the output of that process survives being read by someone whose job is to find the gap in it.",
       ],
     },
   },
@@ -239,7 +239,7 @@ export const en: SiteContent = {
         counts: [30],
         numeral: "{0}",
         unit: "minutes",
-        label: "Briefing · one criterion, end to end, on a synthetic specimen — you are invited to attack it",
+        label: "Briefing · one criterion, end to end, on a synthetic specimen you are invited to attack",
       },
       {
         counts: [10],
@@ -264,7 +264,7 @@ export const en: SiteContent = {
       {
         name: "Abdelfadel Hamdat",
         role: "Board · Strategy & Institutional Partnerships",
-        bio: "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology — a process that does not resemble private-sector sales.",
+        bio: "Ensures the commercial model maps to how public institutions actually evaluate, procure, and adopt technology, a process that does not resemble private-sector sales.",
       },
       {
         name: "Sofiene Chouchine",
@@ -288,7 +288,7 @@ export const en: SiteContent = {
   seal: {
     sealed: "Sealed",
     endOfRecord: "End of record",
-    hashTitle: "This page, hashed in your browser — the property every Monakes record carries.",
+    hashTitle: "This page, hashed in your browser. Every Monakes record carries the same property.",
     closed: "Record closed",
     legal: "Monakes for Artificial Intelligence Solutions LLC",
     address: "Qatar Science & Technology Park, Education City, Doha",
