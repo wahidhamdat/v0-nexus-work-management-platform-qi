@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import { latinVars } from "@/lib/fonts/latin"
 import "../globals.css"
+import { OpenReplay } from "@/components/openreplay"
 
 const TITLE = "Monakes — Decision Protection"
 const DESCRIPTION =
@@ -61,6 +62,7 @@ export default function EnglishLayout({ children }: { children: React.ReactNode 
       <head>
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <OpenReplay />
       </head>
       <body>
         {children}
