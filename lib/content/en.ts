@@ -280,8 +280,8 @@ export const en: SiteContent = {
     verdict: "People who know what a failed record costs.",
     people: [
       {
-        name: "Mohameda Hamdat",
-        role: "Founder & Systems Architect",
+        name: "Wahid Hamdat",
+        role: "Lead",
         bio: "Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps. Designed the Decision Protection Standard and the instrument that executes it.",
       },
       {
@@ -314,7 +314,7 @@ export const en: SiteContent = {
     hashTitle: "This page, hashed in your browser. Every Monakes record carries the same property.",
     closed: "Record closed",
     legal: "Monakes for Artificial Intelligence Solutions LLC",
-    address: "Qatar Science & Technology Park, Education City, Doha",
+    address: "Qatar Science & Technology Park, Education City, Doha · 182 High Street North, London E6 2JA",
     email: "info@monakes.com",
     rights: "All rights reserved",
   },

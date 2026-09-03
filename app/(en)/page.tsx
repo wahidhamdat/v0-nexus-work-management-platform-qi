@@ -13,12 +13,21 @@ const jsonLd = {
       email: "info@monakes.com",
       description:
         "Monakes is a decision-protection firm. It produces sealed, adversarially verified decision records under the Decision Protection Standard (DPS-1).",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Qatar Science & Technology Park, Education City",
-        addressLocality: "Doha",
-        addressCountry: "QA",
-      },
+      address: [
+        {
+          "@type": "PostalAddress",
+          streetAddress: "Qatar Science & Technology Park, Education City",
+          addressLocality: "Doha",
+          addressCountry: "QA",
+        },
+        {
+          "@type": "PostalAddress",
+          streetAddress: "182 High Street North",
+          addressLocality: "London",
+          postalCode: "E6 2JA",
+          addressCountry: "GB",
+        },
+      ],
     },
     {
       "@type": "WebSite",

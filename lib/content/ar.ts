@@ -281,8 +281,8 @@ export const ar: SiteContent = {
     verdict: "أشخاص يعرفون كلفة سجلٍ لا يصمد.",
     people: [
       {
-        name: "Mohameda Hamdat",
-        role: "المؤسس وكبير مهندسي الأنظمة",
+        name: "Wahid Hamdat",
+        role: "القائد",
         bio: "Background in AI systems for operations-heavy environments where the output is read under pressure by people looking for gaps. Designed the Decision Protection Standard and the instrument that executes it.",
       },
       {
@@ -315,7 +315,7 @@ export const ar: SiteContent = {
     hashTitle: "هذه الصفحة، مُجزّأة في متصفحك — الخاصية التي يحملها كل سجل من موناكس.",
     closed: "أُقفل السجل في",
     legal: "شركة موناكس لحلول الذكاء الاصطناعي ذ.م.م",
-    address: "واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية، الدوحة",
+    address: "واحة قطر للعلوم والتكنولوجيا، المدينة التعليمية، الدوحة · 182 High Street North, London E6 2JA",
     email: "info@monakes.com",
     rights: "جميع الحقوق محفوظة",
   },
